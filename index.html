@@ -40,6 +40,7 @@ input,select,button,textarea{font:inherit}
 ::selection{background:#D3E7E3;color:#163D3A}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 @media (max-width:900px){[data-hero-media]{flex:1 1 100%!important;margin-top:0!important}}
+@media (min-width:1280px){[data-hero-media]{margin-top:clamp(-260px,-14vw,-160px)!important}}
 </style>
 </helmet>
 
@@ -133,7 +134,7 @@ input,select,button,textarea{font:inherit}
     </div>
     <div data-hero-media="" style="flex:1 1 620px;position:relative;aspect-ratio:16/9;margin-top:clamp(-72px,-4vw,-32px);margin-left:0;overflow:hidden;border-top-left-radius:clamp(72px,10vw,180px);background:#E3ECEA">
       <div data-fx="scale" style="position:absolute;inset:0">
-        <video src="assets/videoplayback.mp4" autoplay controls playsinline preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0"></video>
+        <video src="assets/videoplayback.mp4" autoplay muted loop playsinline preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0"></video>
       </div>
     </div>
   </div>
@@ -440,32 +441,26 @@ input,select,button,textarea{font:inherit}
       </div>
       <ol style="flex:1.5 1 480px;list-style:none;margin:0;padding:0;border-top:1px solid rgba(22,61,58,.16)">
         <li data-fx="fade" style="display:flex;flex-wrap:wrap;gap:8px 24px;padding:26px 12px;border-bottom:1px solid rgba(22,61,58,.16);transition:background .3s" style-hover="background:#F7F9F8">
-          <span style="flex:0 0 56px;font:600 12px/1.6 'Instrument Sans',sans-serif;letter-spacing:.12em;color:#4E87C1">A.01</span>
           <h3 style="flex:1 1 200px;margin:0;font:500 1.3rem/1.3 'Manrope',sans-serif;letter-spacing:-.02em;color:#1C2B2A">Cirurgias</h3>
           <p style="flex:1.4 1 260px;margin:0;font:400 15px/1.55 'Instrument Sans',sans-serif;color:#4A5C5A">Procedimentos realizados em centro cirúrgico, com equipe preparada para cada intervenção.</p>
         </li>
         <li data-fx="fade" data-delay="60" style="display:flex;flex-wrap:wrap;gap:8px 24px;padding:26px 12px;border-bottom:1px solid rgba(22,61,58,.16);transition:background .3s" style-hover="background:#F7F9F8">
-          <span style="flex:0 0 56px;font:600 12px/1.6 'Instrument Sans',sans-serif;letter-spacing:.12em;color:#4E87C1">A.02</span>
           <h3 style="flex:1 1 200px;margin:0;font:500 1.3rem/1.3 'Manrope',sans-serif;letter-spacing:-.02em;color:#1C2B2A">Reabilitações extensas</h3>
           <p style="flex:1.4 1 260px;margin:0;font:400 15px/1.55 'Instrument Sans',sans-serif;color:#4A5C5A">Casos que envolvem vários dentes ou arcadas inteiras, planejados por etapas.</p>
         </li>
         <li data-fx="fade" data-delay="120" style="display:flex;flex-wrap:wrap;gap:8px 24px;padding:26px 12px;border-bottom:1px solid rgba(22,61,58,.16);transition:background .3s" style-hover="background:#F7F9F8">
-          <span style="flex:0 0 56px;font:600 12px/1.6 'Instrument Sans',sans-serif;letter-spacing:.12em;color:#4E87C1">A.03</span>
           <h3 style="flex:1 1 200px;margin:0;font:500 1.3rem/1.3 'Manrope',sans-serif;letter-spacing:-.02em;color:#1C2B2A">Implantes zigomáticos</h3>
           <p style="flex:1.4 1 260px;margin:0;font:400 15px/1.55 'Instrument Sans',sans-serif;color:#4A5C5A">Alternativa avaliada para perda óssea severa no maxilar superior.</p>
         </li>
         <li data-fx="fade" data-delay="180" style="display:flex;flex-wrap:wrap;gap:8px 24px;padding:26px 12px;border-bottom:1px solid rgba(22,61,58,.16);transition:background .3s" style-hover="background:#F7F9F8">
-          <span style="flex:0 0 56px;font:600 12px/1.6 'Instrument Sans',sans-serif;letter-spacing:.12em;color:#4E87C1">A.04</span>
           <h3 style="flex:1 1 200px;margin:0;font:500 1.3rem/1.3 'Manrope',sans-serif;letter-spacing:-.02em;color:#1C2B2A">Necessidade de sedação</h3>
           <p style="flex:1.4 1 260px;margin:0;font:400 15px/1.55 'Instrument Sans',sans-serif;color:#4A5C5A">Procedimentos que podem ser realizados com sedação, conforme avaliação.</p>
         </li>
         <li data-fx="fade" data-delay="240" style="display:flex;flex-wrap:wrap;gap:8px 24px;padding:26px 12px;border-bottom:1px solid rgba(22,61,58,.16);transition:background .3s" style-hover="background:#F7F9F8">
-          <span style="flex:0 0 56px;font:600 12px/1.6 'Instrument Sans',sans-serif;letter-spacing:.12em;color:#4E87C1">A.05</span>
           <h3 style="flex:1 1 200px;margin:0;font:500 1.3rem/1.3 'Manrope',sans-serif;letter-spacing:-.02em;color:#1C2B2A">Histórico de medo</h3>
           <p style="flex:1.4 1 260px;margin:0;font:400 15px/1.55 'Instrument Sans',sans-serif;color:#4A5C5A">Pacientes que adiaram o tratamento por ansiedade ou por experiências anteriores.</p>
         </li>
         <li data-fx="fade" data-delay="300" style="display:flex;flex-wrap:wrap;gap:8px 24px;padding:26px 12px;border-bottom:1px solid rgba(22,61,58,.16);transition:background .3s" style-hover="background:#F7F9F8">
-          <span style="flex:0 0 56px;font:600 12px/1.6 'Instrument Sans',sans-serif;letter-spacing:.12em;color:#4E87C1">A.06</span>
           <h3 style="flex:1 1 200px;margin:0;font:500 1.3rem/1.3 'Manrope',sans-serif;letter-spacing:-.02em;color:#1C2B2A">Planejamento multidisciplinar</h3>
           <p style="flex:1.4 1 260px;margin:0;font:400 15px/1.55 'Instrument Sans',sans-serif;color:#4A5C5A">Especialistas de diferentes áreas analisando o mesmo caso, em conjunto.</p>
         </li>
@@ -489,20 +484,20 @@ input,select,button,textarea{font:inherit}
         <div role="img" aria-label="Centro cirúrgico do HOE" style="position:relative;height:clamp(380px,46vw,700px);border-top-left-radius:clamp(80px,12vw,220px);background-color:#1D4743;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px)">
           <div style="position:absolute;left:28px;bottom:24px;right:24px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Imagem — centro cirúrgico]</span><sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#8FB0AB">assets/images/estrutura-centro-cirurgico.webp</span></sc-if></div>
         </div>
-        <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5"><span style="font-size:11px;letter-spacing:.14em;color:#9FD0C8">E.01</span>Centro cirúrgico</figcaption>
+        <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5">Centro cirúrgico</figcaption>
       </figure>
       <div style="flex:1 1 320px;display:flex;flex-direction:column;gap:clamp(12px,1.4vw,20px)">
         <figure data-fx="clip" data-delay="120" style="margin:0;flex:1;display:flex;flex-direction:column;gap:14px">
           <div role="img" aria-label="Consultório do HOE" style="position:relative;flex:1;min-height:clamp(220px,20vw,320px);border-radius:4px;background-color:#1D4743;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px)">
             <div style="position:absolute;left:22px;bottom:20px;right:22px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Imagem — consultório]</span></div>
           </div>
-          <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5"><span style="font-size:11px;letter-spacing:.14em;color:#9FD0C8">E.02</span>Consultórios</figcaption>
+          <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5">Consultórios</figcaption>
         </figure>
         <figure data-fx="clip" data-delay="220" style="margin:0;flex:1;display:flex;flex-direction:column;gap:14px">
           <div role="img" aria-label="Tecnologia e equipamentos do HOE" style="position:relative;flex:1;min-height:clamp(220px,20vw,320px);border-radius:4px;background-color:#1D4743;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px)">
             <div style="position:absolute;left:22px;bottom:20px;right:22px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Imagem — tecnologia e equipamentos]</span></div>
           </div>
-          <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5"><span style="font-size:11px;letter-spacing:.14em;color:#9FD0C8">E.03</span>Tecnologia e equipamentos</figcaption>
+          <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5">Tecnologia e equipamentos</figcaption>
         </figure>
       </div>
     </div>
@@ -511,13 +506,13 @@ input,select,button,textarea{font:inherit}
         <div role="img" aria-label="Recepção do HOE" style="position:relative;height:clamp(260px,26vw,400px);border-radius:4px;background-color:#1D4743;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px)">
           <div style="position:absolute;left:22px;bottom:20px;right:22px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Imagem — recepção]</span></div>
         </div>
-        <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5"><span style="font-size:11px;letter-spacing:.14em;color:#9FD0C8">E.04</span>Recepção</figcaption>
+        <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5">Recepção</figcaption>
       </figure>
       <figure data-fx="clip" data-delay="120" style="flex:1.7 1 440px;margin:0;display:flex;flex-direction:column;gap:14px">
         <div role="img" aria-label="Outros ambientes do HOE" style="position:relative;height:clamp(260px,26vw,400px);border-radius:4px 4px clamp(60px,8vw,140px) 4px;background-color:#1D4743;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px)">
           <div style="position:absolute;left:22px;bottom:20px;right:22px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Imagem — outros ambientes]</span></div>
         </div>
-        <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5"><span style="font-size:11px;letter-spacing:.14em;color:#9FD0C8">E.05</span>Ambientes · Sala de recuperação [a confirmar]</figcaption>
+        <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5">Ambientes · Sala de recuperação [a confirmar]</figcaption>
       </figure>
     </div>
     <dl style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:32px;margin:clamp(72px,8vw,120px) 0 0;padding-top:36px;border-top:1px solid rgba(255,255,255,.16)">
