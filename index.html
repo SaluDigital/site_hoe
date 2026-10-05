@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Hospital Odontológico em Salvador | HOE Odontologia Especializada</title>
+<meta name="description" content="HOE — Hospital de Odontologia Especializada em Salvador. Estrutura hospitalar, centro cirúrgico, equipe especializada e possibilidades de sedação, inclusive para quem tem medo de dentista. Unidades Pituba e Shopping Paralela. Atendimento exclusivamente particular.">
+<link rel="canonical" href="https://www.hospitalodontologico.com.br/">
+<meta name="theme-color" content="#163D3A">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="HOE — Hospital de Odontologia Especializada">
+<meta property="og:title" content="Hospital Odontológico em Salvador | HOE Odontologia Especializada">
+<meta property="og:description" content="Estrutura hospitalar, equipe especializada e possibilidades de sedação para tratamentos odontológicos com mais tranquilidade e segurança.">
+<meta property="og:url" content="https://www.hospitalodontologico.com.br/">
+<meta property="og:image" content="https://www.hospitalodontologico.com.br/assets/images/og-hoe.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hospital Odontológico em Salvador | HOE">
+<meta name="twitter:description" content="Odontologia especializada para cuidar até de quem tem medo de dentista. Pituba e Shopping Paralela.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=Manrope:wght@300;400;500;600&amp;display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Dentist","MedicalBusiness"],"@id":"https://www.hospitalodontologico.com.br/#hoe","name":"HOE — Hospital de Odontologia Especializada","alternateName":"HOE","url":"https://www.hospitalodontologico.com.br/","logo":"https://www.hospitalodontologico.com.br/assets/logo/logo-hoe.webp","telephone":"+55-71-4102-7244","description":"Hospital odontológico em Salvador, Bahia, com estrutura hospitalar, centro cirúrgico, equipe especializada e possibilidades de sedação. Atendimento exclusivamente particular; não atende SUS nem planos odontológicos.","areaServed":{"@type":"City","name":"Salvador","containedInPlace":{"@type":"State","name":"Bahia"}},"knowsAbout":["Implantes dentários","Reabilitação oral","Prótese protocolo","Próteses dentárias","Cirurgia odontológica","Implantes zigomáticos","Sedação odontológica","Lentes de contato dentais","Odontofobia"],"subOrganization":[{"@id":"https://www.hospitalodontologico.com.br/#pituba"},{"@id":"https://www.hospitalodontologico.com.br/#paralela"}]},{"@type":"Dentist","@id":"https://www.hospitalodontologico.com.br/#pituba","name":"HOE — Unidade Pituba","parentOrganization":{"@id":"https://www.hospitalodontologico.com.br/#hoe"},"url":"https://www.hospitalodontologico.com.br/#unidades","telephone":"+55-71-4102-7244","address":{"@type":"PostalAddress","streetAddress":"Av. Manoel Dias da Silva, 1783 — Pituba","addressLocality":"Salvador","addressRegion":"BA","postalCode":"41830-001","addressCountry":"BR"},"areaServed":"Salvador, BA"},{"@type":"Dentist","@id":"https://www.hospitalodontologico.com.br/#paralela","name":"HOE — Unidade Shopping Paralela","parentOrganization":{"@id":"https://www.hospitalodontologico.com.br/#hoe"},"url":"https://www.hospitalodontologico.com.br/#unidades","telephone":"+55-71-4102-7244","address":{"@type":"PostalAddress","streetAddress":"Av. Luís Viana, 8544, Piso L1 — Shopping Paralela, Alphaville","addressLocality":"Salvador","addressRegion":"BA","postalCode":"41730-101","addressCountry":"BR"},"areaServed":"Salvador, BA"}]}</script>
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:#FFFFFF;color:#1C2B2A;font-family:'Instrument Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+*,*::before,*::after{box-sizing:border-box}
+a{color:#2E6E67;text-decoration:none}
+a:hover{color:#163D3A}
+img{max-width:100%;display:block}
+summary{list-style:none}
+summary::-webkit-details-marker{display:none}
+input,select,button,textarea{font:inherit}
+::selection{background:#D3E7E3;color:#163D3A}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+@media (max-width:900px){[data-hero-media]{flex:1 1 100%!important;margin-top:0!important}}
+</style>
+</helmet>
+
+<header style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid {{ headerLine }};transition:border-color .4s">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px);height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <a href="#inicio" aria-label="HOE — início" style="display:flex;align-items:center">
+      <img src="assets/logo/logo-hoe.webp" alt="HOE — Hospital de Odontologia Especializada" width="604" height="240" fetchpriority="high" style="height:44px;width:auto">
+    </a>
+    <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Principal" style="display:flex;align-items:center;gap:30px">
+        <a href="#medo-de-dentista" style="color:#1C2B2A;font-size:14px;font-weight:500" style-hover="color:#2E6E67">Medo de dentista</a>
+        <a href="#sedacao" style="color:#1C2B2A;font-size:14px;font-weight:500" style-hover="color:#2E6E67">Sedação</a>
+        <a href="#tratamentos" style="color:#1C2B2A;font-size:14px;font-weight:500" style-hover="color:#2E6E67">Tratamentos</a>
+        <a href="#estrutura" style="color:#1C2B2A;font-size:14px;font-weight:500" style-hover="color:#2E6E67">Estrutura</a>
+        <a href="#equipe" style="color:#1C2B2A;font-size:14px;font-weight:500" style-hover="color:#2E6E67">Equipe</a>
+        <a href="#unidades" style="color:#1C2B2A;font-size:14px;font-weight:500" style-hover="color:#2E6E67">Unidades</a>
+        <a href="#duvidas" style="color:#1C2B2A;font-size:14px;font-weight:500" style-hover="color:#2E6E67">Dúvidas</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:20px">
+        <a href="tel:+557141027244" style="color:#4A5C5A;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums" style-hover="color:#163D3A">(71) 4102-7244</a>
+        <a href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-event="click_whatsapp_header" style="display:inline-flex;align-items:center;height:44px;padding:0 20px;border-radius:999px;background:#163D3A;color:#FFFFFF;font-size:14px;font-weight:600;transition:background .3s" style-hover="background:#2E6E67;color:#FFFFFF">Agende sua avaliação</a>
+      </div>
+    </sc-if>
+    <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;align-items:center;gap:10px">
+        <a href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-event="click_whatsapp_header" style="display:inline-flex;align-items:center;height:44px;padding:0 18px;border-radius:999px;background:#163D3A;color:#FFFFFF;font-size:14px;font-weight:600" style-hover="color:#FFFFFF">Agendar</a>
+        <button type="button" onClick="{{ toggleMenu }}" aria-label="Abrir menu" aria-expanded="{{ menu }}" style="width:44px;height:44px;border-radius:999px;border:1px solid rgba(22,61,58,.2);background:#FFFFFF;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer">
+          <span style="width:16px;height:1.5px;background:#163D3A"></span>
+          <span style="width:16px;height:1.5px;background:#163D3A"></span>
+        </button>
+      </div>
+    </sc-if>
+  </div>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <nav aria-label="Menu" style="position:fixed;top:76px;left:0;right:0;bottom:0;background:#FFFFFF;padding:32px clamp(20px,4vw,64px);display:flex;flex-direction:column;gap:4px;overflow:auto">
+      <a href="#medo-de-dentista" onClick="{{ closeMenu }}" style="padding:16px 0;border-bottom:1px solid rgba(22,61,58,.12);color:#1C2B2A;font:500 26px/1.2 'Manrope',sans-serif;letter-spacing:-.02em">Medo de dentista</a>
+      <a href="#sedacao" onClick="{{ closeMenu }}" style="padding:16px 0;border-bottom:1px solid rgba(22,61,58,.12);color:#1C2B2A;font:500 26px/1.2 'Manrope',sans-serif;letter-spacing:-.02em">Sedação</a>
+      <a href="#tratamentos" onClick="{{ closeMenu }}" style="padding:16px 0;border-bottom:1px solid rgba(22,61,58,.12);color:#1C2B2A;font:500 26px/1.2 'Manrope',sans-serif;letter-spacing:-.02em">Tratamentos</a>
+      <a href="#estrutura" onClick="{{ closeMenu }}" style="padding:16px 0;border-bottom:1px solid rgba(22,61,58,.12);color:#1C2B2A;font:500 26px/1.2 'Manrope',sans-serif;letter-spacing:-.02em">Estrutura</a>
+      <a href="#equipe" onClick="{{ closeMenu }}" style="padding:16px 0;border-bottom:1px solid rgba(22,61,58,.12);color:#1C2B2A;font:500 26px/1.2 'Manrope',sans-serif;letter-spacing:-.02em">Equipe</a>
+      <a href="#unidades" onClick="{{ closeMenu }}" style="padding:16px 0;border-bottom:1px solid rgba(22,61,58,.12);color:#1C2B2A;font:500 26px/1.2 'Manrope',sans-serif;letter-spacing:-.02em">Unidades</a>
+      <a href="#duvidas" onClick="{{ closeMenu }}" style="padding:16px 0;border-bottom:1px solid rgba(22,61,58,.12);color:#1C2B2A;font:500 26px/1.2 'Manrope',sans-serif;letter-spacing:-.02em">Dúvidas</a>
+      <div style="display:flex;flex-direction:column;gap:8px;padding-top:28px;color:#4A5C5A;font-size:15px">
+        <a href="tel:+557141027244" style="color:#163D3A;font-weight:600">(71) 4102-7244</a>
+        <span>Atendimento exclusivamente particular.</span>
+      </div>
+    </nav>
+  </sc-if>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section id="inicio" data-screen-label="00 Hero" style="position:relative;padding-top:76px;background:#FFFFFF;overflow:hidden">
+  <div style="max-width:1440px;margin:0 auto;padding:clamp(40px,7vh,88px) clamp(20px,4vw,64px) clamp(36px,5vh,56px)">
+    <div data-fx="fade" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:clamp(28px,4vh,44px)">
+      <div style="display:flex;align-items:center;gap:14px;font:600 12px/1.3 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67">
+        <span style="width:32px;height:1px;background:#579D95"></span>
+        <span>Hospital de Odontologia Especializada · Salvador</span>
+      </div>
+    </div>
+    <sc-if value="{{ heroA }}" hint-placeholder-val="{{ true }}">
+      <h1 style="margin:0;font:500 clamp(2.05rem,3.7vw,4.05rem)/1.06 'Manrope',sans-serif;letter-spacing:-.035em;color:#1C2B2A;max-width:720px;text-wrap:balance">
+        <span data-fx="mask" style="display:block;overflow:hidden;padding-bottom:.06em"><span style="display:block">Odontologia especializada</span></span>
+        <span data-fx="mask" data-delay="110" style="display:block;overflow:hidden;padding-bottom:.06em"><span style="display:block">para cuidar até de quem</span></span>
+        <span data-fx="mask" data-delay="220" style="display:block;overflow:hidden;padding-bottom:.06em"><span style="display:block;color:#579D95">tem medo de dentista.</span></span>
+      </h1>
+    </sc-if>
+    <sc-if value="{{ heroB }}" hint-placeholder-val="{{ false }}">
+      <h1 style="margin:0;font:500 clamp(2.05rem,3.7vw,4.05rem)/1.06 'Manrope',sans-serif;letter-spacing:-.035em;color:#1C2B2A;max-width:720px;text-wrap:balance">
+        <span data-fx="mask" style="display:block;overflow:hidden;padding-bottom:.06em"><span style="display:block">Um hospital odontológico</span></span>
+        <span data-fx="mask" data-delay="110" style="display:block;overflow:hidden;padding-bottom:.06em"><span style="display:block">preparado para quem</span></span>
+        <span data-fx="mask" data-delay="220" style="display:block;overflow:hidden;padding-bottom:.06em"><span style="display:block;color:#579D95">tem medo de dentista.</span></span>
+      </h1>
+    </sc-if>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;align-items:stretch;gap:clamp(32px,4vw,64px) 0">
+    <div style="flex:1 1 400px;max-width:620px;padding:0 clamp(24px,4vw,64px) clamp(40px,6vh,72px) max(clamp(20px,4vw,64px),calc((100vw - 1440px) / 2 + 64px));display:flex;flex-direction:column;justify-content:space-between;gap:48px">
+      <div data-fx="fade" data-delay="380" style="display:flex;flex-direction:column;gap:32px">
+        <p style="margin:0;font:400 clamp(1.1rem,1.35vw,1.3rem)/1.6 'Instrument Sans',sans-serif;color:#3A4B49;max-width:36ch;text-wrap:pretty">Estrutura hospitalar, equipe especializada e possibilidades de sedação para tratamentos realizados com mais tranquilidade, cuidado e segurança.</p>
+        <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap">
+          <a href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-event="click_whatsapp_hero" style="display:inline-flex;align-items:center;gap:14px;height:56px;padding:0 28px;border-radius:999px;background:#163D3A;color:#FFFFFF;font:600 15px/1 'Instrument Sans',sans-serif;transition:background .3s" style-hover="background:#2E6E67;color:#FFFFFF">Agende sua avaliação <span aria-hidden="true">→</span></a>
+          <a href="#o-hoe" style="display:inline-flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid rgba(22,61,58,.3);color:#163D3A;font:600 15px/1 'Instrument Sans',sans-serif" style-hover="border-color:#163D3A;color:#163D3A">Conheça o HOE</a>
+        </div>
+        <p style="margin:0;display:flex;align-items:center;gap:10px;font:500 13px/1.4 'Instrument Sans',sans-serif;color:#4A5C5A"><span style="width:6px;height:6px;border-radius:50%;background:#579D95"></span>Atendimento exclusivamente particular.</p>
+      </div>
+      <ul data-fx="fade" data-delay="520" aria-label="Diferenciais" style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid rgba(22,61,58,.14)">
+        <li style="display:flex;align-items:center;gap:12px;padding:18px 12px 18px 0;border-bottom:1px solid rgba(22,61,58,.14);font:600 14px/1.3 'Instrument Sans',sans-serif;color:#1C2B2A"><span style="flex:0 0 12px;height:12px;border-radius:12px 0 0 0;background:#579D95"></span>2 unidades em Salvador</li>
+        <li style="display:flex;align-items:center;gap:12px;padding:18px 0 18px 16px;border-bottom:1px solid rgba(22,61,58,.14);border-left:1px solid rgba(22,61,58,.14);font:600 14px/1.3 'Instrument Sans',sans-serif;color:#1C2B2A"><span style="flex:0 0 12px;height:12px;border-radius:0 12px 0 0;background:#4E87C1"></span>Centro cirúrgico</li>
+        <li style="display:flex;align-items:center;gap:12px;padding:18px 12px 18px 0;font:600 14px/1.3 'Instrument Sans',sans-serif;color:#1C2B2A"><span style="flex:0 0 12px;height:12px;border-radius:0 0 0 12px;background:#A9BB2E"></span>Equipe especializada</li>
+        <li style="display:flex;align-items:center;gap:12px;padding:18px 0 18px 16px;border-left:1px solid rgba(22,61,58,.14);font:600 14px/1.3 'Instrument Sans',sans-serif;color:#1C2B2A"><span style="flex:0 0 12px;height:12px;border-radius:0 0 12px 0;background:#A8006F"></span>Possibilidades de sedação</li>
+      </ul>
+    </div>
+    <div data-hero-media="" style="flex:1 1 clamp(520px,48vw,780px);position:relative;aspect-ratio:16/9;margin-top:clamp(-96px,-5vw,-40px);margin-left:auto;overflow:hidden;border-top-left-radius:clamp(72px,10vw,180px);background:#E3ECEA">
+      <div data-fx="scale" style="position:absolute;inset:0">
+        <iframe title="Vídeo de apresentação do HOE" src="https://www.youtube.com/embed/puS0RhQbres?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=puS0RhQbres&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 01 REPOSICIONAMENTO -->
+<section id="o-hoe" data-screen-label="01 O HOE" style="position:relative;background:#FFFFFF;padding:clamp(120px,16vw,240px) 0 clamp(110px,14vw,200px);overflow:hidden">
+  <div aria-hidden="true" style="position:absolute;right:-18vw;top:-22vw;width:56vw;height:56vw;border:1px solid rgba(87,157,149,.22);border-radius:50%"></div>
+  <div aria-hidden="true" style="position:absolute;right:-12vw;top:-16vw;width:44vw;height:44vw;border:1px solid rgba(87,157,149,.14);border-radius:50%"></div>
+  <div style="position:relative;max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67;margin-bottom:clamp(36px,5vw,64px)"><span style="width:28px;height:1px;background:currentColor"></span><span>O HOE</span></div>
+    <h2 data-fx="rise" style="margin:0;font:400 clamp(2.1rem,4.6vw,5rem)/1.06 'Manrope',sans-serif;letter-spacing:-.04em;color:#1C2B2A;max-width:17ch;text-wrap:balance">Mais estrutura para cuidar de quem precisa de <span style="color:#579D95">mais segurança.</span></h2>
+    <div style="display:flex;flex-wrap:wrap;gap:40px clamp(40px,6vw,96px);margin-top:clamp(56px,8vw,120px);padding-left:clamp(0px,calc((100% - 760px) * .55),540px)">
+      <p data-fx="fade" data-delay="100" style="flex:1 1 300px;margin:0;font:400 clamp(1.1rem,1.35vw,1.3rem)/1.6 'Instrument Sans',sans-serif;color:#3A4B49;text-wrap:pretty">O HOE reúne especialistas, recursos, planejamento e estrutura para realizar tratamentos odontológicos dentro de uma proposta de cuidado mais completa.</p>
+      <p data-fx="fade" data-delay="220" style="flex:1 1 260px;margin:0;font:400 15px/1.65 'Instrument Sans',sans-serif;color:#4A5C5A;text-wrap:pretty">O Hospital de Odontologia Especializada é um hospital odontológico em Salvador, Bahia, com unidades na Pituba e no Shopping Paralela. Conta com centro cirúrgico, equipe de diferentes especialidades e possibilidades de sedação.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 MANIFESTO -->
+<section data-screen-label="02 Manifesto" style="background:#EFF4F3;padding:clamp(120px,15vw,220px) 0 clamp(96px,12vw,170px)">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div style="display:flex;justify-content:center;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67;margin-bottom:clamp(40px,5vw,72px)"><span style="width:28px;height:1px;background:currentColor"></span><span>Manifesto</span></div>
+    <h2 data-scroll="words" style="margin:0 auto;max-width:1180px;text-align:center;font:400 clamp(2rem,4.4vw,4.75rem)/1.12 'Manrope',sans-serif;letter-spacing:-.035em;color:#163D3A;text-wrap:balance">
+      <span style="display:block"><span data-w="">Você</span> <span data-w="">não</span> <span data-w="">precisa</span> <span data-w="">gostar</span> <span data-w="">de</span> <span data-w="">ir</span> <span data-w="">ao</span> <span data-w="">dentista.</span></span>
+      <span style="display:block;color:#579D95"><span data-w="">Precisa</span> <span data-w="">sentir</span> <span data-w="">que</span> <span data-w="">está</span> <span data-w="">no</span> <span data-w="">lugar</span> <span data-w="">certo.</span></span>
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));margin-top:clamp(80px,11vw,160px);border-top:1px solid rgba(22,61,58,.16)">
+      <div data-fx="fade" style="padding:36px clamp(20px,3vw,48px) 8px 0;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;border-radius:50%;background:#4E87C1"></span><h3 style="margin:0;font:600 13px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#163D3A">Segurança</h3></div>
+        <p style="margin:0;font:400 clamp(1.15rem,1.5vw,1.4rem)/1.45 'Manrope',sans-serif;letter-spacing:-.01em;color:#1C2B2A;max-width:26ch">Estrutura preparada para procedimentos odontológicos que exigem mais cuidado.</p>
+      </div>
+      <div data-fx="fade" data-delay="140" style="padding:36px clamp(20px,3vw,48px) 8px;border-left:1px solid rgba(22,61,58,.16);display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;border-radius:50%;background:#579D95"></span><h3 style="margin:0;font:600 13px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#163D3A">Especialização</h3></div>
+        <p style="margin:0;font:400 clamp(1.15rem,1.5vw,1.4rem)/1.45 'Manrope',sans-serif;letter-spacing:-.01em;color:#1C2B2A;max-width:26ch">Profissionais de diferentes áreas trabalhando de forma integrada.</p>
+      </div>
+      <div data-fx="fade" data-delay="280" style="padding:36px 0 8px clamp(20px,3vw,48px);border-left:1px solid rgba(22,61,58,.16);display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;border-radius:50%;background:#A8006F"></span><h3 style="margin:0;font:600 13px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#163D3A">Acolhimento</h3></div>
+        <p style="margin:0;font:400 clamp(1.15rem,1.5vw,1.4rem)/1.45 'Manrope',sans-serif;letter-spacing:-.01em;color:#1C2B2A;max-width:26ch">Atendimento pensado também para pessoas com ansiedade ou medo de dentista.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 + 04 ODONTOFOBIA + SEDAÇÃO -->
+<section id="medo-de-dentista" data-scroll="dark" data-screen-label="03 Medo de dentista" style="position:relative;background:#EFF4F3;color:#F2F6F5">
+  <div data-layer="" aria-hidden="true" style="position:absolute;inset:0;background:#163D3A;overflow:hidden">
+    <div style="position:absolute;left:-20vw;top:30%;width:60vw;height:60vw;border:1px solid rgba(255,255,255,.07);border-radius:50%"></div>
+    <div style="position:absolute;right:-24vw;bottom:-10vw;width:70vw;height:70vw;border:1px solid rgba(255,255,255,.06);border-radius:50%"></div>
+  </div>
+  <div style="position:relative;max-width:1440px;margin:0 auto;padding:clamp(120px,15vw,220px) clamp(32px,6vw,96px) 0">
+    <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8;margin-bottom:clamp(36px,5vw,64px)"><span style="width:28px;height:1px;background:currentColor"></span><span>Medo de dentista</span></div>
+    <h2 data-fx="rise" style="margin:0;max-width:20ch;font:400 clamp(2.1rem,4.6vw,5rem)/1.06 'Manrope',sans-serif;letter-spacing:-.04em;color:#F2F6F5;text-wrap:balance">Se o medo de dentista faz você adiar seu tratamento, <span style="color:#9FD0C8">comece por conversar.</span></h2>
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(48px,6vw,96px);margin-top:clamp(64px,8vw,120px);align-items:flex-start">
+      <div data-fx="clip" style="flex:1.15 1 420px;height:clamp(440px,52vw,760px);border-bottom-right-radius:clamp(80px,12vw,220px);overflow:hidden">
+        <div role="img" aria-label="Paciente conversando com profissional do HOE" style="position:relative;width:100%;height:100%;background-color:#1D4743;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px)">
+          <span style="position:absolute;top:22px;left:22px;width:12px;height:12px;border-top:1px solid #9FD0C8;border-left:1px solid #9FD0C8"></span>
+          <div style="position:absolute;left:24px;bottom:22px;right:24px;display:flex;flex-direction:column;gap:6px">
+            <span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Imagem — paciente conversando com profissional]</span>
+            <sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#8FB0AB">assets/images/odontofobia-conversa.webp</span></sc-if>
+          </div>
+        </div>
+      </div>
+      <div style="flex:1 1 360px;display:flex;flex-direction:column;gap:36px;padding-top:8px">
+        <p data-fx="fade" style="margin:0;font:400 clamp(1.15rem,1.45vw,1.4rem)/1.55 'Instrument Sans',sans-serif;color:#F2F6F5;text-wrap:pretty">O HOE possui estrutura e equipe preparada para atender pessoas que sentem ansiedade, insegurança ou medo de tratamento odontológico.</p>
+        <div data-fx="fade" data-delay="100" style="display:flex;flex-direction:column">
+          <span style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8;padding-bottom:18px">Talvez você se reconheça aqui</span>
+          <ul style="list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.16)">
+            <li style="padding:18px 0;border-bottom:1px solid rgba(255,255,255,.16);font:400 16px/1.5 'Instrument Sans',sans-serif;color:#D7E5E2">Sente ansiedade só de pensar em uma consulta.</li>
+            <li style="padding:18px 0;border-bottom:1px solid rgba(255,255,255,.16);font:400 16px/1.5 'Instrument Sans',sans-serif;color:#D7E5E2">Teve experiências negativas em tratamentos anteriores.</li>
+            <li style="padding:18px 0;border-bottom:1px solid rgba(255,255,255,.16);font:400 16px/1.5 'Instrument Sans',sans-serif;color:#D7E5E2">Vem adiando o tratamento há meses, ou anos.</li>
+            <li style="padding:18px 0;border-bottom:1px solid rgba(255,255,255,.16);font:400 16px/1.5 'Instrument Sans',sans-serif;color:#D7E5E2">Sente insegurança por não saber o que vai acontecer.</li>
+          </ul>
+        </div>
+        <p data-fx="fade" data-delay="160" style="margin:0;font:400 16px/1.65 'Instrument Sans',sans-serif;color:#B9CFCB;text-wrap:pretty">Odontofobia é o nome dado ao medo intenso de dentista. É mais comum do que parece e não é motivo de constrangimento. No HOE, cada pessoa é ouvida antes de qualquer procedimento: na avaliação individual, a equipe entende seu histórico e seus receios e apresenta as possibilidades de acolhimento e de sedação que podem fazer sentido para o seu caso.</p>
+        <div data-fx="fade" data-delay="220" style="display:flex;flex-wrap:wrap;gap:16px;align-items:center">
+          <a href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20meu%20medo%20de%20dentista." target="_blank" rel="noopener" data-event="click_whatsapp_odontofobia" style="display:inline-flex;align-items:center;gap:14px;min-height:56px;padding:14px 28px;border-radius:999px;background:#F2F6F5;color:#163D3A;font:600 15px/1.3 'Instrument Sans',sans-serif;transition:background .3s" style-hover="background:#FFFFFF;color:#163D3A">Quero conversar sobre meu medo de dentista <span aria-hidden="true">→</span></a>
+        </div>
+        <div data-fx="fade" data-delay="280" style="display:flex;gap:18px;align-items:center;padding:14px;border:1px solid rgba(255,255,255,.16);border-radius:16px">
+          <div role="img" aria-label="Vídeo de depoimento autorizado" style="flex:0 0 132px;height:88px;border-radius:10px;position:relative;background-color:#1D4743;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 10px);display:flex;align-items:center;justify-content:center">
+            <span style="width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center"><span style="width:0;height:0;border-left:9px solid #F2F6F5;border-top:6px solid transparent;border-bottom:6px solid transparent;margin-left:3px"></span></span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Vídeo — depoimento autorizado]</span>
+            <span style="font:400 14px/1.45 'Instrument Sans',sans-serif;color:#B9CFCB">Um paciente conta como foi voltar ao dentista depois de anos.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="sedacao" data-screen-label="04 Sedação" style="margin-top:clamp(120px,15vw,220px);padding-top:clamp(56px,6vw,88px);border-top:1px solid rgba(255,255,255,.16)">
+      <div style="display:flex;flex-wrap:wrap;gap:40px clamp(48px,6vw,96px);justify-content:space-between">
+        <div style="flex:1 1 420px;max-width:680px">
+          <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8;margin-bottom:32px"><span style="width:28px;height:1px;background:currentColor"></span><span>Sedação e tranquilidade</span></div>
+          <h2 data-fx="rise" style="margin:0;font:400 clamp(2rem,3.8vw,4rem)/1.08 'Manrope',sans-serif;letter-spacing:-.035em;color:#F2F6F5;text-wrap:balance">Tranquilidade também faz parte do planejamento.</h2>
+        </div>
+        <div data-fx="fade" data-delay="120" style="flex:1 1 340px;max-width:520px;display:flex;flex-direction:column;gap:28px;padding-top:clamp(0px,4vw,60px)">
+          <p style="margin:0;font:400 clamp(1.1rem,1.3vw,1.25rem)/1.6 'Instrument Sans',sans-serif;color:#F2F6F5">Existem diferentes possibilidades de sedação que podem ser consideradas conforme avaliação.</p>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,.16)">
+            <li style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.16);font:500 16px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5">Sedação com óxido nitroso<span style="flex:none;padding:5px 10px;border:1px solid rgba(234,197,5,.6);border-radius:999px;font:600 10px/1 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#EAC505">A confirmar</span></li>
+            <li style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.16);font:500 16px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5">Sedação consciente<span style="flex:none;padding:5px 10px;border:1px solid rgba(234,197,5,.6);border-radius:999px;font:600 10px/1 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#EAC505">A confirmar</span></li>
+            <li style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.16);font:500 16px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5">Sedação médica com anestesiologista<span style="flex:none;padding:5px 10px;border:1px solid rgba(234,197,5,.6);border-radius:999px;font:600 10px/1 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#EAC505">A confirmar</span></li>
+          </ul>
+        </div>
+      </div>
+      <ol style="list-style:none;margin:clamp(72px,9vw,128px) 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:40px 24px">
+        <li data-fx="fade" style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;align-items:center;gap:10px"><span style="width:9px;height:9px;border-radius:50%;background:#9FD0C8"></span><span style="flex:1;height:1px;background:rgba(255,255,255,.2)"></span></div>
+          <span style="font:300 clamp(2.4rem,3.4vw,3.4rem)/1 'Manrope',sans-serif;letter-spacing:-.04em;color:#9FD0C8">01</span>
+          <h3 style="margin:0;font:600 13px/1.35 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#F2F6F5">Conversa</h3>
+          <p style="margin:0;font:400 15px/1.55 'Instrument Sans',sans-serif;color:#B9CFCB">Você conta sua história e seus receios, sem pressa.</p>
+        </li>
+        <li data-fx="fade" data-delay="110" style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;align-items:center;gap:10px"><span style="width:9px;height:9px;border-radius:50%;background:#9FD0C8"></span><span style="flex:1;height:1px;background:rgba(255,255,255,.2)"></span></div>
+          <span style="font:300 clamp(2.4rem,3.4vw,3.4rem)/1 'Manrope',sans-serif;letter-spacing:-.04em;color:#9FD0C8">02</span>
+          <h3 style="margin:0;font:600 13px/1.35 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#F2F6F5">Avaliação</h3>
+          <p style="margin:0;font:400 15px/1.55 'Instrument Sans',sans-serif;color:#B9CFCB">A equipe avalia sua saúde bucal e seu histórico de saúde.</p>
+        </li>
+        <li data-fx="fade" data-delay="220" style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;align-items:center;gap:10px"><span style="width:9px;height:9px;border-radius:50%;background:#9FD0C8"></span><span style="flex:1;height:1px;background:rgba(255,255,255,.2)"></span></div>
+          <span style="font:300 clamp(2.4rem,3.4vw,3.4rem)/1 'Manrope',sans-serif;letter-spacing:-.04em;color:#9FD0C8">03</span>
+          <h3 style="margin:0;font:600 13px/1.35 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#F2F6F5">Planejamento</h3>
+          <p style="margin:0;font:400 15px/1.55 'Instrument Sans',sans-serif;color:#B9CFCB">O caso é estudado de forma individual.</p>
+        </li>
+        <li data-fx="fade" data-delay="330" style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;align-items:center;gap:10px"><span style="width:9px;height:9px;border-radius:50%;background:#9FD0C8"></span><span style="flex:1;height:1px;background:rgba(255,255,255,.2)"></span></div>
+          <span style="font:300 clamp(2.4rem,3.4vw,3.4rem)/1 'Manrope',sans-serif;letter-spacing:-.04em;color:#9FD0C8">04</span>
+          <h3 style="margin:0;font:600 13px/1.35 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#F2F6F5">Definição da melhor abordagem</h3>
+          <p style="margin:0;font:400 15px/1.55 'Instrument Sans',sans-serif;color:#B9CFCB">Inclusive se a sedação é indicada, e qual.</p>
+        </li>
+        <li data-fx="fade" data-delay="440" style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;align-items:center;gap:10px"><span style="width:9px;height:9px;border-radius:50%;background:#EAC505"></span><span style="flex:1;height:1px;background:rgba(255,255,255,.0)"></span></div>
+          <span style="font:300 clamp(2.4rem,3.4vw,3.4rem)/1 'Manrope',sans-serif;letter-spacing:-.04em;color:#9FD0C8">05</span>
+          <h3 style="margin:0;font:600 13px/1.35 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#F2F6F5">Tratamento</h3>
+          <p style="margin:0;font:400 15px/1.55 'Instrument Sans',sans-serif;color:#B9CFCB">Realizado com a estrutura adequada ao seu caso.</p>
+        </li>
+      </ol>
+      <p style="margin:clamp(56px,6vw,88px) 0 0;padding-bottom:clamp(110px,14vw,200px);max-width:62ch;font:400 14px/1.6 'Instrument Sans',sans-serif;color:#9DB8B3">A sedação não é indicada da mesma forma para todas as pessoas. A definição depende de avaliação individual, do histórico de saúde e do procedimento planejado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VIRADA -->
+<section aria-label="O que você recupera" data-screen-label="Virada" style="position:relative;min-height:100svh;display:flex;align-items:center;background:#FFFFFF;overflow:hidden;padding:clamp(120px,14vw,200px) 0">
+  <div aria-hidden="true" style="position:absolute;left:50%;top:50%;width:min(130vw,1800px);aspect-ratio:1;transform:translate(-30%,-50%);border:1px solid rgba(87,157,149,.16);border-radius:50%"></div>
+  <div style="position:relative;width:100%;max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <p style="margin:0;font:400 clamp(2.6rem,7.4vw,8.6rem)/1 'Manrope',sans-serif;letter-spacing:-.05em;color:#1C2B2A">
+      <span data-fx="mask" style="display:block;overflow:hidden;padding-bottom:.08em"><span style="display:block">O tratamento é</span></span>
+      <span data-fx="mask" data-delay="100" style="display:block;overflow:hidden;padding-bottom:.08em"><span style="display:block">odontológico.</span></span>
+      <span data-fx="mask" data-delay="260" style="display:block;overflow:hidden;padding-bottom:.08em;margin-top:.18em"><span style="display:block;color:#579D95">O que você recupera</span></span>
+      <span data-fx="mask" data-delay="360" style="display:block;overflow:hidden;padding-bottom:.08em"><span style="display:block;color:#579D95">vai muito além do sorriso.</span></span>
+    </p>
+    <ul data-fx="fade" data-delay="600" style="list-style:none;margin:clamp(56px,7vw,104px) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:16px 40px;font:600 13px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#163D3A">
+      <li style="display:flex;align-items:center;gap:10px"><span style="width:10px;height:10px;border-radius:10px 0 0 0;background:#579D95"></span>Mastigar</li>
+      <li style="display:flex;align-items:center;gap:10px"><span style="width:10px;height:10px;border-radius:0 10px 0 0;background:#4E87C1"></span>Falar</li>
+      <li style="display:flex;align-items:center;gap:10px"><span style="width:10px;height:10px;border-radius:0 0 0 10px;background:#A9BB2E"></span>Sorrir</li>
+      <li style="display:flex;align-items:center;gap:10px"><span style="width:10px;height:10px;border-radius:0 0 10px 0;background:#A8006F"></span>Conviver</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 05 TRATAMENTOS -->
+<section id="tratamentos" data-screen-label="05 Tratamentos" style="background:#F7F9F8;padding:clamp(110px,14vw,200px) 0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px 64px;margin-bottom:clamp(56px,7vw,104px)">
+      <div style="flex:1 1 560px;max-width:900px">
+        <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67;margin-bottom:32px"><span style="width:28px;height:1px;background:currentColor"></span><span>Tratamentos</span></div>
+        <h2 data-fx="rise" style="margin:0;font:400 clamp(2rem,4vw,4.25rem)/1.06 'Manrope',sans-serif;letter-spacing:-.04em;color:#1C2B2A;text-wrap:balance">Tratamentos planejados para devolver função, segurança e confiança.</h2>
+      </div>
+      <p data-fx="fade" data-delay="120" style="flex:0 1 320px;margin:0;font:400 16px/1.6 'Instrument Sans',sans-serif;color:#4A5C5A">Cada tratamento começa por uma avaliação individual e um planejamento feito para o seu caso.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(40px,4vw,64px) clamp(20px,2.4vw,40px)">
+      <div style="flex:1 1 480px;display:flex;flex-direction:column;gap:clamp(40px,4vw,64px)">
+        <article data-fx="rise" style="display:flex;flex-direction:column;gap:22px">
+          <div style="height:clamp(340px,36vw,560px);border-top-left-radius:clamp(64px,8vw,140px);border-radius:clamp(64px,8vw,140px) 6px 6px 6px;overflow:hidden">
+            <div role="img" aria-label="Implantes dentários no HOE" style="position:relative;width:100%;height:100%;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 12px)"><div style="position:absolute;left:22px;bottom:20px;right:22px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67">[Imagem — implantes dentários]</span><sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#5E716F">assets/images/tratamento-implantes.webp</span></sc-if></div></div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 32px">
+            <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:10px">
+              <span style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.14em;color:#579D95">01</span>
+              <h3 style="margin:0;font:500 clamp(1.6rem,2.4vw,2.4rem)/1.1 'Manrope',sans-serif;letter-spacing:-.03em;color:#1C2B2A">Implantes dentários</h3>
+              <p style="margin:0;max-width:44ch;font:400 16px/1.6 'Instrument Sans',sans-serif;color:#4A5C5A">Reposição de dentes perdidos com planejamento individual, devolvendo estabilidade para mastigar e falar.</p>
+            </div>
+            <a href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-event="click_whatsapp_treatment" style="font:600 14px/1 'Instrument Sans',sans-serif;color:#163D3A;padding-bottom:6px;border-bottom:1px solid rgba(22,61,58,.3)" style-hover="border-color:#163D3A">Avaliar meu caso →</a>
+          </div>
+        </article>
+        <article data-fx="rise" style="display:flex;flex-direction:column;gap:22px">
+          <div style="height:clamp(260px,24vw,380px);border-radius:6px;overflow:hidden">
+            <div role="img" aria-label="Reabilitação oral no HOE" style="position:relative;width:100%;height:100%;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 12px)"><div style="position:absolute;left:22px;bottom:20px;right:22px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67">[Imagem — reabilitação oral]</span><sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#5E716F">assets/images/tratamento-reabilitacao.webp</span></sc-if></div></div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 32px">
+            <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:10px">
+              <span style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.14em;color:#579D95">02</span>
+              <h3 style="margin:0;font:500 clamp(1.6rem,2.4vw,2.4rem)/1.1 'Manrope',sans-serif;letter-spacing:-.03em;color:#1C2B2A">Reabilitação oral</h3>
+              <p style="margin:0;max-width:44ch;font:400 16px/1.6 'Instrument Sans',sans-serif;color:#4A5C5A">Planejamento integrado para recuperar função e estética quando vários dentes, ou toda a arcada, precisam de cuidado.</p>
+            </div>
+            <a href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-event="click_whatsapp_treatment" style="font:600 14px/1 'Instrument Sans',sans-serif;color:#163D3A;padding-bottom:6px;border-bottom:1px solid rgba(22,61,58,.3)" style-hover="border-color:#163D3A">Avaliar meu caso →</a>
+          </div>
+        </article>
+      </div>
+      <div style="flex:1 1 480px;display:flex;flex-direction:column;gap:clamp(40px,4vw,64px);padding-top:clamp(0px,8vw,140px)">
+        <article data-fx="rise" data-delay="120" style="display:flex;flex-direction:column;gap:22px">
+          <div style="height:clamp(300px,30vw,460px);border-radius:6px;overflow:hidden">
+            <div role="img" aria-label="Cirurgias odontológicas em centro cirúrgico" style="position:relative;width:100%;height:100%;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 12px)"><div style="position:absolute;left:22px;bottom:20px;right:22px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67">[Imagem — cirurgias odontológicas]</span><sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#5E716F">assets/images/tratamento-cirurgias.webp</span></sc-if></div></div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 32px">
+            <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:10px">
+              <span style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.14em;color:#579D95">03</span>
+              <h3 style="margin:0;font:500 clamp(1.6rem,2.4vw,2.4rem)/1.1 'Manrope',sans-serif;letter-spacing:-.03em;color:#1C2B2A">Cirurgias odontológicas</h3>
+              <p style="margin:0;max-width:44ch;font:400 16px/1.6 'Instrument Sans',sans-serif;color:#4A5C5A">Procedimentos cirúrgicos realizados em ambiente estruturado, com centro cirúrgico e equipe especializada.</p>
+            </div>
+            <a href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-event="click_whatsapp_treatment" style="font:600 14px/1 'Instrument Sans',sans-serif;color:#163D3A;padding-bottom:6px;border-bottom:1px solid rgba(22,61,58,.3)" style-hover="border-color:#163D3A">Avaliar meu caso →</a>
+          </div>
+        </article>
+        <div style="display:flex;flex-wrap:wrap;gap:40px clamp(20px,2.4vw,40px)">
+          <article data-fx="rise" data-delay="180" style="flex:1.35 1 260px;display:flex;flex-direction:column;gap:18px">
+            <div style="height:clamp(220px,18vw,280px);border-radius:6px;overflow:hidden">
+              <div role="img" aria-label="Prótese protocolo" style="position:relative;width:100%;height:100%;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 12px)"><div style="position:absolute;left:18px;bottom:16px;right:18px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67">[Imagem — prótese protocolo]</span></div></div>
+            </div>
+              <span style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.14em;color:#579D95">04</span>
+            <h3 style="margin:0;font:500 clamp(1.3rem,1.7vw,1.6rem)/1.15 'Manrope',sans-serif;letter-spacing:-.02em;color:#1C2B2A">Prótese protocolo</h3>
+            <p style="margin:0;font:400 15px/1.6 'Instrument Sans',sans-serif;color:#4A5C5A">Prótese fixa sobre implantes para quem perdeu todos os dentes de uma arcada.</p>
+            <a href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-event="click_whatsapp_treatment" style="align-self:flex-start;font:600 14px/1 'Instrument Sans',sans-serif;color:#163D3A;padding-bottom:6px;border-bottom:1px solid rgba(22,61,58,.3)" style-hover="border-color:#163D3A">Avaliar meu caso →</a>
+          </article>
+          <article data-fx="rise" data-delay="260" style="flex:1 1 220px;display:flex;flex-direction:column;gap:18px">
+            <div style="height:clamp(220px,18vw,280px);border-radius:6px;overflow:hidden">
+              <div role="img" aria-label="Próteses dentárias" style="position:relative;width:100%;height:100%;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 12px)"><div style="position:absolute;left:18px;bottom:16px;right:18px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67">[Imagem — próteses]</span></div></div>
+            </div>
+              <span style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.14em;color:#579D95">05</span>
+            <h3 style="margin:0;font:500 clamp(1.3rem,1.7vw,1.6rem)/1.15 'Manrope',sans-serif;letter-spacing:-.02em;color:#1C2B2A">Próteses</h3>
+            <p style="margin:0;font:400 15px/1.6 'Instrument Sans',sans-serif;color:#4A5C5A">Soluções fixas ou removíveis, indicadas conforme a avaliação de cada caso.</p>
+            <a href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-event="click_whatsapp_treatment" style="align-self:flex-start;font:600 14px/1 'Instrument Sans',sans-serif;color:#163D3A;padding-bottom:6px;border-bottom:1px solid rgba(22,61,58,.3)" style-hover="border-color:#163D3A">Avaliar meu caso →</a>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));margin-top:clamp(64px,7vw,104px);border-top:1px solid rgba(22,61,58,.16)">
+      <article data-fx="fade" style="display:flex;gap:20px;padding:28px 28px 28px 0;align-items:flex-start">
+        <div role="img" aria-label="Implantes zigomáticos" style="flex:0 0 96px;height:96px;border-radius:0 0 0 40px;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 10px);display:flex;align-items:flex-end;padding:8px"><span style="font:600 8px/1.3 'Instrument Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#2E6E67">[Imagem]</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+              <span style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.14em;color:#579D95">06</span>
+          <h3 style="margin:0;font:500 1.25rem/1.2 'Manrope',sans-serif;letter-spacing:-.02em;color:#1C2B2A">Implantes zigomáticos</h3>
+          <p style="margin:0;font:400 14px/1.55 'Instrument Sans',sans-serif;color:#4A5C5A">Alternativa para casos com perda óssea severa no maxilar superior, avaliada caso a caso.</p>
+        </div>
+      </article>
+      <article data-fx="fade" data-delay="100" style="display:flex;gap:20px;padding:28px;border-left:1px solid rgba(22,61,58,.16);align-items:flex-start">
+        <div role="img" aria-label="Sedação odontológica" style="flex:0 0 96px;height:96px;border-radius:0 0 0 40px;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 10px);display:flex;align-items:flex-end;padding:8px"><span style="font:600 8px/1.3 'Instrument Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#2E6E67">[Imagem]</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+              <span style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.14em;color:#579D95">07</span>
+          <h3 style="margin:0;font:500 1.25rem/1.2 'Manrope',sans-serif;letter-spacing:-.02em;color:#1C2B2A">Sedação odontológica</h3>
+          <p style="margin:0;font:400 14px/1.55 'Instrument Sans',sans-serif;color:#4A5C5A">Possibilidades de sedação consideradas conforme avaliação, para mais tranquilidade.</p>
+        </div>
+      </article>
+      <article data-fx="fade" data-delay="200" style="display:flex;gap:20px;padding:28px 0 28px 28px;border-left:1px solid rgba(22,61,58,.16);align-items:flex-start">
+        <div role="img" aria-label="Lentes de contato dentais" style="flex:0 0 72px;height:72px;border-radius:0 0 0 30px;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 10px);display:flex;align-items:flex-end;padding:7px"><span style="font:600 8px/1.3 'Instrument Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#2E6E67">[Imagem]</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+              <span style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.14em;color:#579D95">08</span>
+          <h3 style="margin:0;font:500 1.25rem/1.2 'Manrope',sans-serif;letter-spacing:-.02em;color:#1C2B2A">Lentes</h3>
+          <p style="margin:0;font:400 14px/1.55 'Instrument Sans',sans-serif;color:#4A5C5A">Lentes de contato dentais, indicadas após avaliação.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 06 IMPLANTES E REABILITAÇÃO -->
+<section id="reabilitacao" data-screen-label="06 Implantes e reabilitação" style="background:#FFFFFF;padding:clamp(120px,15vw,220px) 0;overflow:hidden">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67;margin-bottom:clamp(40px,5vw,72px)"><span style="width:28px;height:1px;background:currentColor"></span><span>Implantes e reabilitação</span></div>
+    <h2 style="margin:0;font:400 clamp(2.3rem,5.6vw,6.2rem)/1.02 'Manrope',sans-serif;letter-spacing:-.045em;color:#1C2B2A">
+      <span data-fx="mask" style="display:block;overflow:hidden;padding-bottom:.06em"><span style="display:block">Voltar a mastigar.</span></span>
+      <span data-fx="mask" data-delay="120" style="display:block;overflow:hidden;padding-bottom:.06em;padding-left:clamp(0px,8vw,160px)"><span style="display:block">Voltar a sorrir.</span></span>
+      <span data-fx="mask" data-delay="240" style="display:block;overflow:hidden;padding-bottom:.06em;padding-left:clamp(0px,16vw,320px)"><span style="display:block;color:#579D95">Voltar a viver sem pensar nos dentes.</span></span>
+    </h2>
+    <div style="display:flex;flex-wrap:wrap;gap:48px clamp(48px,6vw,96px);margin-top:clamp(72px,9vw,140px);align-items:flex-end">
+      <div data-scroll="parallax" style="flex:1.6 1 520px;height:clamp(360px,42vw,640px);overflow:hidden;border-radius:6px 6px 6px clamp(80px,11vw,200px);position:relative">
+        <div data-inner="" role="img" aria-label="Paciente real após tratamento, com autorização" style="position:absolute;left:0;right:0;top:-48px;bottom:-48px;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 12px)">
+          <div style="position:absolute;left:clamp(40px,6vw,110px);bottom:76px;right:24px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67">[Imagem — paciente real após tratamento]</span><span style="font:500 12px/1.4 'Instrument Sans',sans-serif;color:#5E716F">Somente com autorização. Sem antes/depois.</span><sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#5E716F">assets/images/reabilitacao-paciente.webp</span></sc-if></div>
+        </div>
+      </div>
+      <div style="flex:1 1 340px;display:flex;flex-direction:column;gap:32px">
+        <p data-fx="fade" style="margin:0;font:400 clamp(1.1rem,1.35vw,1.3rem)/1.6 'Instrument Sans',sans-serif;color:#3A4B49;text-wrap:pretty">Perder dentes muda a forma de comer, de falar e de se relacionar. A reabilitação no HOE parte de um planejamento individualizado para reconstruir a função, e não apenas a aparência.</p>
+        <ul data-fx="fade" data-delay="120" style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px">
+          <li style="padding:10px 16px;border:1px solid rgba(22,61,58,.2);border-radius:999px;font:500 14px/1 'Instrument Sans',sans-serif;color:#163D3A">Implantes</li>
+          <li style="padding:10px 16px;border:1px solid rgba(22,61,58,.2);border-radius:999px;font:500 14px/1 'Instrument Sans',sans-serif;color:#163D3A">Reabilitação oral</li>
+          <li style="padding:10px 16px;border:1px solid rgba(22,61,58,.2);border-radius:999px;font:500 14px/1 'Instrument Sans',sans-serif;color:#163D3A">Próteses</li>
+          <li style="padding:10px 16px;border:1px solid rgba(22,61,58,.2);border-radius:999px;font:500 14px/1 'Instrument Sans',sans-serif;color:#163D3A">Prótese protocolo</li>
+          <li style="padding:10px 16px;border:1px solid rgba(22,61,58,.2);border-radius:999px;font:500 14px/1 'Instrument Sans',sans-serif;color:#163D3A">Reconstrução funcional</li>
+          <li style="padding:10px 16px;border:1px solid rgba(22,61,58,.2);border-radius:999px;font:500 14px/1 'Instrument Sans',sans-serif;color:#163D3A">Planejamento individualizado</li>
+        </ul>
+        <a data-fx="fade" data-delay="200" href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-event="click_whatsapp_treatment" style="align-self:flex-start;display:inline-flex;align-items:center;gap:14px;height:54px;padding:0 26px;border-radius:999px;background:#163D3A;color:#FFFFFF;font:600 15px/1 'Instrument Sans',sans-serif" style-hover="background:#2E6E67;color:#FFFFFF">Conversar sobre reabilitação <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 CASOS COMPLEXOS -->
+<section id="casos-complexos" data-screen-label="07 Casos complexos" style="background:#FFFFFF;padding:0 0 clamp(120px,15vw,220px)">
+  <div style="max-width:1440px;margin:0 auto;padding:clamp(80px,9vw,128px) clamp(20px,4vw,64px) 0;border-top:1px solid rgba(22,61,58,.12)">
+    <div style="display:flex;flex-wrap:wrap;gap:48px clamp(48px,7vw,120px)">
+      <div style="flex:1 1 380px;max-width:560px;display:flex;flex-direction:column;gap:32px">
+        <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67"><span style="width:28px;height:1px;background:currentColor"></span><span>Casos complexos</span></div>
+        <h2 data-fx="rise" style="margin:0;font:400 clamp(2rem,3.8vw,4rem)/1.06 'Manrope',sans-serif;letter-spacing:-.04em;color:#1C2B2A;text-wrap:balance">Quando o caso exige mais cuidado, estrutura importa.</h2>
+        <p data-fx="fade" data-delay="120" style="margin:0;font:400 16px/1.65 'Instrument Sans',sans-serif;color:#4A5C5A;max-width:42ch">Alguns tratamentos pedem mais tempo de planejamento, mais especialistas envolvidos e um ambiente preparado. O HOE foi estruturado para receber esses casos.</p>
+      </div>
+      <ol style="flex:1.5 1 480px;list-style:none;margin:0;padding:0;border-top:1px solid rgba(22,61,58,.16)">
+        <li data-fx="fade" style="display:flex;flex-wrap:wrap;gap:8px 24px;padding:26px 12px;border-bottom:1px solid rgba(22,61,58,.16);transition:background .3s" style-hover="background:#F7F9F8">
+          <span style="flex:0 0 56px;font:600 12px/1.6 'Instrument Sans',sans-serif;letter-spacing:.12em;color:#4E87C1">A.01</span>
+          <h3 style="flex:1 1 200px;margin:0;font:500 1.3rem/1.3 'Manrope',sans-serif;letter-spacing:-.02em;color:#1C2B2A">Cirurgias</h3>
+          <p style="flex:1.4 1 260px;margin:0;font:400 15px/1.55 'Instrument Sans',sans-serif;color:#4A5C5A">Procedimentos realizados em centro cirúrgico, com equipe preparada para cada intervenção.</p>
+        </li>
+        <li data-fx="fade" data-delay="60" style="display:flex;flex-wrap:wrap;gap:8px 24px;padding:26px 12px;border-bottom:1px solid rgba(22,61,58,.16);transition:background .3s" style-hover="background:#F7F9F8">
+          <span style="flex:0 0 56px;font:600 12px/1.6 'Instrument Sans',sans-serif;letter-spacing:.12em;color:#4E87C1">A.02</span>
+          <h3 style="flex:1 1 200px;margin:0;font:500 1.3rem/1.3 'Manrope',sans-serif;letter-spacing:-.02em;color:#1C2B2A">Reabilitações extensas</h3>
+          <p style="flex:1.4 1 260px;margin:0;font:400 15px/1.55 'Instrument Sans',sans-serif;color:#4A5C5A">Casos que envolvem vários dentes ou arcadas inteiras, planejados por etapas.</p>
+        </li>
+        <li data-fx="fade" data-delay="120" style="display:flex;flex-wrap:wrap;gap:8px 24px;padding:26px 12px;border-bottom:1px solid rgba(22,61,58,.16);transition:background .3s" style-hover="background:#F7F9F8">
+          <span style="flex:0 0 56px;font:600 12px/1.6 'Instrument Sans',sans-serif;letter-spacing:.12em;color:#4E87C1">A.03</span>
+          <h3 style="flex:1 1 200px;margin:0;font:500 1.3rem/1.3 'Manrope',sans-serif;letter-spacing:-.02em;color:#1C2B2A">Implantes zigomáticos</h3>
+          <p style="flex:1.4 1 260px;margin:0;font:400 15px/1.55 'Instrument Sans',sans-serif;color:#4A5C5A">Alternativa avaliada para perda óssea severa no maxilar superior.</p>
+        </li>
+        <li data-fx="fade" data-delay="180" style="display:flex;flex-wrap:wrap;gap:8px 24px;padding:26px 12px;border-bottom:1px solid rgba(22,61,58,.16);transition:background .3s" style-hover="background:#F7F9F8">
+          <span style="flex:0 0 56px;font:600 12px/1.6 'Instrument Sans',sans-serif;letter-spacing:.12em;color:#4E87C1">A.04</span>
+          <h3 style="flex:1 1 200px;margin:0;font:500 1.3rem/1.3 'Manrope',sans-serif;letter-spacing:-.02em;color:#1C2B2A">Necessidade de sedação</h3>
+          <p style="flex:1.4 1 260px;margin:0;font:400 15px/1.55 'Instrument Sans',sans-serif;color:#4A5C5A">Procedimentos que podem ser realizados com sedação, conforme avaliação.</p>
+        </li>
+        <li data-fx="fade" data-delay="240" style="display:flex;flex-wrap:wrap;gap:8px 24px;padding:26px 12px;border-bottom:1px solid rgba(22,61,58,.16);transition:background .3s" style-hover="background:#F7F9F8">
+          <span style="flex:0 0 56px;font:600 12px/1.6 'Instrument Sans',sans-serif;letter-spacing:.12em;color:#4E87C1">A.05</span>
+          <h3 style="flex:1 1 200px;margin:0;font:500 1.3rem/1.3 'Manrope',sans-serif;letter-spacing:-.02em;color:#1C2B2A">Histórico de medo</h3>
+          <p style="flex:1.4 1 260px;margin:0;font:400 15px/1.55 'Instrument Sans',sans-serif;color:#4A5C5A">Pacientes que adiaram o tratamento por ansiedade ou por experiências anteriores.</p>
+        </li>
+        <li data-fx="fade" data-delay="300" style="display:flex;flex-wrap:wrap;gap:8px 24px;padding:26px 12px;border-bottom:1px solid rgba(22,61,58,.16);transition:background .3s" style-hover="background:#F7F9F8">
+          <span style="flex:0 0 56px;font:600 12px/1.6 'Instrument Sans',sans-serif;letter-spacing:.12em;color:#4E87C1">A.06</span>
+          <h3 style="flex:1 1 200px;margin:0;font:500 1.3rem/1.3 'Manrope',sans-serif;letter-spacing:-.02em;color:#1C2B2A">Planejamento multidisciplinar</h3>
+          <p style="flex:1.4 1 260px;margin:0;font:400 15px/1.55 'Instrument Sans',sans-serif;color:#4A5C5A">Especialistas de diferentes áreas analisando o mesmo caso, em conjunto.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 08 ESTRUTURA -->
+<section id="estrutura" data-screen-label="08 Estrutura" style="background:#0F2D2B;color:#F2F6F5;padding:clamp(110px,14vw,200px) 0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px 64px;margin-bottom:clamp(56px,7vw,96px)">
+      <div style="flex:1 1 560px;max-width:960px">
+        <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8;margin-bottom:32px"><span style="width:28px;height:1px;background:currentColor"></span><span>Estrutura</span></div>
+        <h2 data-fx="rise" style="margin:0;font:400 clamp(2rem,4.2vw,4.5rem)/1.06 'Manrope',sans-serif;letter-spacing:-.04em;color:#F2F6F5;text-wrap:balance">Estrutura que muda a experiência de um tratamento odontológico.</h2>
+      </div>
+      <p data-fx="fade" data-delay="120" style="flex:0 1 300px;margin:0;font:400 15px/1.6 'Instrument Sans',sans-serif;color:#B9CFCB">Centro cirúrgico, consultórios, tecnologia e ambientes pensados para cada etapa do atendimento.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.4vw,20px)">
+      <figure data-fx="clip" style="flex:2 1 560px;margin:0;display:flex;flex-direction:column;gap:14px">
+        <div role="img" aria-label="Centro cirúrgico do HOE" style="position:relative;height:clamp(380px,46vw,700px);border-top-left-radius:clamp(80px,12vw,220px);background-color:#1D4743;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px)">
+          <div style="position:absolute;left:28px;bottom:24px;right:24px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Imagem — centro cirúrgico]</span><sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#8FB0AB">assets/images/estrutura-centro-cirurgico.webp</span></sc-if></div>
+        </div>
+        <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5"><span style="font-size:11px;letter-spacing:.14em;color:#9FD0C8">E.01</span>Centro cirúrgico</figcaption>
+      </figure>
+      <div style="flex:1 1 320px;display:flex;flex-direction:column;gap:clamp(12px,1.4vw,20px)">
+        <figure data-fx="clip" data-delay="120" style="margin:0;flex:1;display:flex;flex-direction:column;gap:14px">
+          <div role="img" aria-label="Consultório do HOE" style="position:relative;flex:1;min-height:clamp(220px,20vw,320px);border-radius:4px;background-color:#1D4743;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px)">
+            <div style="position:absolute;left:22px;bottom:20px;right:22px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Imagem — consultório]</span></div>
+          </div>
+          <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5"><span style="font-size:11px;letter-spacing:.14em;color:#9FD0C8">E.02</span>Consultórios</figcaption>
+        </figure>
+        <figure data-fx="clip" data-delay="220" style="margin:0;flex:1;display:flex;flex-direction:column;gap:14px">
+          <div role="img" aria-label="Tecnologia e equipamentos do HOE" style="position:relative;flex:1;min-height:clamp(220px,20vw,320px);border-radius:4px;background-color:#1D4743;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px)">
+            <div style="position:absolute;left:22px;bottom:20px;right:22px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Imagem — tecnologia e equipamentos]</span></div>
+          </div>
+          <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5"><span style="font-size:11px;letter-spacing:.14em;color:#9FD0C8">E.03</span>Tecnologia e equipamentos</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.4vw,20px);margin-top:clamp(24px,3vw,40px)">
+      <figure data-fx="clip" style="flex:1 1 300px;margin:0;display:flex;flex-direction:column;gap:14px">
+        <div role="img" aria-label="Recepção do HOE" style="position:relative;height:clamp(260px,26vw,400px);border-radius:4px;background-color:#1D4743;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px)">
+          <div style="position:absolute;left:22px;bottom:20px;right:22px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Imagem — recepção]</span></div>
+        </div>
+        <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5"><span style="font-size:11px;letter-spacing:.14em;color:#9FD0C8">E.04</span>Recepção</figcaption>
+      </figure>
+      <figure data-fx="clip" data-delay="120" style="flex:1.7 1 440px;margin:0;display:flex;flex-direction:column;gap:14px">
+        <div role="img" aria-label="Outros ambientes do HOE" style="position:relative;height:clamp(260px,26vw,400px);border-radius:4px 4px clamp(60px,8vw,140px) 4px;background-color:#1D4743;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px)">
+          <div style="position:absolute;left:22px;bottom:20px;right:22px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Imagem — outros ambientes]</span></div>
+        </div>
+        <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5"><span style="font-size:11px;letter-spacing:.14em;color:#9FD0C8">E.05</span>Ambientes · Sala de recuperação [a confirmar]</figcaption>
+      </figure>
+    </div>
+    <dl style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:32px;margin:clamp(72px,8vw,120px) 0 0;padding-top:36px;border-top:1px solid rgba(255,255,255,.16)">
+      <div data-fx="fade" style="display:flex;flex-direction:column;gap:10px"><dt style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8">Equipe</dt><dd style="margin:0;font:400 16px/1.55 'Instrument Sans',sans-serif;color:#D7E5E2">Especialistas de diferentes áreas no mesmo lugar.</dd></div>
+      <div data-fx="fade" data-delay="100" style="display:flex;flex-direction:column;gap:10px"><dt style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8">Protocolos</dt><dd style="margin:0;font:400 16px/1.55 'Instrument Sans',sans-serif;color:#D7E5E2">Biossegurança e fluxos de atendimento [a detalhar com o HOE].</dd></div>
+      <div data-fx="fade" data-delay="200" style="display:flex;flex-direction:column;gap:10px"><dt style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8">Segurança</dt><dd style="margin:0;font:400 16px/1.55 'Instrument Sans',sans-serif;color:#D7E5E2">Ambiente preparado para procedimentos que exigem mais cuidado.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- 09 POR QUE ESTRUTURA -->
+<section data-screen-label="09 Por que estrutura" style="background:#FFFFFF;padding:clamp(120px,15vw,220px) 0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px);display:flex;flex-wrap:wrap;align-items:center;gap:72px clamp(48px,7vw,120px)">
+    <div style="flex:1 1 380px;max-width:540px;display:flex;flex-direction:column;gap:32px">
+      <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67"><span style="width:28px;height:1px;background:currentColor"></span><span>Por que um hospital odontológico</span></div>
+      <h2 data-fx="rise" style="margin:0;font:400 clamp(2.2rem,4.4vw,4.75rem)/1.04 'Manrope',sans-serif;letter-spacing:-.045em;color:#1C2B2A">Por que estrutura faz diferença?</h2>
+      <p data-fx="fade" data-delay="120" style="margin:0;font:400 clamp(1.05rem,1.25vw,1.2rem)/1.65 'Instrument Sans',sans-serif;color:#3A4B49;text-wrap:pretty">Planejamento, especialistas, centro cirúrgico e possibilidades de sedação reunidos em um mesmo ambiente. O seu caso é acompanhado de forma integrada, do primeiro contato ao fim do tratamento.</p>
+    </div>
+    <div style="flex:1 1 360px;display:flex;justify-content:center">
+      <div style="position:relative;width:100%;max-width:600px;aspect-ratio:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:clamp(8px,1.2vw,14px)">
+        <div data-fx="fit-tl" style="background:#163D3A;border-radius:42% 6px 6px 6px;padding:clamp(18px,3vw,40px);display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-end;text-align:right;gap:10px;color:#F2F6F5">
+          <span style="width:8px;height:8px;border-radius:50%;background:#4E87C1"></span>
+          <h3 style="margin:0;max-width:11ch;font:600 clamp(14px,1.5vw,20px)/1.25 'Manrope',sans-serif;letter-spacing:-.01em">Planejamento integrado</h3>
+        </div>
+        <div data-fx="fit-tr" data-delay="90" style="background:#1D4C48;border-radius:6px 42% 6px 6px;padding:clamp(18px,3vw,40px);display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;gap:10px;color:#F2F6F5">
+          <span style="width:8px;height:8px;border-radius:50%;background:#EAC505"></span>
+          <h3 style="margin:0;max-width:11ch;font:600 clamp(14px,1.5vw,20px)/1.25 'Manrope',sans-serif;letter-spacing:-.01em">Equipe multidisciplinar</h3>
+        </div>
+        <div data-fx="fit-bl" data-delay="180" style="background:#2A6560;border-radius:6px 6px 6px 42%;padding:clamp(18px,3vw,40px);display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-end;text-align:right;gap:10px;color:#F2F6F5">
+          <h3 style="margin:0;max-width:11ch;font:600 clamp(14px,1.5vw,20px)/1.25 'Manrope',sans-serif;letter-spacing:-.01em">Centro cirúrgico</h3>
+          <span style="width:8px;height:8px;border-radius:50%;background:#A9BB2E"></span>
+        </div>
+        <div data-fx="fit-br" data-delay="270" style="background:#357A72;border-radius:6px 6px 42% 6px;padding:clamp(18px,3vw,40px);display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:10px;color:#FFFFFF">
+          <h3 style="margin:0;max-width:11ch;font:600 clamp(14px,1.5vw,20px)/1.25 'Manrope',sans-serif;letter-spacing:-.01em">Possibilidades de sedação</h3>
+          <span style="width:8px;height:8px;border-radius:50%;background:#A8006F"></span>
+        </div>
+        <div data-fx="fade" data-delay="420" style="position:absolute;left:50%;top:50%;width:32%;aspect-ratio:1;transform:translate(-50%,-50%) rotate(45deg);background:#FFFFFF;border-radius:16%;display:flex;align-items:center;justify-content:center">
+          <span style="transform:rotate(-45deg);text-align:center;font:600 clamp(10px,1.1vw,14px)/1.3 'Instrument Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#163D3A;max-width:9ch">Tudo em um mesmo ambiente</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 TECNOLOGIA -->
+<section id="tecnologia" data-screen-label="10 Tecnologia" style="background:#F7F9F8;padding:clamp(96px,11vw,160px) 0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px);display:flex;flex-wrap:wrap;gap:48px clamp(48px,7vw,120px)">
+    <div style="flex:1 1 320px;max-width:460px;display:flex;flex-direction:column;gap:28px">
+      <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67"><span style="width:28px;height:1px;background:currentColor"></span><span>Tecnologia</span></div>
+      <h2 data-fx="rise" style="margin:0;font:400 clamp(1.9rem,3.2vw,3.25rem)/1.08 'Manrope',sans-serif;letter-spacing:-.035em;color:#1C2B2A">Tecnologia a serviço do planejamento.</h2>
+      <p data-fx="fade" data-delay="100" style="margin:0;font:400 16px/1.6 'Instrument Sans',sans-serif;color:#4A5C5A">Os recursos tecnológicos apoiam o diagnóstico, o planejamento e a previsibilidade de cada etapa do tratamento.</p>
+    </div>
+    <ul style="flex:1.6 1 480px;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:1px;background:rgba(22,61,58,.14);border:1px solid rgba(22,61,58,.14)">
+      <li data-fx="fade" style="background:#F7F9F8;padding:24px;display:flex;flex-direction:column;gap:16px"><div role="img" aria-label="Tecnologia a confirmar" style="aspect-ratio:4/3;border-radius:4px;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 10px)"></div><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67">[Tecnologia a confirmar]</span><span style="font:400 14px/1.5 'Instrument Sans',sans-serif;color:#4A5C5A">Função no planejamento: [a confirmar]</span></li>
+      <li data-fx="fade" data-delay="80" style="background:#F7F9F8;padding:24px;display:flex;flex-direction:column;gap:16px"><div role="img" aria-label="Tecnologia a confirmar" style="aspect-ratio:4/3;border-radius:4px;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 10px)"></div><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67">[Tecnologia a confirmar]</span><span style="font:400 14px/1.5 'Instrument Sans',sans-serif;color:#4A5C5A">Função no planejamento: [a confirmar]</span></li>
+      <li data-fx="fade" data-delay="160" style="background:#F7F9F8;padding:24px;display:flex;flex-direction:column;gap:16px"><div role="img" aria-label="Tecnologia a confirmar" style="aspect-ratio:4/3;border-radius:4px;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 10px)"></div><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67">[Tecnologia a confirmar]</span><span style="font:400 14px/1.5 'Instrument Sans',sans-serif;color:#4A5C5A">Função no planejamento: [a confirmar]</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 11 EQUIPE -->
+<section id="equipe" data-screen-label="11 Equipe" style="background:#FFFFFF;padding:clamp(120px,15vw,220px) 0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px 64px;margin-bottom:clamp(48px,6vw,88px)">
+      <div style="flex:1 1 560px;max-width:900px">
+        <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67;margin-bottom:32px"><span style="width:28px;height:1px;background:currentColor"></span><span>Equipe</span></div>
+        <h2 data-fx="rise" style="margin:0;font:400 clamp(2rem,4.2vw,4.5rem)/1.06 'Manrope',sans-serif;letter-spacing:-.04em;color:#1C2B2A;text-wrap:balance">Especialistas que trabalham juntos pelo seu caso.</h2>
+      </div>
+      <p data-fx="fade" data-delay="120" style="flex:0 1 320px;margin:0;font:400 16px/1.6 'Instrument Sans',sans-serif;color:#4A5C5A">Profissionais de diferentes especialidades discutem e planejam cada tratamento em conjunto.</p>
+    </div>
+    <div data-fx="clipx" role="img" aria-label="Equipe HOE" style="position:relative;height:clamp(320px,40vw,620px);border-radius:6px 6px clamp(80px,12vw,220px) 6px;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 12px)">
+      <span style="position:absolute;top:24px;left:24px;width:12px;height:12px;border-top:1px solid #2E6E67;border-left:1px solid #2E6E67"></span>
+      <div style="position:absolute;left:28px;bottom:24px;right:24px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67">[Imagem — equipe HOE]</span><sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#5E716F">assets/images/equipe-hoe.webp</span></sc-if></div>
+    </div>
+    <ul style="list-style:none;margin:clamp(48px,6vw,80px) 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:40px clamp(16px,2vw,28px)">
+      <sc-for list="{{ team }}" as="p" hint-placeholder-count="4">
+        <li data-fx="clipx" style="display:flex;flex-direction:column;gap:14px">
+          <div role="img" aria-label="Foto do profissional" style="position:relative;aspect-ratio:4/5;border-radius:4px;background-color:#EFF4F3;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 10px)"><span style="position:absolute;left:16px;bottom:14px;font:600 10px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67">[Foto]</span></div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font:500 1.15rem/1.25 'Manrope',sans-serif;letter-spacing:-.01em;color:#1C2B2A">[Nome do profissional]</h3>
+            <span style="font:400 14px/1.4 'Instrument Sans',sans-serif;color:#4A5C5A">[Especialidade]</span>
+            <span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#579D95">CRO-BA [número]</span>
+          </div>
+        </li>
+      </sc-for>
+    </ul>
+    <div style="display:flex;justify-content:center;margin-top:clamp(48px,5vw,72px)">
+      <button type="button" onClick="{{ toggleTeam }}" aria-expanded="{{ teamOpen }}" style="height:52px;padding:0 26px;border-radius:999px;border:1px solid rgba(22,61,58,.25);background:#FFFFFF;color:#163D3A;font:600 14px/1 'Instrument Sans',sans-serif;cursor:pointer;transition:border-color .3s,background .3s" style-hover="border-color:#163D3A;background:#F7F9F8">{{ teamLabel }}</button>
+    </div>
+  </div>
+</section>
+
+<!-- 12 JORNADA -->
+<section id="como-comecar" data-screen-label="12 Jornada" style="background:#EFF4F3;padding:clamp(120px,15vw,220px) 0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px);display:flex;flex-wrap:wrap;gap:64px clamp(48px,8vw,140px);align-items:flex-start">
+    <div style="flex:1 1 360px;max-width:520px;position:sticky;top:120px;display:flex;flex-direction:column;gap:32px">
+      <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67"><span style="width:28px;height:1px;background:currentColor"></span><span>Jornada</span></div>
+      <h2 data-fx="rise" style="margin:0;font:400 clamp(2rem,4vw,4.25rem)/1.06 'Manrope',sans-serif;letter-spacing:-.04em;color:#1C2B2A;text-wrap:balance">Como começa seu tratamento no HOE?</h2>
+      <a data-fx="fade" data-delay="120" href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-event="click_whatsapp_hero" style="align-self:flex-start;display:inline-flex;align-items:center;gap:14px;height:54px;padding:0 26px;border-radius:999px;background:#163D3A;color:#FFFFFF;font:600 15px/1 'Instrument Sans',sans-serif" style-hover="background:#2E6E67;color:#FFFFFF">Começar pela conversa <span aria-hidden="true">→</span></a>
+    </div>
+    <ol data-scroll="journey" style="flex:1.3 1 420px;position:relative;list-style:none;margin:0;padding:0 0 0 56px">
+      <span aria-hidden="true" style="position:absolute;left:11px;top:14px;bottom:14px;width:1px;background:rgba(22,61,58,.18)"></span>
+      <span data-fill="" aria-hidden="true" style="position:absolute;left:11px;top:14px;bottom:14px;width:1px;background:#163D3A;transform-origin:top"></span>
+      <li data-step="" style="position:relative;padding:0 0 clamp(56px,7vw,96px)">
+        <span data-dot="" aria-hidden="true" style="position:absolute;left:-56px;top:6px;width:23px;height:23px;border-radius:50%;border:1px solid #163D3A;background:#163D3A;transition:background .4s"></span>
+        <span style="display:block;font:300 clamp(2.4rem,3.6vw,3.6rem)/1 'Manrope',sans-serif;letter-spacing:-.04em;color:#579D95;margin-bottom:18px">01</span>
+        <h3 style="margin:0 0 10px;font:600 14px/1.35 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#163D3A">Converse com nossa equipe</h3>
+        <p style="margin:0;max-width:44ch;font:400 16px/1.6 'Instrument Sans',sans-serif;color:#4A5C5A">Pelo WhatsApp ou pelo telefone, tire as primeiras dúvidas e conte o que você procura.</p>
+      </li>
+      <li data-step="" style="position:relative;padding:0 0 clamp(56px,7vw,96px)">
+        <span data-dot="" aria-hidden="true" style="position:absolute;left:-56px;top:6px;width:23px;height:23px;border-radius:50%;border:1px solid #163D3A;background:#163D3A;transition:background .4s"></span>
+        <span style="display:block;font:300 clamp(2.4rem,3.6vw,3.6rem)/1 'Manrope',sans-serif;letter-spacing:-.04em;color:#579D95;margin-bottom:18px">02</span>
+        <h3 style="margin:0 0 10px;font:600 14px/1.35 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#163D3A">Agende sua avaliação</h3>
+        <p style="margin:0;max-width:44ch;font:400 16px/1.6 'Instrument Sans',sans-serif;color:#4A5C5A">Escolha a unidade mais conveniente: Pituba ou Shopping Paralela.</p>
+      </li>
+      <li data-step="" style="position:relative;padding:0 0 clamp(56px,7vw,96px)">
+        <span data-dot="" aria-hidden="true" style="position:absolute;left:-56px;top:6px;width:23px;height:23px;border-radius:50%;border:1px solid #163D3A;background:#163D3A;transition:background .4s"></span>
+        <span style="display:block;font:300 clamp(2.4rem,3.6vw,3.6rem)/1 'Manrope',sans-serif;letter-spacing:-.04em;color:#579D95;margin-bottom:18px">03</span>
+        <h3 style="margin:0 0 10px;font:600 14px/1.35 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#163D3A">Entenda seu caso</h3>
+        <p style="margin:0;max-width:44ch;font:400 16px/1.6 'Instrument Sans',sans-serif;color:#4A5C5A">Na avaliação, o especialista examina, escuta e explica o que encontrou.</p>
+      </li>
+      <li data-step="" style="position:relative;padding:0 0 clamp(56px,7vw,96px)">
+        <span data-dot="" aria-hidden="true" style="position:absolute;left:-56px;top:6px;width:23px;height:23px;border-radius:50%;border:1px solid #163D3A;background:#163D3A;transition:background .4s"></span>
+        <span style="display:block;font:300 clamp(2.4rem,3.6vw,3.6rem)/1 'Manrope',sans-serif;letter-spacing:-.04em;color:#579D95;margin-bottom:18px">04</span>
+        <h3 style="margin:0 0 10px;font:600 14px/1.35 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#163D3A">Receba um planejamento</h3>
+        <p style="margin:0;max-width:44ch;font:400 16px/1.6 'Instrument Sans',sans-serif;color:#4A5C5A">Você conhece as possibilidades de tratamento indicadas para o seu caso.</p>
+      </li>
+      <li data-step="" style="position:relative">
+        <span data-dot="" aria-hidden="true" style="position:absolute;left:-56px;top:6px;width:23px;height:23px;border-radius:50%;border:1px solid #163D3A;background:#163D3A;transition:background .4s"></span>
+        <span style="display:block;font:300 clamp(2.4rem,3.6vw,3.6rem)/1 'Manrope',sans-serif;letter-spacing:-.04em;color:#579D95;margin-bottom:18px">05</span>
+        <h3 style="margin:0 0 10px;font:600 14px/1.35 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#163D3A">Inicie seu tratamento</h3>
+        <p style="margin:0;max-width:44ch;font:400 16px/1.6 'Instrument Sans',sans-serif;color:#4A5C5A">Com tudo planejado, o tratamento começa no seu tempo.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 13 PROVA SOCIAL -->
+<section id="experiencias" data-screen-label="13 Experiências" style="background:#FFFFFF;padding:clamp(120px,15vw,220px) 0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67;margin-bottom:32px"><span style="width:28px;height:1px;background:currentColor"></span><span>Experiências</span></div>
+    <h2 data-fx="rise" style="margin:0 0 clamp(56px,7vw,96px);max-width:16ch;font:400 clamp(2rem,4.2vw,4.5rem)/1.06 'Manrope',sans-serif;letter-spacing:-.04em;color:#1C2B2A;text-wrap:balance">Experiências de quem já passou pelo HOE.</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:48px clamp(40px,6vw,96px);align-items:stretch">
+      <div data-fx="clip" role="img" aria-label="Vídeo de depoimento autorizado" style="flex:1.2 1 440px;position:relative;min-height:clamp(380px,40vw,600px);border-radius:clamp(80px,11vw,200px) 6px 6px 6px;background-color:#163D3A;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px);display:flex;align-items:center;justify-content:center">
+        <span style="width:84px;height:84px;border-radius:50%;border:1px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center"><span style="width:0;height:0;border-left:16px solid #F2F6F5;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:5px"></span></span>
+        <div style="position:absolute;left:28px;bottom:24px;right:24px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Vídeo depoimento]</span><sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#8FB0AB">assets/videos/depoimento-01.mp4</span></sc-if></div>
+      </div>
+      <div style="flex:1 1 360px;display:flex;flex-direction:column;justify-content:space-between;gap:0;border-top:1px solid rgba(22,61,58,.16)">
+        <figure data-fx="fade" style="margin:0;padding:32px 0;border-bottom:1px solid rgba(22,61,58,.16);display:flex;flex-direction:column;gap:16px">
+          <span aria-hidden="true" style="font:400 56px/0.6 'Manrope',sans-serif;color:#579D95;height:24px">“</span>
+          <blockquote style="margin:0;font:400 clamp(1.15rem,1.5vw,1.4rem)/1.45 'Manrope',sans-serif;letter-spacing:-.01em;color:#1C2B2A">[Depoimento autorizado 01]</blockquote>
+          <figcaption style="font:500 13px/1.4 'Instrument Sans',sans-serif;color:#4A5C5A">[Nome do paciente, com autorização] · [Tratamento]</figcaption>
+        </figure>
+        <figure data-fx="fade" data-delay="120" style="margin:0;padding:32px 0;border-bottom:1px solid rgba(22,61,58,.16);display:flex;flex-direction:column;gap:16px">
+          <span aria-hidden="true" style="font:400 56px/0.6 'Manrope',sans-serif;color:#579D95;height:24px">“</span>
+          <blockquote style="margin:0;font:400 clamp(1.15rem,1.5vw,1.4rem)/1.45 'Manrope',sans-serif;letter-spacing:-.01em;color:#1C2B2A">[Depoimento autorizado 02]</blockquote>
+          <figcaption style="font:500 13px/1.4 'Instrument Sans',sans-serif;color:#4A5C5A">[Nome do paciente, com autorização] · [Tratamento]</figcaption>
+        </figure>
+        <figure data-fx="fade" data-delay="240" style="margin:0;padding:32px 0;border-bottom:1px solid rgba(22,61,58,.16);display:flex;flex-direction:column;gap:16px">
+          <span aria-hidden="true" style="font:400 56px/0.6 'Manrope',sans-serif;color:#579D95;height:24px">“</span>
+          <blockquote style="margin:0;font:400 clamp(1.15rem,1.5vw,1.4rem)/1.45 'Manrope',sans-serif;letter-spacing:-.01em;color:#1C2B2A">[Depoimento autorizado 03]</blockquote>
+          <figcaption style="font:500 13px/1.4 'Instrument Sans',sans-serif;color:#4A5C5A">[Nome do paciente, com autorização] · [Tratamento]</figcaption>
+        </figure>
+        <p style="margin:24px 0 0;font:400 13px/1.5 'Instrument Sans',sans-serif;color:#5E716F">Publicamos apenas depoimentos autorizados pelos pacientes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 14 UNIDADES -->
+<section id="unidades" data-screen-label="14 Unidades" style="background:#F7F9F8;padding:clamp(120px,15vw,220px) 0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67;margin-bottom:32px"><span style="width:28px;height:1px;background:currentColor"></span><span>Unidades em Salvador</span></div>
+    <h2 style="margin:0 0 clamp(56px,7vw,104px);font:400 clamp(2rem,4.4vw,4.75rem)/1.06 'Manrope',sans-serif;letter-spacing:-.04em;color:#1C2B2A">
+      <span data-fx="mask" style="display:block;overflow:hidden;padding-bottom:.06em"><span style="display:block">Duas unidades em Salvador.</span></span>
+      <span data-fx="mask" data-delay="120" style="display:block;overflow:hidden;padding-bottom:.06em"><span style="display:block;color:#579D95">A mesma proposta de cuidado.</span></span>
+    </h2>
+    <div style="display:flex;flex-wrap:wrap;gap:64px clamp(20px,2.4vw,40px)">
+      <article data-fx="rise" style="flex:1 1 420px;display:flex;flex-direction:column;gap:32px">
+        <div role="img" aria-label="Fachada da unidade Pituba" style="position:relative;aspect-ratio:4/3;border-radius:clamp(64px,9vw,160px) 6px 6px 6px;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 12px)">
+          <div style="position:absolute;left:24px;bottom:22px;right:24px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67">[Imagem — Pituba]</span><sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#5E716F">assets/images/unidade-pituba.webp</span></sc-if></div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px 40px">
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <h3 style="margin:0;font:500 clamp(1.8rem,2.8vw,2.75rem)/1 'Manrope',sans-serif;letter-spacing:-.035em;color:#1C2B2A">Pituba</h3>
+            <address style="font-style:normal;font:400 16px/1.6 'Instrument Sans',sans-serif;color:#3A4B49">Av. Manoel Dias da Silva, 1783<br>Pituba · Salvador/BA<br>CEP 41830-001</address>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;align-self:flex-end">
+            <a href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20uma%20avalia%C3%A7%C3%A3o%20na%20unidade%20Pituba." target="_blank" rel="noopener" data-event="click_whatsapp_unit" style="display:inline-flex;align-items:center;justify-content:center;height:50px;padding:0 24px;border-radius:999px;background:#163D3A;color:#FFFFFF;font:600 14px/1 'Instrument Sans',sans-serif" style-hover="background:#2E6E67;color:#FFFFFF">Agendar nesta unidade</a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Manoel%20Dias%20da%20Silva%2C%201783%2C%20Pituba%2C%20Salvador%20-%20BA%2C%2041830-001" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;height:50px;padding:0 24px;border-radius:999px;border:1px solid rgba(22,61,58,.25);color:#163D3A;font:600 14px/1 'Instrument Sans',sans-serif" style-hover="border-color:#163D3A;color:#163D3A">Ver localização ↗</a>
+          </div>
+        </div>
+      </article>
+      <article data-fx="rise" data-delay="140" style="flex:1 1 420px;display:flex;flex-direction:column;gap:32px">
+        <div role="img" aria-label="Unidade Shopping Paralela" style="position:relative;aspect-ratio:4/3;border-radius:6px clamp(64px,9vw,160px) 6px 6px;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 12px)">
+          <div style="position:absolute;left:24px;bottom:22px;right:24px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67">[Imagem — Shopping Paralela]</span><sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#5E716F">assets/images/unidade-paralela.webp</span></sc-if></div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px 40px">
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <h3 style="margin:0;font:500 clamp(1.8rem,2.8vw,2.75rem)/1 'Manrope',sans-serif;letter-spacing:-.035em;color:#1C2B2A">Shopping Paralela</h3>
+            <address style="font-style:normal;font:400 16px/1.6 'Instrument Sans',sans-serif;color:#3A4B49">Av. Luís Viana, 8544 · Piso L1<br>Shopping Paralela / Alphaville · Salvador/BA<br>CEP 41730-101</address>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;align-self:flex-end">
+            <a href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20uma%20avalia%C3%A7%C3%A3o%20na%20unidade%20Shopping%20Paralela." target="_blank" rel="noopener" data-event="click_whatsapp_unit" style="display:inline-flex;align-items:center;justify-content:center;height:50px;padding:0 24px;border-radius:999px;background:#163D3A;color:#FFFFFF;font:600 14px/1 'Instrument Sans',sans-serif" style-hover="background:#2E6E67;color:#FFFFFF">Agendar nesta unidade</a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Shopping%20Paralela%2C%20Av.%20Lu%C3%ADs%20Viana%2C%208544%2C%20Salvador%20-%20BA%2C%2041730-101" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;height:50px;padding:0 24px;border-radius:999px;border:1px solid rgba(22,61,58,.25);color:#163D3A;font:600 14px/1 'Instrument Sans',sans-serif" style-hover="border-color:#163D3A;color:#163D3A">Ver localização ↗</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 15 FAQ -->
+<section id="duvidas" data-screen-label="15 Dúvidas" style="background:#FFFFFF;padding:clamp(120px,15vw,220px) 0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px);display:flex;flex-wrap:wrap;gap:56px clamp(48px,8vw,140px);align-items:flex-start">
+    <div style="flex:1 1 320px;max-width:460px;position:sticky;top:120px;display:flex;flex-direction:column;gap:32px">
+      <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67"><span style="width:28px;height:1px;background:currentColor"></span><span>Dúvidas frequentes</span></div>
+      <h2 data-fx="rise" style="margin:0;font:400 clamp(2rem,3.6vw,3.75rem)/1.06 'Manrope',sans-serif;letter-spacing:-.04em;color:#1C2B2A">Perguntas que costumamos ouvir.</h2>
+      <div data-fx="fade" data-delay="120" style="padding:24px;background:#EFF4F3;border-radius:28px 4px 4px 4px;display:flex;flex-direction:column;gap:8px">
+        <span style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#163D3A">Atendimento particular</span>
+        <p style="margin:0;font:400 15px/1.6 'Instrument Sans',sans-serif;color:#3A4B49">Todos os atendimentos do HOE são realizados de forma particular. O HOE não atende SUS ou planos odontológicos.</p>
+      </div>
+    </div>
+    <div style="flex:1.6 1 480px;border-top:1px solid rgba(22,61,58,.16)">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
+        <details open="{{ f.open }}" style="border-bottom:1px solid rgba(22,61,58,.16)">
+          <summary onClick="{{ f.toggle }}" style="display:flex;justify-content:space-between;align-items:center;gap:24px;padding:26px 0;cursor:pointer">
+            <h3 style="margin:0;font:500 clamp(1.05rem,1.4vw,1.3rem)/1.35 'Manrope',sans-serif;letter-spacing:-.015em;color:#1C2B2A">{{ f.q }}</h3>
+            <span aria-hidden="true" style="flex:0 0 36px;height:36px;border-radius:50%;border:1px solid rgba(22,61,58,.2);display:flex;align-items:center;justify-content:center;font:400 20px/1 'Manrope',sans-serif;color:#163D3A;background:{{ f.iconBg }}">{{ f.sign }}</span>
+          </summary>
+          <p style="margin:0;padding:0 64px 28px 0;font:400 16px/1.65 'Instrument Sans',sans-serif;color:#3A4B49;max-width:70ch">{{ f.a }}</p>
+        </details>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- 16 CTA FINAL -->
+<section id="contato" data-screen-label="16 Contato" style="position:relative;background:#163D3A;color:#F2F6F5;padding:clamp(120px,15vw,220px) 0 clamp(80px,9vw,128px);overflow:hidden">
+  <div data-loop="" aria-hidden="true" style="position:absolute;right:-30vw;top:-30vw;width:90vw;height:90vw;pointer-events:none">
+    <div style="position:absolute;inset:0;border:1px solid rgba(255,255,255,.07);border-radius:50%"></div>
+    <div style="position:absolute;inset:12%;border:1px solid rgba(255,255,255,.06);border-radius:50% 50% 50% 6%"></div>
+    <div style="position:absolute;inset:26%;border:1px solid rgba(159,208,200,.12);border-radius:6% 50% 50% 50%"></div>
+  </div>
+  <div style="position:relative;max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div style="display:flex;flex-wrap:wrap;gap:72px clamp(48px,7vw,120px);align-items:flex-start">
+      <div style="flex:1.1 1 420px;display:flex;flex-direction:column;gap:36px">
+        <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8"><span style="width:28px;height:1px;background:currentColor"></span><span>Contato</span></div>
+        <h2 style="margin:0;font:400 clamp(2.3rem,5vw,5.4rem)/1.02 'Manrope',sans-serif;letter-spacing:-.045em;color:#F2F6F5">
+          <span data-fx="mask" style="display:block;overflow:hidden;padding-bottom:.06em"><span style="display:block">Seu tratamento pode</span></span>
+          <span data-fx="mask" data-delay="120" style="display:block;overflow:hidden;padding-bottom:.06em"><span style="display:block;color:#9FD0C8">começar com uma conversa.</span></span>
+        </h2>
+        <p data-fx="fade" data-delay="200" style="margin:0;max-width:40ch;font:400 clamp(1.1rem,1.35vw,1.3rem)/1.6 'Instrument Sans',sans-serif;color:#D7E5E2">Fale com a equipe do HOE e entenda quais possibilidades podem fazer sentido para o seu caso.</p>
+        <a data-fx="fade" data-delay="260" href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-event="click_whatsapp_footer" style="align-self:flex-start;display:inline-flex;align-items:center;gap:14px;height:58px;padding:0 30px;border-radius:999px;background:#F2F6F5;color:#163D3A;font:600 15px/1 'Instrument Sans',sans-serif" style-hover="background:#FFFFFF;color:#163D3A">Converse com nossa equipe <span aria-hidden="true">→</span></a>
+        <dl data-fx="fade" data-delay="320" style="margin:12px 0 0;display:flex;flex-wrap:wrap;gap:28px 56px;padding-top:32px;border-top:1px solid rgba(255,255,255,.16)">
+          <div style="display:flex;flex-direction:column;gap:10px"><dt style="font:600 11px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8">WhatsApp</dt><dd style="margin:0"><a href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-event="click_whatsapp_footer" style="font:500 clamp(1.3rem,1.8vw,1.7rem)/1 'Manrope',sans-serif;letter-spacing:-.02em;color:#F2F6F5" style-hover="color:#9FD0C8">(71) 99296-0598</a></dd></div>
+          <div style="display:flex;flex-direction:column;gap:10px"><dt style="font:600 11px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8">Telefone</dt><dd style="margin:0"><a href="tel:+557141027244" style="font:500 clamp(1.3rem,1.8vw,1.7rem)/1 'Manrope',sans-serif;letter-spacing:-.02em;color:#F2F6F5" style-hover="color:#9FD0C8">(71) 4102-7244</a></dd></div>
+        </dl>
+        <p style="margin:0;display:flex;align-items:center;gap:10px;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#B9CFCB"><span style="width:6px;height:6px;border-radius:50%;background:#EAC505"></span>Atendimento exclusivamente particular.</p>
+      </div>
+      <form data-fx="rise" data-delay="160" onSubmit="{{ submit }}" novalidate="" style="flex:1 1 380px;max-width:560px;background:#F7F9F8;color:#1C2B2A;border-radius:clamp(48px,6vw,96px) 8px 8px 8px;padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:8px">
+          <span style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67">Prefere que a equipe chame você?</span>
+          <span style="font:400 14px/1.5 'Instrument Sans',sans-serif;color:#4A5C5A">Preencha e continue a conversa pelo WhatsApp.</span>
+        </div>
+        <label style="display:flex;flex-direction:column;gap:8px;font:600 13px/1 'Instrument Sans',sans-serif;color:#1C2B2A">Nome
+          <input type="text" name="nome" autocomplete="name" value="{{ form.nome }}" onChange="{{ setNome }}" style="height:52px;padding:0 16px;border:1px solid #CBD9D6;border-radius:10px;background:#FFFFFF;font:400 16px/1 'Instrument Sans',sans-serif;color:#1C2B2A;outline:none" style-focus="border-color:#2E6E67;box-shadow:0 0 0 3px rgba(87,157,149,.2)">
+        </label>
+        <label style="display:flex;flex-direction:column;gap:8px;font:600 13px/1 'Instrument Sans',sans-serif;color:#1C2B2A">WhatsApp
+          <input type="tel" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="(71) 9 0000-0000" value="{{ form.whats }}" onChange="{{ setWhats }}" style="height:52px;padding:0 16px;border:1px solid #CBD9D6;border-radius:10px;background:#FFFFFF;font:400 16px/1 'Instrument Sans',sans-serif;color:#1C2B2A;outline:none" style-focus="border-color:#2E6E67;box-shadow:0 0 0 3px rgba(87,157,149,.2)">
+        </label>
+        <label style="display:flex;flex-direction:column;gap:8px;font:600 13px/1 'Instrument Sans',sans-serif;color:#1C2B2A">Motivo do contato
+          <select name="motivo" value="{{ form.motivo }}" onChange="{{ setMotivo }}" style="height:52px;padding:0 14px;border:1px solid #CBD9D6;border-radius:10px;background:#FFFFFF;font:400 16px/1 'Instrument Sans',sans-serif;color:#1C2B2A;outline:none" style-focus="border-color:#2E6E67;box-shadow:0 0 0 3px rgba(87,157,149,.2)">
+            <option value="">Selecione</option>
+            <option value="Avaliação geral">Quero uma avaliação</option>
+            <option value="Implantes dentários">Implantes dentários</option>
+            <option value="Reabilitação oral">Reabilitação oral</option>
+            <option value="Prótese protocolo">Prótese protocolo</option>
+            <option value="Próteses">Próteses</option>
+            <option value="Cirurgia odontológica">Cirurgia odontológica</option>
+            <option value="Implantes zigomáticos">Implantes zigomáticos</option>
+            <option value="Sedação odontológica">Sedação odontológica</option>
+            <option value="Lentes">Lentes</option>
+          </select>
+        </label>
+        <div style="display:flex;flex-direction:column;gap:14px;padding-top:6px">
+          <label style="display:flex;gap:12px;align-items:flex-start;font:400 14px/1.45 'Instrument Sans',sans-serif;color:#1C2B2A;cursor:pointer"><input type="checkbox" checked="{{ form.medo }}" onChange="{{ setMedo }}" style="flex:none;width:18px;height:18px;margin:1px 0 0;accent-color:#163D3A">Tenho medo de dentista <span style="color:#5E716F">(opcional)</span></label>
+          <label style="display:flex;gap:12px;align-items:flex-start;font:400 14px/1.45 'Instrument Sans',sans-serif;color:#1C2B2A;cursor:pointer"><input type="checkbox" checked="{{ form.particular }}" onChange="{{ setParticular }}" style="flex:none;width:18px;height:18px;margin:1px 0 0;accent-color:#163D3A">Estou ciente de que o atendimento do HOE é exclusivamente particular.</label>
+          <label style="display:flex;gap:12px;align-items:flex-start;font:400 14px/1.45 'Instrument Sans',sans-serif;color:#1C2B2A;cursor:pointer"><input type="checkbox" checked="{{ form.lgpd }}" onChange="{{ setLgpd }}" style="flex:none;width:18px;height:18px;margin:1px 0 0;accent-color:#163D3A">Autorizo o HOE a usar estes dados apenas para entrar em contato comigo, conforme a LGPD.</label>
+        </div>
+        <sc-if value="{{ hasError }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;padding:12px 14px;border-radius:8px;background:#FBEAF3;color:#7A0051;font:500 14px/1.4 'Instrument Sans',sans-serif">{{ formError }}</p></sc-if>
+        <sc-if value="{{ formSent }}" hint-placeholder-val="{{ false }}"><p role="status" style="margin:0;padding:12px 14px;border-radius:8px;background:#E3F0EE;color:#163D3A;font:500 14px/1.4 'Instrument Sans',sans-serif">Abrimos o WhatsApp com sua mensagem. Se a janela não abriu, chame no (71) 99296-0598.</p></sc-if>
+        <button type="submit" style="height:56px;border:0;border-radius:999px;background:#163D3A;color:#FFFFFF;font:600 15px/1 'Instrument Sans',sans-serif;cursor:pointer;transition:background .3s" style-hover="background:#2E6E67">Enviar e continuar no WhatsApp</button>
+      </form>
+    </div>
+    <div data-fx="clip" role="img" aria-label="Imagem ou vídeo final do HOE" style="position:relative;margin-top:clamp(80px,10vw,140px);height:clamp(260px,30vw,460px);border-radius:6px 6px 6px clamp(80px,12vw,220px);background-color:#1D4743;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px)">
+      <div style="position:absolute;left:28px;bottom:24px;right:24px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Imagem ou vídeo final]</span><sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#8FB0AB">assets/videos/final-hoe.mp4</span></sc-if></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer style="background:#0F2D2B;color:#D7E5E2;padding:clamp(72px,8vw,112px) 0 40px">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div style="display:flex;flex-wrap:wrap;gap:48px clamp(40px,5vw,80px);justify-content:space-between">
+      <div style="flex:1 1 260px;max-width:340px;display:flex;flex-direction:column;gap:24px">
+        <img src="assets/logo/logo-hoe.webp" alt="HOE — Hospital de Odontologia Especializada" width="604" height="240" loading="lazy" style="height:56px;width:auto;filter:brightness(0) invert(1);opacity:.95">
+        <p style="margin:0;font:400 14px/1.6 'Instrument Sans',sans-serif;color:#B9CFCB">Hospital odontológico em Salvador, Bahia. Estrutura hospitalar, equipe especializada e possibilidades de sedação.</p>
+      </div>
+      <div style="flex:1 1 220px;display:flex;flex-direction:column;gap:14px">
+        <span style="font:600 11px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8">Pituba</span>
+        <address style="font-style:normal;font:400 14px/1.6 'Instrument Sans',sans-serif;color:#D7E5E2">Av. Manoel Dias da Silva, 1783<br>Pituba · Salvador/BA<br>CEP 41830-001</address>
+      </div>
+      <div style="flex:1 1 220px;display:flex;flex-direction:column;gap:14px">
+        <span style="font:600 11px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8">Shopping Paralela</span>
+        <address style="font-style:normal;font:400 14px/1.6 'Instrument Sans',sans-serif;color:#D7E5E2">Av. Luís Viana, 8544 · Piso L1<br>Shopping Paralela / Alphaville<br>Salvador/BA · CEP 41730-101</address>
+      </div>
+      <div style="flex:1 1 200px;display:flex;flex-direction:column;gap:14px">
+        <span style="font:600 11px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8">Contato</span>
+        <a href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-event="click_whatsapp_footer" style="font:400 14px/1.4 'Instrument Sans',sans-serif;color:#D7E5E2" style-hover="color:#FFFFFF">WhatsApp (71) 99296-0598</a>
+        <a href="tel:+557141027244" style="font:400 14px/1.4 'Instrument Sans',sans-serif;color:#D7E5E2" style-hover="color:#FFFFFF">Telefone (71) 4102-7244</a>
+      </div>
+      <div style="flex:1 1 220px;display:flex;flex-direction:column;gap:14px">
+        <span style="font:600 11px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8">Atendimento</span>
+        <p style="margin:0;font:400 14px/1.6 'Instrument Sans',sans-serif;color:#D7E5E2">Exclusivamente particular.<br>Não atende SUS.<br>Não atende planos odontológicos.</p>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:clamp(56px,6vw,88px);padding-top:28px;border-top:1px solid rgba(255,255,255,.12);font:400 12px/1.5 'Instrument Sans',sans-serif;color:#9DB8B3">
+      <span>© 2026 HOE — Hospital de Odontologia Especializada · Salvador, Bahia</span>
+      <span>Responsável técnico: [Nome] · CRO-BA [número]</span>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroVariant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;medo&quot;,&quot;hospital&quot;],&quot;default&quot;:&quot;medo&quot;,&quot;tsType&quot;:&quot;'medo' | 'hospital'&quot;,&quot;section&quot;:&quot;Conteúdo&quot;},&quot;showPaths&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Handoff&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Movimento&quot;}}">
+const FAQ = [
+  ['O HOE atende pacientes com medo de dentista?', 'Sim. O HOE possui estrutura e equipe preparada para atender pessoas que sentem ansiedade, insegurança ou medo de tratamento odontológico, incluindo quem convive com odontofobia. O primeiro passo é uma conversa, seguida de uma avaliação individual.'],
+  ['O HOE oferece sedação odontológica?', 'Sim. O HOE trabalha com possibilidades de sedação, que podem ser consideradas conforme avaliação individual, histórico de saúde e tipo de procedimento.'],
+  ['Como funciona a sedação odontológica?', 'A sedação é um recurso para tornar o procedimento mais tranquilo. Existem diferentes tipos e níveis, e a indicação é definida pela equipe após avaliação. Nem todo paciente ou procedimento tem a mesma indicação; na avaliação você entende quais possibilidades fazem sentido para o seu caso.'],
+  ['O HOE atende convênios?', 'Não. O HOE não atende planos odontológicos. Todos os atendimentos são realizados de forma particular.'],
+  ['O HOE atende SUS?', 'Não. O HOE não atende pelo SUS. O atendimento é exclusivamente particular.'],
+  ['O atendimento é particular?', 'Sim. O atendimento do HOE é exclusivamente particular, nas duas unidades em Salvador.'],
+  ['Como funciona a primeira avaliação?', 'Na avaliação, o especialista conversa com você sobre seu histórico, seus receios e o que você procura, examina sua saúde bucal e explica as possibilidades. A partir daí, a equipe elabora um planejamento para o seu caso. Para agendar, fale com a equipe pelo WhatsApp (71) 99296-0598 ou pelo telefone (71) 4102-7244.'],
+  ['Quais tratamentos são realizados?', 'Implantes dentários, reabilitação oral, prótese protocolo, próteses, cirurgias odontológicas, implantes zigomáticos, sedação odontológica e lentes de contato dentais.'],
+  ['O HOE realiza implantes?', 'Sim. O HOE realiza implantes dentários com planejamento individual, incluindo casos que exigem cirurgia em centro cirúrgico.'],
+  ['O que é reabilitação oral?', 'É o conjunto de tratamentos planejados para recuperar a mastigação, a fala e a estética quando vários dentes, ou a arcada inteira, estão comprometidos. Pode envolver implantes, próteses e outros procedimentos, combinados conforme cada caso.'],
+  ['O que é prótese protocolo?', 'É uma prótese fixa, apoiada sobre implantes, indicada para quem perdeu todos os dentes de uma arcada. Ela não é removida pelo paciente no dia a dia.'],
+  ['O que são implantes zigomáticos?', 'São implantes ancorados no osso zigomático (malar), indicados em alguns casos de perda óssea severa no maxilar superior, quando os implantes convencionais não são viáveis. A indicação depende de avaliação especializada.'],
+  ['Onde ficam as unidades do HOE?', 'O HOE tem duas unidades em Salvador, Bahia: Pituba (Av. Manoel Dias da Silva, 1783, CEP 41830-001) e Shopping Paralela (Av. Luís Viana, 8544, Piso L1, Alphaville, CEP 41730-101).'],
+  ['Como saber qual tratamento é ideal para mim?', 'Somente uma avaliação individual pode indicar o tratamento adequado. Converse com a equipe do HOE para agendar a sua.']
+];
+const WA = 'https://wa.me/5571992960598?text=';
+const EASE = 'cubic-bezier(.2,.7,.1,1)';
+const FX = {
+  fade: [[{ opacity: 0, transform: 'translateY(18px)' }, { opacity: 1, transform: 'none' }], 900],
+  rise: [[{ opacity: 0, transform: 'translateY(48px)' }, { opacity: 1, transform: 'none' }], 1100],
+  clip: [[{ clipPath: 'inset(100% 0 0 0)' }, { clipPath: 'inset(0 0 0 0)' }], 1400],
+  clipx: [[{ clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0% 0 0)' }], 1400],
+  scale: [[{ transform: 'scale(1.03)' }, { transform: 'scale(1)' }], 2200],
+  'fit-tl': [[{ opacity: 0, transform: 'translate(-28px,-28px)' }, { opacity: 1, transform: 'none' }], 1100],
+  'fit-tr': [[{ opacity: 0, transform: 'translate(28px,-28px)' }, { opacity: 1, transform: 'none' }], 1100],
+  'fit-bl': [[{ opacity: 0, transform: 'translate(-28px,28px)' }, { opacity: 1, transform: 'none' }], 1100],
+  'fit-br': [[{ opacity: 0, transform: 'translate(28px,28px)' }, { opacity: 1, transform: 'none' }], 1100]
+};
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+
+class Component extends DCLogic {
+  state = { wide: true, scrolled: false, menu: false, teamOpen: false, faq: 0, form: { nome: '', whats: '', motivo: '', medo: false, particular: false, lgpd: false }, formError: '', formSent: false };
+
+  componentDidMount() {
+    document.documentElement.lang = 'pt-BR';
+    this.onResize = () => { const w = window.innerWidth >= 1140; if (w !== this.state.wide) this.setState({ wide: w, menu: false }); };
+    this.onResize();
+    window.addEventListener('resize', this.onResize);
+    this.onClick = e => { const a = e.target.closest && e.target.closest('[data-event]'); if (a) (window.dataLayer = window.dataLayer || []).push({ event: a.dataset.event }); };
+    document.addEventListener('click', this.onClick);
+    this.injectFaqSchema();
+    this.reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches || this.props.motion === false;
+    this.onScroll = () => { if (!this.raf) this.raf = requestAnimationFrame(() => { this.raf = 0; this.tick(); }); };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('resize', this.onScroll);
+    requestAnimationFrame(() => { this.setupMotion(); this.tick(); });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('resize', this.onScroll);
+    document.removeEventListener('click', this.onClick);
+    if (this.io) this.io.disconnect();
+    (this.loops || []).forEach(a => a.cancel());
+    const s = document.getElementById('hoe-faq-schema'); if (s) s.remove();
+  }
+
+  injectFaqSchema() {
+    if (document.getElementById('hoe-faq-schema')) return;
+    const s = document.createElement('script');
+    s.type = 'application/ld+json'; s.id = 'hoe-faq-schema';
+    s.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) });
+    document.head.appendChild(s);
+  }
+
+  setupMotion() {
+    if (this.reduce || !Element.prototype.animate) return;
+    this.io = new IntersectionObserver(entries => {
+      entries.forEach(en => { if (en.isIntersecting) { const a = this.anims.get(en.target); if (a) a.play(); this.io.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    this.anims = new Map();
+    document.querySelectorAll('[data-fx]').forEach(el => {
+      const type = el.dataset.fx, delay = +(el.dataset.delay || 0);
+      let a;
+      if (type === 'mask') {
+        const child = el.firstElementChild; if (!child) return;
+        a = child.animate([{ transform: 'translateY(110%)' }, { transform: 'none' }], { duration: 1200, delay, easing: EASE, fill: 'both' });
+      } else if (FX[type]) {
+        a = el.animate(FX[type][0], { duration: FX[type][1], delay, easing: EASE, fill: 'both' });
+      } else return;
+      a.pause(); a.currentTime = 0;
+      this.anims.set(el, a); this.io.observe(el);
+    });
+    this.loops = [];
+    document.querySelectorAll('[data-loop]').forEach(el => {
+      this.loops.push(el.animate([{ transform: 'rotate(0deg) translate(0,0)' }, { transform: 'rotate(180deg) translate(2vw,1vw)' }, { transform: 'rotate(360deg) translate(0,0)' }], { duration: 120000, iterations: Infinity }));
+    });
+  }
+
+  tick() {
+    const vh = window.innerHeight, y = window.scrollY;
+    const sc = y > 12; if (sc !== this.state.scrolled) this.setState({ scrolled: sc });
+    const r = this.reduce;
+    document.querySelectorAll('[data-scroll="dark"]').forEach(el => {
+      const layer = el.querySelector('[data-layer]'); if (!layer) return;
+      const p = r ? 1 : clamp((vh - el.getBoundingClientRect().top) / (vh * 0.85));
+      const e = 1 - Math.pow(1 - p, 2);
+      const x = (1 - e) * Math.min(64, window.innerWidth * 0.045), rad = (1 - e) * 56;
+      layer.style.clipPath = `inset(0 ${x.toFixed(1)}px 0 ${x.toFixed(1)}px round ${rad.toFixed(1)}px)`;
+    });
+    document.querySelectorAll('[data-scroll="words"]').forEach(el => {
+      const words = el.querySelectorAll('[data-w]'); const n = words.length;
+      const p = r ? 1 : clamp((vh * 0.88 - el.getBoundingClientRect().top) / (vh * 0.55));
+      words.forEach((w, i) => { w.style.opacity = (0.14 + 0.86 * clamp(p * n - i)).toFixed(3); });
+    });
+    document.querySelectorAll('[data-scroll="parallax"]').forEach(el => {
+      const inner = el.querySelector('[data-inner]'); if (!inner || r) return;
+      const b = el.getBoundingClientRect();
+      const c = clamp((b.top + b.height / 2 - vh / 2) / vh, -1, 1);
+      inner.style.transform = `translate3d(0,${(c * 40).toFixed(1)}px,0)`;
+    });
+    document.querySelectorAll('[data-scroll="journey"]').forEach(el => {
+      const fill = el.querySelector('[data-fill]'); const b = el.getBoundingClientRect();
+      const p = r ? 1 : clamp((vh * 0.62 - b.top) / (b.height - 28));
+      if (fill) fill.style.transform = `scaleY(${p.toFixed(4)})`;
+      const reach = p * (b.height - 28);
+      el.querySelectorAll('[data-step]').forEach(st => {
+        const dot = st.querySelector('[data-dot]'); if (!dot) return;
+        dot.style.background = st.offsetTop - 4 <= reach ? '#163D3A' : '#EFF4F3';
+      });
+    });
+  }
+
+  setField(k, v) { this.setState(s => ({ form: { ...s.form, [k]: v }, formError: '', formSent: false })); }
+
+  maskPhone(v) {
+    const d = v.replace(/\D/g, '').slice(0, 11);
+    if (d.length <= 2) return d.length ? `(${d}` : '';
+    if (d.length <= 6) return `(${d.slice(0, 2)}) ${d.slice(2)}`;
+    if (d.length <= 10) return `(${d.slice(0, 2)}) ${d.slice(2, 6)}-${d.slice(6)}`;
+    return `(${d.slice(0, 2)}) ${d.slice(2, 3)} ${d.slice(3, 7)}-${d.slice(7)}`;
+  }
+
+  submit = e => {
+    e.preventDefault();
+    const f = this.state.form;
+    const err = m => this.setState({ formError: m, formSent: false });
+    if (!f.nome.trim()) return err('Informe seu nome.');
+    if (f.whats.replace(/\D/g, '').length < 10) return err('Informe um WhatsApp válido, com DDD.');
+    if (!f.particular) return err('Confirme que está ciente de que o atendimento é exclusivamente particular.');
+    if (!f.lgpd) return err('Para continuar, autorize o uso dos dados para contato.');
+    const msg = `Olá! Conheci o HOE pelo site e gostaria de informações sobre uma avaliação.\n\nNome: ${f.nome.trim()}\nWhatsApp: ${f.whats}\nMotivo: ${f.motivo || 'Avaliação'}${f.medo ? '\nTenho medo de dentista.' : ''}`;
+    (window.dataLayer = window.dataLayer || []).push({ event: 'form_submit_whatsapp', motivo: f.motivo || 'Avaliação', medo: f.medo });
+    window.open(WA + encodeURIComponent(msg), '_blank', 'noopener');
+    this.setState({ formSent: true, formError: '' });
+  };
+
+  renderVals() {
+    const s = this.state;
+    const variant = this.props.heroVariant ?? 'medo';
+    return {
+      wide: s.wide, narrow: !s.wide, menu: s.menu, menuOpen: !s.wide && s.menu,
+      toggleMenu: () => this.setState(st => ({ menu: !st.menu })),
+      closeMenu: () => this.setState({ menu: false }),
+      headerLine: s.scrolled ? 'rgba(22,61,58,.12)' : 'rgba(22,61,58,0)',
+      heroA: variant !== 'hospital', heroB: variant === 'hospital',
+      showPaths: !!this.props.showPaths,
+      team: Array.from({ length: s.teamOpen ? 8 : 4 }, (_, i) => ({ id: i })),
+      teamOpen: s.teamOpen,
+      teamLabel: s.teamOpen ? 'Mostrar menos' : 'Ver equipe completa',
+      toggleTeam: () => this.setState(st => ({ teamOpen: !st.teamOpen })),
+      faqs: FAQ.map(([q, a], i) => {
+        const open = s.faq === i;
+        return { q, a, open, sign: open ? '−' : '+', iconBg: open ? '#EFF4F3' : 'transparent', toggle: e => { e.preventDefault(); this.setState({ faq: open ? -1 : i }); } };
+      }),
+      form: s.form, formError: s.formError, hasError: !!s.formError, formSent: s.formSent,
+      setNome: e => this.setField('nome', e.target.value),
+      setWhats: e => this.setField('whats', this.maskPhone(e.target.value)),
+      setMotivo: e => this.setField('motivo', e.target.value),
+      setMedo: e => this.setField('medo', e.target.checked),
+      setParticular: e => this.setField('particular', e.target.checked),
+      setLgpd: e => this.setField('lgpd', e.target.checked),
+      submit: this.submit
+    };
+  }
+}
+
+</script>
+</body>
+</html>
