@@ -154,10 +154,9 @@ input,select,button,textarea{font:inherit}
       <div aria-hidden="true" style="position:absolute;left:clamp(-28px,-2vw,-14px);bottom:clamp(-28px,-2vw,-14px);width:46%;height:46%;border-radius:0 0 0 clamp(56px,7vw,120px);background:#EFF4F3"></div>
       <div style="position:relative;aspect-ratio:4/5;max-height:720px;width:100%;overflow:hidden;border-radius:6px clamp(72px,9vw,160px) 6px 6px;background:#E3ECEA;box-shadow:0 40px 80px -40px rgba(22,61,58,.35)">
         <div data-fx="scale" style="position:absolute;inset:0">
-          <video src="assets/videoplayback.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0"></video>
+          <video src="assets/v_sobre.mp4" poster="assets/v_sobre_capa.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0"></video>
         </div>
         <div aria-hidden="true" style="position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(to top,rgba(22,61,58,.55),rgba(22,61,58,0))"></div>
-        <div style="position:absolute;left:clamp(18px,2vw,28px);bottom:clamp(18px,2vw,28px);display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;background:rgba(255,255,255,.16);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.28);font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#FFFFFF"><span style="width:7px;height:7px;border-radius:50%;background:#A9BB2E"></span>Pituba · Shopping Paralela</div>
       </div>
     </div>
   </div>
@@ -906,7 +905,16 @@ class Component extends DCLogic {
     this.onScroll = () => { if (!this.raf) this.raf = requestAnimationFrame(() => { this.raf = 0; this.tick(); }); };
     window.addEventListener('scroll', this.onScroll, { passive: true });
     window.addEventListener('resize', this.onScroll);
-    requestAnimationFrame(() => { this.setupMotion(); this.tick(); });
+    requestAnimationFrame(() => { this.setupMotion(); this.tick(); this.setupVideos(); });
+  }
+
+  setupVideos() {
+    const vids = document.querySelectorAll('video[autoplay]');
+    const play = v => { v.muted = true; v.defaultMuted = true; v.playsInline = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+    vids.forEach(play);
+    if (!('IntersectionObserver' in window)) return;
+    this.vio = new IntersectionObserver(entries => entries.forEach(en => { if (en.isIntersecting && en.target.paused) play(en.target); }), { threshold: 0.1 });
+    vids.forEach(v => this.vio.observe(v));
   }
 
   componentWillUnmount() {
@@ -915,6 +923,7 @@ class Component extends DCLogic {
     window.removeEventListener('resize', this.onScroll);
     document.removeEventListener('click', this.onClick);
     if (this.io) this.io.disconnect();
+    if (this.vio) this.vio.disconnect();
     (this.loops || []).forEach(a => a.cancel());
     const s = document.getElementById('hoe-faq-schema'); if (s) s.remove();
   }
