@@ -345,7 +345,7 @@ button:hover [data-play-ring]{transform:scale(1.08)}
       <div style="flex:1 1 480px;display:flex;flex-direction:column;gap:clamp(40px,4vw,64px)">
         <article data-fx="rise" style="display:flex;flex-direction:column;gap:22px">
           <div style="height:clamp(340px,36vw,560px);border-top-left-radius:clamp(64px,8vw,140px);border-radius:clamp(64px,8vw,140px) 6px 6px 6px;overflow:hidden">
-            <div role="img" aria-label="Implantes dentários no HOE" style="position:relative;width:100%;height:100%;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 12px)"><div style="position:absolute;left:22px;bottom:20px;right:22px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67">[Imagem — implantes dentários]</span><sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#5E716F">assets/images/tratamento-implantes.webp</span></sc-if></div></div>
+            <img src="assets/t_implante.jpg" alt="Dentista explicando implante dentário a paciente no HOE" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center 40%;transition:transform 1.2s cubic-bezier(.2,.7,.1,1)" style-hover="transform:scale(1.04)">
           </div>
           <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 32px">
             <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:10px">
@@ -373,7 +373,7 @@ button:hover [data-play-ring]{transform:scale(1.08)}
       <div style="flex:1 1 480px;display:flex;flex-direction:column;gap:clamp(40px,4vw,64px);padding-top:clamp(0px,8vw,140px)">
         <article data-fx="rise" data-delay="120" style="display:flex;flex-direction:column;gap:22px">
           <div style="height:clamp(300px,30vw,460px);border-radius:6px;overflow:hidden">
-            <div role="img" aria-label="Cirurgias odontológicas em centro cirúrgico" style="position:relative;width:100%;height:100%;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 12px)"><div style="position:absolute;left:22px;bottom:20px;right:22px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67">[Imagem — cirurgias odontológicas]</span><sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#5E716F">assets/images/tratamento-cirurgias.webp</span></sc-if></div></div>
+            <img src="assets/t_cirurgia.jpg" alt="Cirurgia odontológica em centro cirúrgico do HOE" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center 45%;transition:transform 1.2s cubic-bezier(.2,.7,.1,1)" style-hover="transform:scale(1.04)">
           </div>
           <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 32px">
             <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:10px">
@@ -921,9 +921,10 @@ button:hover [data-play-ring]{transform:scale(1.08)}
     <div style="display:flex;flex-wrap:wrap;gap:72px clamp(48px,7vw,120px);align-items:flex-start">
       <div style="flex:1.1 1 420px;display:flex;flex-direction:column;gap:36px">
         <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8"><span style="width:28px;height:1px;background:currentColor"></span><span>Contato</span></div>
-        <h2 style="margin:0;font:400 clamp(2rem,4.2vw,4.5rem)/1.06 'Manrope',sans-serif;letter-spacing:-.04em;color:#F2F6F5">
+        <h2 style="margin:0;font:400 clamp(1.75rem,3.6vw,3.9rem)/1.06 'Manrope',sans-serif;letter-spacing:-.04em;color:#F2F6F5;white-space:nowrap">
           <span data-fx="mask" style="display:block;overflow:hidden;padding-bottom:.06em"><span style="display:block">Seu tratamento pode</span></span>
-          <span data-fx="mask" data-delay="120" style="display:block;overflow:hidden;padding-bottom:.06em"><span style="display:block;color:#9FD0C8">começar com uma conversa.</span></span>
+          <span data-fx="mask" data-delay="120" style="display:block;overflow:hidden;padding-bottom:.06em"><span style="display:block;color:#9FD0C8">começar com uma</span></span>
+          <span data-fx="mask" data-delay="200" style="display:block;overflow:hidden;padding-bottom:.06em"><span style="display:block;color:#9FD0C8">conversa.</span></span>
         </h2>
         <p data-fx="fade" data-delay="200" style="margin:0;max-width:40ch;font:400 clamp(1.1rem,1.35vw,1.3rem)/1.6 'Instrument Sans',sans-serif;color:#D7E5E2">Fale com a equipe do HOE e entenda quais possibilidades podem fazer sentido para o seu caso.</p>
         <a data-fx="fade" data-delay="260" href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-event="click_whatsapp_footer" style="align-self:flex-start;display:inline-flex;align-items:center;gap:14px;height:58px;padding:0 30px;border-radius:999px;background:#F2F6F5;color:#163D3A;font:600 15px/1 'Instrument Sans',sans-serif" style-hover="background:#FFFFFF;color:#163D3A">Converse com nossa equipe <span aria-hidden="true">→</span></a>
