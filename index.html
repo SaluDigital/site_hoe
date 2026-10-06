@@ -74,6 +74,7 @@ button:hover [data-play-ring]{transform:scale(1.08)}
 @media (max-width:600px){footer{padding-bottom:104px!important}}
 @media (max-width:1023px){[data-stagger]{padding-top:0!important}}
 @supports (height:100dvh){[data-mobile-menu]{height:calc(100dvh - 76px)!important}}
+@media (max-width:767px){[data-hero]{min-height:0!important;justify-content:flex-start!important;background:#FFFFFF!important}[data-hero-bg]{position:relative!important;inset:auto!important;width:100%;aspect-ratio:4/3;overflow:hidden;border-radius:0 0 0 64px}[data-hero-overlay],[data-hero-fade]{display:none!important}[data-hero-img]{object-position:76% 28%!important}[data-hero-top]{padding-top:36px!important;text-align:center}[data-hero-top]>div{justify-content:center!important}[data-hero-top]>div>div{justify-content:center}[data-hero-top]>div>div>span:first-child{display:none}[data-hero-top]>div>div>span:last-child{text-wrap:balance;max-width:30ch}[data-hero-top] h1{margin:0 auto!important}[data-hero-bottom]{justify-content:center}[data-hero-col]{flex:1 1 100%!important;align-items:center;text-align:center}[data-hero-col] p{margin:0 auto!important}[data-hero-cta]{justify-content:center}[data-hero] ul{width:100%}[data-hero] ul li{justify-content:center;text-align:left}}
 body:has([data-mobile-menu]){overflow:hidden}body:has([data-mobile-menu]) [data-wa-float]{display:none!important}
 button[aria-label="Abrir menu"]>span,button[aria-label="Fechar menu"]>span{transition:transform .3s cubic-bezier(.2,.7,.1,1)}button[aria-label="Fechar menu"]>span:first-child{transform:translateY(3.25px) rotate(45deg)}button[aria-label="Fechar menu"]>span:last-child{transform:translateY(-3.25px) rotate(-45deg)}
 @media (max-width:600px){[data-rev]{--rev-card:218px}[data-rev-item] p{-webkit-line-clamp:4!important}}
@@ -126,15 +127,15 @@ button[aria-label="Abrir menu"]>span,button[aria-label="Fechar menu"]>span{trans
     
   </div>
   </header></div>
-<main><section id="inicio" data-screen-label="00 Hero" style="position: relative; min-height: min(100svh, 980px); display: flex; flex-direction: column; justify-content: center; padding-top: 76px; background: rgb(234, 243, 242); overflow: hidden;">
-  <div aria-hidden="true" style="position: absolute; inset: 0px;">
+<main><section id="inicio" data-hero="" data-screen-label="00 Hero" style="position: relative; min-height: min(100svh, 980px); display: flex; flex-direction: column; justify-content: center; padding-top: 76px; background: rgb(234, 243, 242); overflow: hidden;">
+  <div data-hero-bg="" aria-hidden="true" style="position: absolute; inset: 0px;">
     <div data-fx="scale" style="position: absolute; inset: 0px;">
       <img data-hero-img="" src="assets/opt/hero-implante-1600.webp" srcset="assets/opt/hero-implante-960.webp 960w, assets/opt/hero-implante-1600.webp 1600w, assets/opt/hero-implante-1920.webp 1920w" sizes="100vw" width="1920" height="1080" alt="" fetchpriority="high" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; object-position: 68% center;">
     </div>
     <div data-hero-overlay="" style="position: absolute; inset: 0px; background: linear-gradient(90deg, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 68%);"></div>
-    <div style="position: absolute; inset: auto 0px 0px; height: 22%; background: linear-gradient(to top, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0));"></div>
+    <div data-hero-fade="" style="position: absolute; inset: auto 0px 0px; height: 22%; background: linear-gradient(to top, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0));"></div>
   </div>
-  <div style="position: relative; width: 100%; max-width: 1440px; margin: 0px auto; padding: clamp(48px, 9vh, 112px) clamp(20px, 4vw, 64px) clamp(28px, 4vh, 44px);">
+  <div data-hero-top="" style="position: relative; width: 100%; max-width: 1440px; margin: 0px auto; padding: clamp(48px, 9vh, 112px) clamp(20px, 4vw, 64px) clamp(28px, 4vh, 44px);">
     <div data-fx="fade" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: clamp(28px, 4vh, 44px);">
       <div style="display: flex; align-items: center; gap: 14px; font: 600 12px / 1.3 &quot;Instrument Sans&quot;, sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(46, 110, 103);">
         <span style="width: 32px; height: 1px; background: rgb(87, 157, 149);"></span>
@@ -150,11 +151,11 @@ button[aria-label="Abrir menu"]>span,button[aria-label="Fechar menu"]>span{trans
     
     
   </div>
-  <div style="position: relative; width: 100%; max-width: 1440px; margin: 0px auto; padding: 0px clamp(20px, 4vw, 64px) clamp(56px, 9vh, 112px); display: flex; flex-wrap: wrap; align-items: flex-end; gap: clamp(20px, 2.2vw, 36px);">
-    <div style="flex: 0 1 500px; display: flex; flex-direction: column; justify-content: space-between; gap: 44px;">
+  <div data-hero-bottom="" style="position: relative; width: 100%; max-width: 1440px; margin: 0px auto; padding: 0px clamp(20px, 4vw, 64px) clamp(56px, 9vh, 112px); display: flex; flex-wrap: wrap; align-items: flex-end; gap: clamp(20px, 2.2vw, 36px);">
+    <div data-hero-col="" style="flex: 0 1 500px; display: flex; flex-direction: column; justify-content: space-between; gap: 44px;">
       <div data-fx="fade" data-delay="380" style="display: flex; flex-direction: column; gap: 32px;">
         <p style="margin: 0px; font: 400 clamp(1.1rem, 1.35vw, 1.3rem) / 1.6 &quot;Instrument Sans&quot;, sans-serif; color: rgb(58, 75, 73); max-width: 36ch; text-wrap: pretty;">Estrutura hospitalar, equipe especializada e possibilidades de sedação para tratamentos realizados com mais tranquilidade, cuidado e segurança.</p>
-        <div style="display: flex; align-items: center; gap: 28px; flex-wrap: wrap;">
+        <div data-hero-cta="" style="display: flex; align-items: center; gap: 28px; flex-wrap: wrap;">
           <a href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-event="click_whatsapp_hero" style="display: inline-flex; align-items: center; gap: 14px; height: 56px; padding: 0px 28px; border-radius: 999px; background: rgb(22, 61, 58); color: rgb(255, 255, 255); font: 600 15px / 1 &quot;Instrument Sans&quot;, sans-serif; transition: background 0.3s;">Agende sua avaliação <span aria-hidden="true">→</span></a>
         </div>
       </div>
@@ -221,15 +222,15 @@ button[aria-label="Abrir menu"]>span,button[aria-label="Fechar menu"]>span{trans
 <main>
 
 <!-- HERO -->
-<section id="inicio" data-screen-label="00 Hero" style="position:relative;min-height:min(100svh,980px);display:flex;flex-direction:column;justify-content:center;padding-top:76px;background:#EAF3F2;overflow:hidden">
-  <div aria-hidden="true" style="position:absolute;inset:0">
+<section id="inicio" data-hero="" data-screen-label="00 Hero" style="position:relative;min-height:min(100svh,980px);display:flex;flex-direction:column;justify-content:center;padding-top:76px;background:#EAF3F2;overflow:hidden">
+  <div data-hero-bg="" aria-hidden="true" style="position:absolute;inset:0">
     <div data-fx="scale" style="position:absolute;inset:0">
       <img data-hero-img="" src="assets/opt/hero-implante-1600.webp" srcSet="assets/opt/hero-implante-960.webp 960w, assets/opt/hero-implante-1600.webp 1600w, assets/opt/hero-implante-1920.webp 1920w" sizes="100vw" width="1920" height="1080" alt="" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% center">
     </div>
     <div data-hero-overlay="" style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.9) 30%,rgba(255,255,255,.5) 50%,rgba(255,255,255,0) 68%)"></div>
-    <div style="position:absolute;inset:auto 0 0 0;height:22%;background:linear-gradient(to top,rgba(255,255,255,.55),rgba(255,255,255,0))"></div>
+    <div data-hero-fade="" style="position:absolute;inset:auto 0 0 0;height:22%;background:linear-gradient(to top,rgba(255,255,255,.55),rgba(255,255,255,0))"></div>
   </div>
-  <div style="position:relative;width:100%;max-width:1440px;margin:0 auto;padding:clamp(48px,9vh,112px) clamp(20px,4vw,64px) clamp(28px,4vh,44px)">
+  <div data-hero-top="" style="position:relative;width:100%;max-width:1440px;margin:0 auto;padding:clamp(48px,9vh,112px) clamp(20px,4vw,64px) clamp(28px,4vh,44px)">
     <div data-fx="fade" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:clamp(28px,4vh,44px)">
       <div style="display:flex;align-items:center;gap:14px;font:600 12px/1.3 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67">
         <span style="width:32px;height:1px;background:#579D95"></span>
@@ -251,11 +252,11 @@ button[aria-label="Abrir menu"]>span,button[aria-label="Fechar menu"]>span{trans
       </h1>
     </sc-if>
   </div>
-  <div style="position:relative;width:100%;max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px) clamp(56px,9vh,112px);display:flex;flex-wrap:wrap;align-items:flex-end;gap:clamp(20px,2.2vw,36px)">
-    <div style="flex:0 1 500px;display:flex;flex-direction:column;justify-content:space-between;gap:44px">
+  <div data-hero-bottom="" style="position:relative;width:100%;max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px) clamp(56px,9vh,112px);display:flex;flex-wrap:wrap;align-items:flex-end;gap:clamp(20px,2.2vw,36px)">
+    <div data-hero-col="" style="flex:0 1 500px;display:flex;flex-direction:column;justify-content:space-between;gap:44px">
       <div data-fx="fade" data-delay="380" style="display:flex;flex-direction:column;gap:32px">
         <p style="margin:0;font:400 clamp(1.1rem,1.35vw,1.3rem)/1.6 'Instrument Sans',sans-serif;color:#3A4B49;max-width:36ch;text-wrap:pretty">Estrutura hospitalar, equipe especializada e possibilidades de sedação para tratamentos realizados com mais tranquilidade, cuidado e segurança.</p>
-        <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap">
+        <div data-hero-cta="" style="display:flex;align-items:center;gap:28px;flex-wrap:wrap">
           <a href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-event="click_whatsapp_hero" style="display:inline-flex;align-items:center;gap:14px;height:56px;padding:0 28px;border-radius:999px;background:#163D3A;color:#FFFFFF;font:600 15px/1 'Instrument Sans',sans-serif;transition:background .3s" style-hover="background:#2E6E67;color:#FFFFFF">Agende sua avaliação <span aria-hidden="true">→</span></a>
         </div>
       </div>
