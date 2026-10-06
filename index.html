@@ -43,6 +43,7 @@ input,select,button,textarea{font:inherit}
 @media (prefers-reduced-motion: reduce){[data-wa-float]::before{animation:none}}
 ::selection{background:#D3E7E3;color:#163D3A}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+@media (max-width:520px){[data-quad-sub]{display:none}}
 @media (max-width:900px){[data-virada-overlay]{background:linear-gradient(180deg,rgba(15,45,43,.9) 0%,rgba(15,45,43,.78) 55%,rgba(15,45,43,.55) 100%)!important}[data-virada-img]{object-position:72% center!important}[data-hero-overlay]{background:linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.88) 55%,rgba(255,255,255,.62) 100%)!important}[data-hero-img]{object-position:76% center!important}}
 </style>
 </helmet>
@@ -560,24 +561,17 @@ input,select,button,textarea{font:inherit}
     </div>
     <div style="flex:1 1 360px;display:flex;justify-content:center">
       <div style="position:relative;width:100%;max-width:600px;aspect-ratio:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:clamp(8px,1.2vw,14px)">
-        <div data-fx="fit-tl" style="background:#163D3A;border-radius:42% 6px 6px 6px;padding:clamp(18px,3vw,40px);display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-end;text-align:right;gap:10px;color:#F2F6F5">
-          <span style="width:8px;height:8px;border-radius:50%;background:#4E87C1"></span>
-          <h3 style="margin:0;max-width:11ch;font:600 clamp(14px,1.5vw,20px)/1.25 'Manrope',sans-serif;letter-spacing:-.01em">Planejamento integrado</h3>
+        <div data-fx="fit-tl" style="position:relative;overflow:hidden;background:#1887C3;border-radius:42% 6px 6px 6px;padding:clamp(18px,3vw,40px);display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-end;text-align:right;gap:clamp(12px,1.6vw,20px);color:#FFFFFF;box-shadow:0 24px 48px -32px #1887C3">
+          <span style="display:inline-flex;align-items:center;gap:8px;font:600 11px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;color:#FFFFFF;opacity:.75">01<span style="width:18px;height:1px;background:currentColor"></span></span><div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end"><h3 style="margin:0;max-width:10ch;font:500 clamp(17px,2.1vw,28px)/1.08 'Manrope',sans-serif;letter-spacing:-.03em;color:#FFFFFF;text-wrap:balance">Planejamento integrado</h3><p data-quad-sub="" style="margin:0;max-width:20ch;font:400 clamp(12px,1.05vw,14px)/1.45 'Instrument Sans',sans-serif;color:#FFFFFF;opacity:.85;text-wrap:pretty">Cada etapa do seu caso pensada em conjunto.</p></div>
         </div>
-        <div data-fx="fit-tr" data-delay="90" style="background:#1D4C48;border-radius:6px 42% 6px 6px;padding:clamp(18px,3vw,40px);display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;gap:10px;color:#F2F6F5">
-          <span style="width:8px;height:8px;border-radius:50%;background:#EAC505"></span>
-          <h3 style="margin:0;max-width:11ch;font:600 clamp(14px,1.5vw,20px)/1.25 'Manrope',sans-serif;letter-spacing:-.01em">Equipe multidisciplinar</h3>
+        <div data-fx="fit-tr" data-delay="90" style="position:relative;overflow:hidden;background:#F7C500;border-radius:6px 42% 6px 6px;padding:clamp(18px,3vw,40px);display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;gap:clamp(12px,1.6vw,20px);color:#1C2B2A;box-shadow:0 24px 48px -32px #F7C500">
+          <span style="display:inline-flex;align-items:center;gap:8px;font:600 11px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;color:#1C2B2A;opacity:.75"><span style="width:18px;height:1px;background:currentColor"></span>02</span><div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start"><h3 style="margin:0;max-width:10ch;font:500 clamp(17px,2.1vw,28px)/1.08 'Manrope',sans-serif;letter-spacing:-.03em;color:#1C2B2A;text-wrap:balance">Equipe multidisciplinar</h3><p data-quad-sub="" style="margin:0;max-width:20ch;font:400 clamp(12px,1.05vw,14px)/1.45 'Instrument Sans',sans-serif;color:#1C2B2A;opacity:.85;text-wrap:pretty">Especialistas de diferentes áreas, lado a lado.</p></div>
         </div>
-        <div data-fx="fit-bl" data-delay="180" style="background:#2A6560;border-radius:6px 6px 6px 42%;padding:clamp(18px,3vw,40px);display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-end;text-align:right;gap:10px;color:#F2F6F5">
-          <h3 style="margin:0;max-width:11ch;font:600 clamp(14px,1.5vw,20px)/1.25 'Manrope',sans-serif;letter-spacing:-.01em">Centro cirúrgico</h3>
-          <span style="width:8px;height:8px;border-radius:50%;background:#A9BB2E"></span>
+        <div data-fx="fit-bl" data-delay="180" style="position:relative;overflow:hidden;background:#C5016F;border-radius:6px 6px 6px 42%;padding:clamp(18px,3vw,40px);display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-end;text-align:right;gap:clamp(12px,1.6vw,20px);color:#FFFFFF;box-shadow:0 24px 48px -32px #C5016F">
+          <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end"><h3 style="margin:0;max-width:10ch;font:500 clamp(17px,2.1vw,28px)/1.08 'Manrope',sans-serif;letter-spacing:-.03em;color:#FFFFFF;text-wrap:balance">Centro cirúrgico</h3><p data-quad-sub="" style="margin:0;max-width:20ch;font:400 clamp(12px,1.05vw,14px)/1.45 'Instrument Sans',sans-serif;color:#FFFFFF;opacity:.85;text-wrap:pretty">Estrutura preparada para casos complexos.</p></div><span style="display:inline-flex;align-items:center;gap:8px;font:600 11px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;color:#FFFFFF;opacity:.75">03<span style="width:18px;height:1px;background:currentColor"></span></span>
         </div>
-        <div data-fx="fit-br" data-delay="270" style="background:#357A72;border-radius:6px 6px 42% 6px;padding:clamp(18px,3vw,40px);display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:10px;color:#FFFFFF">
-          <h3 style="margin:0;max-width:11ch;font:600 clamp(14px,1.5vw,20px)/1.25 'Manrope',sans-serif;letter-spacing:-.01em">Possibilidades de sedação</h3>
-          <span style="width:8px;height:8px;border-radius:50%;background:#A8006F"></span>
-        </div>
-        <div data-fx="fade" data-delay="420" style="position:absolute;left:50%;top:50%;width:32%;aspect-ratio:1;transform:translate(-50%,-50%) rotate(45deg);background:#FFFFFF;border-radius:16%;display:flex;align-items:center;justify-content:center">
-          <span style="transform:rotate(-45deg);text-align:center;font:600 clamp(10px,1.1vw,14px)/1.3 'Instrument Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#163D3A;max-width:9ch">Tudo em um mesmo ambiente</span>
+        <div data-fx="fit-br" data-delay="270" style="position:relative;overflow:hidden;background:#A7BC0A;border-radius:6px 6px 42% 6px;padding:clamp(18px,3vw,40px);display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:clamp(12px,1.6vw,20px);color:#1C2B2A;box-shadow:0 24px 48px -32px #A7BC0A">
+          <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start"><h3 style="margin:0;max-width:10ch;font:500 clamp(17px,2.1vw,28px)/1.08 'Manrope',sans-serif;letter-spacing:-.03em;color:#1C2B2A;text-wrap:balance">Possibilidades de sedação</h3><p data-quad-sub="" style="margin:0;max-width:20ch;font:400 clamp(12px,1.05vw,14px)/1.45 'Instrument Sans',sans-serif;color:#1C2B2A;opacity:.85;text-wrap:pretty">Mais tranquilidade durante o procedimento.</p></div><span style="display:inline-flex;align-items:center;gap:8px;font:600 11px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;color:#1C2B2A;opacity:.75"><span style="width:18px;height:1px;background:currentColor"></span>04</span>
         </div>
       </div>
     </div>
