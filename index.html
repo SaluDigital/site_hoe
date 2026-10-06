@@ -38,9 +38,13 @@ summary{list-style:none}
 summary::-webkit-details-marker{display:none}
 input,select,button,textarea{font:inherit}
 :root{--sec-y:clamp(72px,8vw,120px)}
+[data-gallery]{scrollbar-width:none}
+[data-gallery]::-webkit-scrollbar{display:none}
+[data-play-ring]::after{content:"";position:absolute;inset:-1px;border-radius:inherit;border:2px solid rgba(255,255,255,.7);animation:waPulse 2.6s cubic-bezier(.2,.7,.1,1) infinite}
+button:hover [data-play-ring]{transform:scale(1.08)}
 [data-wa-float]::before{content:"";position:absolute;inset:0;border-radius:inherit;background:#25D366;z-index:-1;animation:waPulse 2.6s cubic-bezier(.2,.7,.1,1) infinite}
 @keyframes waPulse{0%{transform:scale(1);opacity:.45}70%,100%{transform:scale(1.55);opacity:0}}
-@media (prefers-reduced-motion: reduce){[data-wa-float]::before{animation:none}}
+@media (prefers-reduced-motion: reduce){[data-wa-float]::before,[data-play-ring]::after{animation:none}}
 ::selection{background:#D3E7E3;color:#163D3A}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 @media (max-width:520px){[data-quad-sub]{display:none}}
@@ -507,42 +511,40 @@ input,select,button,textarea{font:inherit}
       </div>
       <p data-fx="fade" data-delay="120" style="flex:0 1 300px;margin:0;font:400 15px/1.6 'Instrument Sans',sans-serif;color:#B9CFCB">Centro cirúrgico, consultórios, tecnologia e ambientes pensados para cada etapa do atendimento.</p>
     </div>
-    <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.4vw,20px)">
-      <figure data-fx="clip" style="flex:2 1 560px;margin:0;display:flex;flex-direction:column;gap:14px">
-        <div role="img" aria-label="Centro cirúrgico do HOE" style="position:relative;height:clamp(380px,46vw,700px);border-top-left-radius:clamp(80px,12vw,220px);background-color:#1D4743;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px)">
-          <div style="position:absolute;left:28px;bottom:24px;right:24px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Imagem — centro cirúrgico]</span><sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#8FB0AB">assets/images/estrutura-centro-cirurgico.webp</span></sc-if></div>
-        </div>
-        <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5">Centro cirúrgico</figcaption>
-      </figure>
-      <div style="flex:1 1 320px;display:flex;flex-direction:column;gap:clamp(12px,1.4vw,20px)">
-        <figure data-fx="clip" data-delay="120" style="margin:0;flex:1;display:flex;flex-direction:column;gap:14px">
-          <div role="img" aria-label="Consultório do HOE" style="position:relative;flex:1;min-height:clamp(220px,20vw,320px);border-radius:4px;background-color:#1D4743;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px)">
-            <div style="position:absolute;left:22px;bottom:20px;right:22px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Imagem — consultório]</span></div>
-          </div>
-          <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5">Consultórios</figcaption>
-        </figure>
-        <figure data-fx="clip" data-delay="220" style="margin:0;flex:1;display:flex;flex-direction:column;gap:14px">
-          <div role="img" aria-label="Tecnologia e equipamentos do HOE" style="position:relative;flex:1;min-height:clamp(220px,20vw,320px);border-radius:4px;background-color:#1D4743;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px)">
-            <div style="position:absolute;left:22px;bottom:20px;right:22px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Imagem — tecnologia e equipamentos]</span></div>
-          </div>
-          <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5">Tecnologia e equipamentos</figcaption>
-        </figure>
+    <div data-fx="fade" style="position:relative;aspect-ratio:16/9;max-height:820px;width:100%;overflow:hidden;border-radius:clamp(80px,12vw,220px) 6px 6px 6px;background:#1D4743;box-shadow:0 60px 120px -60px rgba(0,0,0,.7)">
+      <sc-if value="{{ ytCover }}" hint-placeholder-val="{{ true }}">
+        <button type="button" onClick="{{ playYT }}" aria-label="Assistir ao vídeo: Hospital Odontológico em Salvador, conheça o HOE" data-event="click_video_estrutura" style="position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;cursor:pointer;background:#1D4743;color:#FFFFFF">
+          <img src="https://i.ytimg.com/vi/puS0RhQbres/sddefault.jpg" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+          <span aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(15,45,43,.15) 0%,rgba(15,45,43,.6) 100%)"></span>
+          <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:18px">
+            <span data-play-ring="" style="position:relative;width:clamp(76px,7vw,104px);height:clamp(76px,7vw,104px);border-radius:999px;display:flex;align-items:center;justify-content:center;background:#FFFFFF;color:#163D3A;box-shadow:0 20px 50px -12px rgba(0,0,0,.5);transition:transform .4s cubic-bezier(.2,.7,.1,1)"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-left:4px"><path d="M7 4.5v15a1 1 0 0 0 1.52.85l12-7.5a1 1 0 0 0 0-1.7l-12-7.5A1 1 0 0 0 7 4.5Z"></path></svg></span>
+            <span style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;text-shadow:0 1px 10px rgba(0,0,0,.4)">Conheça o HOE</span>
+          </span>
+        </button>
+      </sc-if>
+      <sc-if value="{{ ytPlaying }}" hint-placeholder-val="{{ false }}">
+        <iframe src="https://www.youtube-nocookie.com/embed/puS0RhQbres?autoplay=1&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" title="Hospital Odontológico em Salvador: conheça o HOE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+      </sc-if>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin:clamp(56px,7vw,96px) 0 clamp(24px,3vw,36px)">
+      <div data-fx="fade" style="display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8"><span style="width:28px;height:1px;background:currentColor"></span><span>Galeria</span></div>
+        <h3 style="margin:0;font:400 clamp(1.5rem,2.4vw,2.25rem)/1.15 'Manrope',sans-serif;letter-spacing:-.03em;color:#F2F6F5">Conheça nossos ambientes</h3>
+      </div>
+      <div data-fx="fade" data-delay="100" style="display:flex;gap:10px">
+        <button type="button" onClick="{{ galPrev }}" aria-label="Fotos anteriores" data-event="click_gallery_prev" style="width:52px;height:52px;border-radius:999px;border:1px solid rgba(255,255,255,.24);background:transparent;color:#F2F6F5;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .3s,color .3s,border-color .3s" style-hover="background:#F2F6F5;color:#0F2D2B;border-color:#F2F6F5"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg></button>
+        <button type="button" onClick="{{ galNext }}" aria-label="Próximas fotos" data-event="click_gallery_next" style="width:52px;height:52px;border-radius:999px;border:1px solid rgba(255,255,255,.24);background:transparent;color:#F2F6F5;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .3s,color .3s,border-color .3s" style-hover="background:#F2F6F5;color:#0F2D2B;border-color:#F2F6F5"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg></button>
       </div>
     </div>
-    <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.4vw,20px);margin-top:clamp(24px,3vw,40px)">
-      <figure data-fx="clip" style="flex:1 1 300px;margin:0;display:flex;flex-direction:column;gap:14px">
-        <div role="img" aria-label="Recepção do HOE" style="position:relative;height:clamp(260px,26vw,400px);border-radius:4px;background-color:#1D4743;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px)">
-          <div style="position:absolute;left:22px;bottom:20px;right:22px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Imagem — recepção]</span></div>
-        </div>
-        <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5">Recepção</figcaption>
-      </figure>
-      <figure data-fx="clip" data-delay="120" style="flex:1.7 1 440px;margin:0;display:flex;flex-direction:column;gap:14px">
-        <div role="img" aria-label="Outros ambientes do HOE" style="position:relative;height:clamp(260px,26vw,400px);border-radius:4px 4px clamp(60px,8vw,140px) 4px;background-color:#1D4743;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px)">
-          <div style="position:absolute;left:22px;bottom:20px;right:22px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Imagem — outros ambientes]</span></div>
-        </div>
-        <figcaption style="display:flex;gap:16px;align-items:baseline;font:500 14px/1.4 'Instrument Sans',sans-serif;color:#F2F6F5">Ambientes · Sala de recuperação [a confirmar]</figcaption>
-      </figure>
-    </div>
+    <ul id="hoe-gallery" data-gallery="" data-fx="fade" data-delay="160" aria-label="Galeria de fotos da estrutura do HOE" style="list-style:none;margin:0;padding:0;display:flex;gap:clamp(12px,1.4vw,20px);height:clamp(280px,30vw,420px);overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch">
+        <li data-gal-item="" style="flex:0 0 auto;height:100%;aspect-ratio:3/2;scroll-snap-align:start;border-radius:clamp(28px,3vw,48px) 6px 6px 6px;overflow:hidden;background:#1D4743;position:relative"><img src="assets/f1.webp" alt="Recepção do HOE" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.1,1)" style-hover="transform:scale(1.05)"></li>
+        <li data-gal-item="" style="flex:0 0 auto;height:100%;aspect-ratio:3/2;scroll-snap-align:start;border-radius:6px 6px clamp(28px,3vw,48px) 6px;overflow:hidden;background:#1D4743;position:relative"><img src="assets/f2.webp" alt="Ambiente interno do HOE" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.1,1)" style-hover="transform:scale(1.05)"></li>
+        <li data-gal-item="" style="flex:0 0 auto;height:100%;aspect-ratio:3/4;scroll-snap-align:start;border-radius:clamp(28px,3vw,48px) 6px 6px 6px;overflow:hidden;background:#1D4743;position:relative"><img src="assets/f3.webp" alt="Exame de imagem no HOE" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.1,1)" style-hover="transform:scale(1.05)"></li>
+        <li data-gal-item="" style="flex:0 0 auto;height:100%;aspect-ratio:3/4;scroll-snap-align:start;border-radius:6px 6px clamp(28px,3vw,48px) 6px;overflow:hidden;background:#1D4743;position:relative"><img src="assets/f4.webp" alt="Atendimento no HOE" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.1,1)" style-hover="transform:scale(1.05)"></li>
+        <li data-gal-item="" style="flex:0 0 auto;height:100%;aspect-ratio:3/4;scroll-snap-align:start;border-radius:clamp(28px,3vw,48px) 6px 6px 6px;overflow:hidden;background:#1D4743;position:relative"><img src="assets/f5.webp" alt="Estrutura do HOE" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.1,1)" style-hover="transform:scale(1.05)"></li>
+        <li data-gal-item="" style="flex:0 0 auto;height:100%;aspect-ratio:3/4;scroll-snap-align:start;border-radius:6px 6px clamp(28px,3vw,48px) 6px;overflow:hidden;background:#1D4743;position:relative"><img src="assets/f6.webp" alt="Equipamentos do HOE" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.1,1)" style-hover="transform:scale(1.05)"></li>
+        <li data-gal-item="" style="flex:0 0 auto;height:100%;aspect-ratio:3/2;scroll-snap-align:start;border-radius:clamp(28px,3vw,48px) 6px 6px 6px;overflow:hidden;background:#1D4743;position:relative"><img src="assets/f7.webp" alt="Corredor dos consultórios do HOE" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.1,1)" style-hover="transform:scale(1.05)"></li>
+    </ul>
     <dl style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:32px;margin:clamp(72px,8vw,120px) 0 0;padding-top:36px;border-top:1px solid rgba(255,255,255,.16)">
       <div data-fx="fade" style="display:flex;flex-direction:column;gap:10px"><dt style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8">Equipe</dt><dd style="margin:0;font:400 16px/1.55 'Instrument Sans',sans-serif;color:#D7E5E2">Especialistas de diferentes áreas no mesmo lugar.</dd></div>
       <div data-fx="fade" data-delay="100" style="display:flex;flex-direction:column;gap:10px"><dt style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8">Protocolos</dt><dd style="margin:0;font:400 16px/1.55 'Instrument Sans',sans-serif;color:#D7E5E2">Biossegurança e fluxos de atendimento [a detalhar com o HOE].</dd></div>
@@ -903,7 +905,7 @@ const FX = {
 const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
 
 class Component extends DCLogic {
-  state = { wide: true, scrolled: false, menu: false, teamOpen: false, sobreSound: false, odontoSound: false, faq: 0, form: { nome: '', whats: '', motivo: '', medo: false, particular: false, lgpd: false }, formError: '', formSent: false };
+  state = { wide: true, scrolled: false, menu: false, teamOpen: false, sobreSound: false, odontoSound: false, ytPlaying: false, faq: 0, form: { nome: '', whats: '', motivo: '', medo: false, particular: false, lgpd: false }, formError: '', formSent: false };
 
   componentDidMount() {
     document.documentElement.lang = 'pt-BR';
@@ -1048,6 +1050,10 @@ class Component extends DCLogic {
         if (on) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
         this.setState({ odontoSound: on });
       },
+      ytCover: !s.ytPlaying, ytPlaying: s.ytPlaying,
+      playYT: () => this.setState({ ytPlaying: true }),
+      galPrev: () => { const g = document.getElementById('hoe-gallery'); if (g) g.scrollBy({ left: -g.clientWidth * 0.8, behavior: 'smooth' }); },
+      galNext: () => { const g = document.getElementById('hoe-gallery'); if (g) g.scrollBy({ left: g.clientWidth * 0.8, behavior: 'smooth' }); },
       toggleSobreSound: () => {
         const v = document.getElementById('v-sobre'); if (!v) return;
         const on = !this.state.sobreSound;
