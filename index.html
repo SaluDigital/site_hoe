@@ -43,7 +43,7 @@ input,select,button,textarea{font:inherit}
 @media (prefers-reduced-motion: reduce){[data-wa-float]::before{animation:none}}
 ::selection{background:#D3E7E3;color:#163D3A}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-@media (max-width:900px){[data-hero-overlay]{background:linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.88) 55%,rgba(255,255,255,.62) 100%)!important}[data-hero-img]{object-position:76% center!important}}
+@media (max-width:900px){[data-virada-overlay]{background:linear-gradient(180deg,rgba(15,45,43,.9) 0%,rgba(15,45,43,.78) 55%,rgba(15,45,43,.55) 100%)!important}[data-virada-img]{object-position:72% center!important}[data-hero-overlay]{background:linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.88) 55%,rgba(255,255,255,.62) 100%)!important}[data-hero-img]{object-position:76% center!important}}
 </style>
 </helmet>
 
@@ -294,20 +294,27 @@ input,select,button,textarea{font:inherit}
 </section>
 
 <!-- VIRADA -->
-<section aria-label="O que você recupera" data-screen-label="Virada" style="position:relative;min-height:100svh;display:flex;align-items:center;background:#FFFFFF;overflow:hidden;padding:var(--sec-y) 0">
-  <div aria-hidden="true" style="position:absolute;left:50%;top:50%;width:min(130vw,1800px);aspect-ratio:1;transform:translate(-30%,-50%);border:1px solid rgba(87,157,149,.16);border-radius:50%"></div>
+<section aria-label="O que você recupera" data-screen-label="Virada" style="position:relative;min-height:min(100svh,900px);display:flex;align-items:center;background:#0F2D2B;overflow:hidden;padding:var(--sec-y) 0">
+  <div aria-hidden="true" style="position:absolute;inset:0">
+    <div data-fx="scale" style="position:absolute;inset:0">
+      <img data-virada-img="" src="assets/casal-feliz.png" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:65% 30%">
+    </div>
+    <div data-virada-overlay="" style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,45,43,.94) 0%,rgba(15,45,43,.84) 30%,rgba(15,45,43,.4) 56%,rgba(15,45,43,0) 76%)"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,45,43,.35) 0%,rgba(15,45,43,0) 22%,rgba(15,45,43,0) 70%,rgba(15,45,43,.45) 100%)"></div>
+  </div>
+  <div aria-hidden="true" style="position:absolute;left:50%;top:50%;width:min(130vw,1800px);aspect-ratio:1;transform:translate(-30%,-50%);border:1px solid rgba(255,255,255,.12);border-radius:50%"></div>
   <div style="position:relative;width:100%;max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
-    <p style="margin:0;font:400 clamp(2rem,4.2vw,4.5rem)/1.06 'Manrope',sans-serif;letter-spacing:-.04em;color:#1C2B2A">
+    <p style="margin:0;font:400 clamp(2rem,4.2vw,4.5rem)/1.06 'Manrope',sans-serif;letter-spacing:-.04em;color:#FFFFFF;text-shadow:0 2px 24px rgba(15,45,43,.25)">
       <span data-fx="mask" style="display:block;overflow:hidden;padding-bottom:.08em"><span style="display:block">O tratamento é</span></span>
       <span data-fx="mask" data-delay="100" style="display:block;overflow:hidden;padding-bottom:.08em"><span style="display:block">odontológico.</span></span>
-      <span data-fx="mask" data-delay="260" style="display:block;overflow:hidden;padding-bottom:.08em;margin-top:.18em"><span style="display:block;color:#579D95">O que você recupera</span></span>
-      <span data-fx="mask" data-delay="360" style="display:block;overflow:hidden;padding-bottom:.08em"><span style="display:block;color:#579D95">vai muito além do sorriso.</span></span>
+      <span data-fx="mask" data-delay="260" style="display:block;overflow:hidden;padding-bottom:.08em;margin-top:.18em"><span style="display:block;color:#9FD0C8">O que você recupera</span></span>
+      <span data-fx="mask" data-delay="360" style="display:block;overflow:hidden;padding-bottom:.08em"><span style="display:block;color:#9FD0C8">vai muito além do sorriso.</span></span>
     </p>
-    <ul data-fx="fade" data-delay="600" style="list-style:none;margin:clamp(56px,7vw,104px) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:16px 40px;font:600 13px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#163D3A">
-      <li style="display:flex;align-items:center;gap:10px"><span style="width:10px;height:10px;border-radius:10px 0 0 0;background:#579D95"></span>Mastigar</li>
-      <li style="display:flex;align-items:center;gap:10px"><span style="width:10px;height:10px;border-radius:0 10px 0 0;background:#4E87C1"></span>Falar</li>
-      <li style="display:flex;align-items:center;gap:10px"><span style="width:10px;height:10px;border-radius:0 0 0 10px;background:#A9BB2E"></span>Sorrir</li>
-      <li style="display:flex;align-items:center;gap:10px"><span style="width:10px;height:10px;border-radius:0 0 10px 0;background:#A8006F"></span>Conviver</li>
+    <ul data-fx="fade" data-delay="600" style="list-style:none;margin:clamp(56px,7vw,104px) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#FFFFFF">
+      <li style="display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)"><span style="width:10px;height:10px;border-radius:10px 0 0 0;background:#579D95"></span>Mastigar</li>
+      <li style="display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)"><span style="width:10px;height:10px;border-radius:0 10px 0 0;background:#4E87C1"></span>Falar</li>
+      <li style="display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)"><span style="width:10px;height:10px;border-radius:0 0 0 10px;background:#A9BB2E"></span>Sorrir</li>
+      <li style="display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)"><span style="width:10px;height:10px;border-radius:0 0 10px 0;background:#A8006F"></span>Conviver</li>
     </ul>
   </div>
 </section>
