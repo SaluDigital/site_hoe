@@ -43,6 +43,8 @@ input,select,button,textarea{font:inherit}
 @media (max-width:860px){[data-team-grid]{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:600px){[data-team-grid]{grid-template-columns:repeat(2,minmax(0,1fr))}}
 li:hover [data-team-photo] img{transform:scale(1.05)}
+[data-rev]{--rev-card:172px;--rev-gap:14px}
+@media (max-width:600px){[data-rev]{--rev-card:196px}}
 [data-gallery]{scrollbar-width:none}
 [data-gallery]::-webkit-scrollbar{display:none}
 [data-play-ring]::after{content:"";position:absolute;inset:-1px;border-radius:inherit;border:2px solid rgba(255,255,255,.7);animation:waPulse 2.6s cubic-bezier(.2,.7,.1,1) infinite}
@@ -672,28 +674,118 @@ button:hover [data-play-ring]{transform:scale(1.08)}
   <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
     <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67;margin-bottom:32px"><span style="width:28px;height:1px;background:currentColor"></span><span>Experiências</span></div>
     <h2 data-fx="rise" style="margin:0 0 clamp(56px,7vw,96px);max-width:16ch;font:400 clamp(2rem,4.2vw,4.5rem)/1.06 'Manrope',sans-serif;letter-spacing:-.04em;color:#1C2B2A;text-wrap:balance">Experiências de quem já passou pelo HOE.</h2>
-    <div style="display:flex;flex-wrap:wrap;gap:48px clamp(40px,6vw,96px);align-items:stretch">
-      <div data-fx="clip" role="img" aria-label="Vídeo de depoimento autorizado" style="flex:1.2 1 440px;position:relative;min-height:clamp(380px,40vw,600px);border-radius:clamp(80px,11vw,200px) 6px 6px 6px;background-color:#163D3A;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px);display:flex;align-items:center;justify-content:center">
-        <span style="width:84px;height:84px;border-radius:50%;border:1px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center"><span style="width:0;height:0;border-left:16px solid #F2F6F5;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:5px"></span></span>
-        <div style="position:absolute;left:28px;bottom:24px;right:24px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Vídeo depoimento]</span><sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#8FB0AB">assets/videos/depoimento-01.mp4</span></sc-if></div>
+    <div style="display:flex;flex-wrap:wrap;gap:64px clamp(40px,6vw,96px);align-items:center">
+      <div style="flex:1 1 400px;min-width:0;display:flex;justify-content:center">
+        <div data-fx="fade" style="position:relative;width:min(100%,420px)">
+          <div aria-hidden="true" style="position:absolute;inset:clamp(18px,2vw,28px) clamp(18px,2vw,28px) clamp(-28px,-2vw,-18px) clamp(-28px,-2vw,-18px);border:1px solid rgba(87,157,149,.35);border-radius:clamp(64px,8vw,140px) 6px 6px 6px"></div>
+          <div style="position:relative;aspect-ratio:9/16;overflow:hidden;border-radius:clamp(64px,8vw,140px) 6px 6px 6px;background:#163D3A;box-shadow:0 50px 90px -40px rgba(22,61,58,.55)">
+            <video id="v-depo" src="assets/paciente3.mp4" poster="assets/capa-sedacao.jpg" data-autoplay="" muted loop playsinline preload="none" aria-label="Vídeo: depoimento de paciente que tinha muito medo de dentista" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0"></video>
+            <div aria-hidden="true" style="position:absolute;inset:auto 0 0 0;height:30%;background:linear-gradient(to top,rgba(15,45,43,.45),rgba(15,45,43,0))"></div>
+            <button type="button" onClick="{{ toggleDepoSound }}" aria-label="{{ depoSoundLabel }}" aria-pressed="{{ depoSound }}" title="{{ depoSoundLabel }}" data-event="click_video_depoimento_audio" style="position:absolute;right:clamp(16px,2vw,28px);bottom:clamp(16px,2vw,28px);width:52px;height:52px;border-radius:999px;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer;color:#FFFFFF;background:rgba(255,255,255,.16);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.32);transition:background .3s,transform .3s" style-hover="background:rgba(255,255,255,.28);transform:scale(1.06)">
+              <sc-if value="{{ depoSound }}" hint-placeholder-val="{{ false }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg></sc-if>
+              <sc-if value="{{ depoMuted }}" hint-placeholder-val="{{ true }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"></path><path d="m16 9 5 6"></path><path d="m21 9-5 6"></path></svg></sc-if>
+            </button>
+          </div>
+        </div>
       </div>
-      <div style="flex:1 1 360px;display:flex;flex-direction:column;justify-content:space-between;gap:0;border-top:1px solid rgba(22,61,58,.16)">
-        <figure data-fx="fade" style="margin:0;padding:32px 0;border-bottom:1px solid rgba(22,61,58,.16);display:flex;flex-direction:column;gap:16px">
-          <span aria-hidden="true" style="font:400 56px/0.6 'Manrope',sans-serif;color:#579D95;height:24px">“</span>
-          <blockquote style="margin:0;font:400 clamp(1.15rem,1.5vw,1.4rem)/1.45 'Manrope',sans-serif;letter-spacing:-.01em;color:#1C2B2A">[Depoimento autorizado 01]</blockquote>
-          <figcaption style="font:500 13px/1.4 'Instrument Sans',sans-serif;color:#4A5C5A">[Nome do paciente, com autorização] · [Tratamento]</figcaption>
-        </figure>
-        <figure data-fx="fade" data-delay="120" style="margin:0;padding:32px 0;border-bottom:1px solid rgba(22,61,58,.16);display:flex;flex-direction:column;gap:16px">
-          <span aria-hidden="true" style="font:400 56px/0.6 'Manrope',sans-serif;color:#579D95;height:24px">“</span>
-          <blockquote style="margin:0;font:400 clamp(1.15rem,1.5vw,1.4rem)/1.45 'Manrope',sans-serif;letter-spacing:-.01em;color:#1C2B2A">[Depoimento autorizado 02]</blockquote>
-          <figcaption style="font:500 13px/1.4 'Instrument Sans',sans-serif;color:#4A5C5A">[Nome do paciente, com autorização] · [Tratamento]</figcaption>
-        </figure>
-        <figure data-fx="fade" data-delay="240" style="margin:0;padding:32px 0;border-bottom:1px solid rgba(22,61,58,.16);display:flex;flex-direction:column;gap:16px">
-          <span aria-hidden="true" style="font:400 56px/0.6 'Manrope',sans-serif;color:#579D95;height:24px">“</span>
-          <blockquote style="margin:0;font:400 clamp(1.15rem,1.5vw,1.4rem)/1.45 'Manrope',sans-serif;letter-spacing:-.01em;color:#1C2B2A">[Depoimento autorizado 03]</blockquote>
-          <figcaption style="font:500 13px/1.4 'Instrument Sans',sans-serif;color:#4A5C5A">[Nome do paciente, com autorização] · [Tratamento]</figcaption>
-        </figure>
-        <p style="margin:24px 0 0;font:400 13px/1.5 'Instrument Sans',sans-serif;color:#5E716F">Publicamos apenas depoimentos autorizados pelos pacientes.</p>
+      <div data-rev="" style="flex:1 1 400px;min-width:0;display:flex;flex-direction:column;gap:24px">
+        <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67"><span style="display:flex;gap:2px"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg></span><span>Avaliações de pacientes no Google</span></div>
+        <div data-fx="fade" data-delay="100" style="position:relative;height:calc(var(--rev-card) * 3 + var(--rev-gap) * 2);overflow:hidden">
+          <ul id="hoe-reviews" aria-label="Depoimentos de pacientes" style="position:relative;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:var(--rev-gap);transition:transform .9s cubic-bezier(.2,.7,.1,1);will-change:transform">
+            <li data-rev-item="" style="height:var(--rev-card);box-sizing:border-box;padding:clamp(18px,1.8vw,24px) clamp(18px,2vw,26px);border-radius:22px 22px 22px 6px;background:#F7F9F8;border:1px solid rgba(22,61,58,.08);display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;align-items:center;gap:12px">
+                <span aria-hidden="true" style="flex:0 0 42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#1887C3;color:#FFFFFF;font:600 17px/1 'Manrope',sans-serif">M</span>
+                <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:5px">
+                  <strong style="font:600 15px/1.2 'Manrope',sans-serif;letter-spacing:-.01em;color:#1C2B2A">Maria Eduarda Campos</strong>
+                  <span role="img" aria-label="5 de 5 estrelas" style="display:flex;gap:2px"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg></span>
+                </div>
+                <span aria-hidden="true" style="align-self:flex-start;font:400 48px/0.7 'Manrope',sans-serif;color:#9FD0C8">&#8220;</span>
+              </div>
+              <p style="margin:0;font:400 clamp(14px,1.05vw,15.5px)/1.55 'Instrument Sans',sans-serif;color:#3A4B49;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">Excelente atendimento! Melhor clínica odontológica de Salvador, indicação ótima! Dr. Bruno, adorei o resultado! Obrigada!!!</p>
+            </li>
+            <li data-rev-item="" style="height:var(--rev-card);box-sizing:border-box;padding:clamp(18px,1.8vw,24px) clamp(18px,2vw,26px);border-radius:22px 22px 22px 6px;background:#F7F9F8;border:1px solid rgba(22,61,58,.08);display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;align-items:center;gap:12px">
+                <span aria-hidden="true" style="flex:0 0 42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#C5016F;color:#FFFFFF;font:600 17px/1 'Manrope',sans-serif">C</span>
+                <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:5px">
+                  <strong style="font:600 15px/1.2 'Manrope',sans-serif;letter-spacing:-.01em;color:#1C2B2A">Clarindo Bernardo</strong>
+                  <span role="img" aria-label="4 de 5 estrelas" style="display:flex;gap:2px"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#D5DEDC" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg></span>
+                </div>
+                <span aria-hidden="true" style="align-self:flex-start;font:400 48px/0.7 'Manrope',sans-serif;color:#9FD0C8">&#8220;</span>
+              </div>
+              <p style="margin:0;font:400 clamp(14px,1.05vw,15.5px)/1.55 'Instrument Sans',sans-serif;color:#3A4B49;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">Excelente. Profissionais capacitados e educados. Da recepção ao atendimento com o dentista. Nota 10. Parabéns.</p>
+            </li>
+            <li data-rev-item="" style="height:var(--rev-card);box-sizing:border-box;padding:clamp(18px,1.8vw,24px) clamp(18px,2vw,26px);border-radius:22px 22px 22px 6px;background:#F7F9F8;border:1px solid rgba(22,61,58,.08);display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;align-items:center;gap:12px">
+                <span aria-hidden="true" style="flex:0 0 42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#579D95;color:#FFFFFF;font:600 17px/1 'Manrope',sans-serif">M</span>
+                <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:5px">
+                  <strong style="font:600 15px/1.2 'Manrope',sans-serif;letter-spacing:-.01em;color:#1C2B2A">Mara Lima</strong>
+                  <span role="img" aria-label="5 de 5 estrelas" style="display:flex;gap:2px"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg></span>
+                </div>
+                <span aria-hidden="true" style="align-self:flex-start;font:400 48px/0.7 'Manrope',sans-serif;color:#9FD0C8">&#8220;</span>
+              </div>
+              <p style="margin:0;font:400 clamp(14px,1.05vw,15.5px)/1.55 'Instrument Sans',sans-serif;color:#3A4B49;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">Como hospital especializado, ele realmente faz o que promete. Profissionais competentes, educados e atenciosos.</p>
+            </li>
+            <li data-rev-item="" style="height:var(--rev-card);box-sizing:border-box;padding:clamp(18px,1.8vw,24px) clamp(18px,2vw,26px);border-radius:22px 22px 22px 6px;background:#F7F9F8;border:1px solid rgba(22,61,58,.08);display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;align-items:center;gap:12px">
+                <span aria-hidden="true" style="flex:0 0 42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#A7BC0A;color:#1C2B2A;font:600 17px/1 'Manrope',sans-serif">E</span>
+                <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:5px">
+                  <strong style="font:600 15px/1.2 'Manrope',sans-serif;letter-spacing:-.01em;color:#1C2B2A">Esmeraldo Júnior</strong>
+                  <span role="img" aria-label="5 de 5 estrelas" style="display:flex;gap:2px"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg></span>
+                </div>
+                <span aria-hidden="true" style="align-self:flex-start;font:400 48px/0.7 'Manrope',sans-serif;color:#9FD0C8">&#8220;</span>
+              </div>
+              <p style="margin:0;font:400 clamp(14px,1.05vw,15.5px)/1.55 'Instrument Sans',sans-serif;color:#3A4B49;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">Foi tudo ótimo. Sou sempre bem atendido, desde a recepção até a Dra. Simone, que é uma ótima profissional.</p>
+            </li>
+            <li data-rev-item="" style="height:var(--rev-card);box-sizing:border-box;padding:clamp(18px,1.8vw,24px) clamp(18px,2vw,26px);border-radius:22px 22px 22px 6px;background:#F7F9F8;border:1px solid rgba(22,61,58,.08);display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;align-items:center;gap:12px">
+                <span aria-hidden="true" style="flex:0 0 42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#F7C500;color:#1C2B2A;font:600 17px/1 'Manrope',sans-serif">P</span>
+                <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:5px">
+                  <strong style="font:600 15px/1.2 'Manrope',sans-serif;letter-spacing:-.01em;color:#1C2B2A">Paula Reis</strong>
+                  <span role="img" aria-label="5 de 5 estrelas" style="display:flex;gap:2px"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg></span>
+                </div>
+                <span aria-hidden="true" style="align-self:flex-start;font:400 48px/0.7 'Manrope',sans-serif;color:#9FD0C8">&#8220;</span>
+              </div>
+              <p style="margin:0;font:400 clamp(14px,1.05vw,15.5px)/1.55 'Instrument Sans',sans-serif;color:#3A4B49;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">Excelente atendimento desde a recepção até o tratamento! Super indico!</p>
+            </li>
+            <li data-rev-item="" style="height:var(--rev-card);box-sizing:border-box;padding:clamp(18px,1.8vw,24px) clamp(18px,2vw,26px);border-radius:22px 22px 22px 6px;background:#F7F9F8;border:1px solid rgba(22,61,58,.08);display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;align-items:center;gap:12px">
+                <span aria-hidden="true" style="flex:0 0 42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#163D3A;color:#FFFFFF;font:600 17px/1 'Manrope',sans-serif">G</span>
+                <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:5px">
+                  <strong style="font:600 15px/1.2 'Manrope',sans-serif;letter-spacing:-.01em;color:#1C2B2A">Gley Lopes</strong>
+                  <span role="img" aria-label="5 de 5 estrelas" style="display:flex;gap:2px"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg></span>
+                </div>
+                <span aria-hidden="true" style="align-self:flex-start;font:400 48px/0.7 'Manrope',sans-serif;color:#9FD0C8">&#8220;</span>
+              </div>
+              <p style="margin:0;font:400 clamp(14px,1.05vw,15.5px)/1.55 'Instrument Sans',sans-serif;color:#3A4B49;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">Muito bom!! Principalmente o atendimento. Profissionais excelentes e muito competentes. Voltarei novamente, sem dúvidas.</p>
+            </li>
+            <li data-rev-item="" style="height:var(--rev-card);box-sizing:border-box;padding:clamp(18px,1.8vw,24px) clamp(18px,2vw,26px);border-radius:22px 22px 22px 6px;background:#F7F9F8;border:1px solid rgba(22,61,58,.08);display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;align-items:center;gap:12px">
+                <span aria-hidden="true" style="flex:0 0 42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#1887C3;color:#FFFFFF;font:600 17px/1 'Manrope',sans-serif">S</span>
+                <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:5px">
+                  <strong style="font:600 15px/1.2 'Manrope',sans-serif;letter-spacing:-.01em;color:#1C2B2A">Sandra Rangel Loureiro</strong>
+                  <span role="img" aria-label="5 de 5 estrelas" style="display:flex;gap:2px"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F7C500" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5Z"></path></svg></span>
+                </div>
+                <span aria-hidden="true" style="align-self:flex-start;font:400 48px/0.7 'Manrope',sans-serif;color:#9FD0C8">&#8220;</span>
+              </div>
+              <p style="margin:0;font:400 clamp(14px,1.05vw,15.5px)/1.55 'Instrument Sans',sans-serif;color:#3A4B49;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">Ótimo atendimento, pessoas gentis e prestativas, Dr. Bruno é 10!!!!! Perfeito!!!! Recomendo!!!!</p>
+            </li>
+          </ul>
+        </div>
+        <div data-fx="fade" data-delay="160" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+          <div data-rev-menu="" style="position:relative">
+            <button type="button" onClick="{{ toggleRevMenu }}" aria-haspopup="menu" aria-expanded="{{ revMenu }}" data-event="click_ver_mais_depoimentos" style="display:inline-flex;align-items:center;gap:12px;height:52px;padding:0 24px;border:0;border-radius:999px;background:#163D3A;color:#FFFFFF;font:600 15px/1 'Instrument Sans',sans-serif;cursor:pointer;transition:background .3s" style-hover="background:#2E6E67">Ver mais depoimentos <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transition:transform .3s;transform:{{ revChevron }}"><path d="M6 9l6 6 6-6"></path></svg></button>
+            <sc-if value="{{ revMenu }}" hint-placeholder-val="{{ false }}">
+              <div role="menu" aria-label="Ver depoimentos no Google por unidade" style="position:absolute;left:0;bottom:calc(100% + 10px);z-index:5;min-width:290px;padding:8px;border-radius:18px 18px 18px 6px;background:#FFFFFF;border:1px solid rgba(22,61,58,.1);box-shadow:0 30px 60px -24px rgba(22,61,58,.4);display:flex;flex-direction:column;gap:2px">
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=HOE+Hospital+Odontologico+Especializado+Salvador+Pituba&amp;query_place_id=ChIJJWIoM2EbFgcRBZ4GoWCmuS0" target="_blank" rel="noopener" role="menuitem" data-event="click_reviews_pituba" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1C2B2A;font:600 14px/1.2 'Instrument Sans',sans-serif;transition:background .25s" style-hover="background:#EFF4F3;color:#163D3A"><span style="flex:0 0 34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:#EFF4F3;color:#2E6E67"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span><span style="flex:1">HOE Pituba</span><span aria-hidden="true" style="color:#579D95">&#8599;</span></a>
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=HOE+Hospital+Odontologico+Especializado+Shopping+Paralela+Salvador&amp;query_place_id=ChIJzez0tTcRFgcRBXvVuUse7y0" target="_blank" rel="noopener" role="menuitem" data-event="click_reviews_paralela" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1C2B2A;font:600 14px/1.2 'Instrument Sans',sans-serif;transition:background .25s" style-hover="background:#EFF4F3;color:#163D3A"><span style="flex:0 0 34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:#EFF4F3;color:#2E6E67"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span><span style="flex:1">HOE Shopping Paralela</span><span aria-hidden="true" style="color:#579D95">&#8599;</span></a>
+              </div>
+            </sc-if>
+          </div>
+          <div style="display:flex;gap:10px">
+            <button type="button" onClick="{{ revPrev }}" aria-label="Depoimento anterior" data-event="click_reviews_prev" style="width:48px;height:48px;border-radius:999px;border:1px solid rgba(22,61,58,.2);background:#FFFFFF;color:#163D3A;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .3s,color .3s,border-color .3s" style-hover="background:#163D3A;color:#FFFFFF;border-color:#163D3A"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 15l-6-6-6 6"></path></svg></button>
+            <button type="button" onClick="{{ revNext }}" aria-label="Próximo depoimento" data-event="click_reviews_next" style="width:48px;height:48px;border-radius:999px;border:1px solid rgba(22,61,58,.2);background:#FFFFFF;color:#163D3A;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .3s,color .3s,border-color .3s" style-hover="background:#163D3A;color:#FFFFFF;border-color:#163D3A"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -910,21 +1002,21 @@ const FX = {
 const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
 
 class Component extends DCLogic {
-  state = { wide: true, scrolled: false, menu: false, teamOpen: false, sobreSound: false, odontoSound: false, ytPlaying: false, faq: 0, form: { nome: '', whats: '', motivo: '', medo: false, particular: false, lgpd: false }, formError: '', formSent: false };
+  state = { wide: true, scrolled: false, menu: false, teamOpen: false, sobreSound: false, odontoSound: false, depoSound: false, revMenu: false, ytPlaying: false, faq: 0, form: { nome: '', whats: '', motivo: '', medo: false, particular: false, lgpd: false }, formError: '', formSent: false };
 
   componentDidMount() {
     document.documentElement.lang = 'pt-BR';
     this.onResize = () => { const w = window.innerWidth >= 1140; if (w !== this.state.wide) this.setState({ wide: w, menu: false }); };
     this.onResize();
     window.addEventListener('resize', this.onResize);
-    this.onClick = e => { const a = e.target.closest && e.target.closest('[data-event]'); if (a) (window.dataLayer = window.dataLayer || []).push({ event: a.dataset.event }); };
+    this.onClick = e => { if (this.state.revMenu && !(e.target.closest && e.target.closest('[data-rev-menu]'))) this.setState({ revMenu: false }); const a = e.target.closest && e.target.closest('[data-event]'); if (a) (window.dataLayer = window.dataLayer || []).push({ event: a.dataset.event }); };
     document.addEventListener('click', this.onClick);
     this.injectFaqSchema();
     this.reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches || this.props.motion === false;
     this.onScroll = () => { if (!this.raf) this.raf = requestAnimationFrame(() => { this.raf = 0; this.tick(); }); };
     window.addEventListener('scroll', this.onScroll, { passive: true });
     window.addEventListener('resize', this.onScroll);
-    requestAnimationFrame(() => { this.setupMotion(); this.tick(); this.setupVideos(); this.setupGallery(); });
+    requestAnimationFrame(() => { this.setupMotion(); this.tick(); this.setupVideos(); this.setupGallery(); this.setupReviews(); });
   }
 
   galStep(dir) {
@@ -963,10 +1055,45 @@ class Component extends DCLogic {
     this.galTimer = setInterval(() => { if (!this.galPaused && this.galVisible && !document.hidden) this.galStep(1); }, 3500);
   }
 
+  revStep(dir) {
+    const t = document.getElementById('hoe-reviews'); if (!t) return;
+    const items = t.querySelectorAll('[data-rev-item]'), max = Math.max(0, items.length - 3);
+    let i = (this.revIdx || 0) + dir;
+    if (i > max) i = 0; else if (i < 0) i = max;
+    this.revIdx = i;
+    t.style.transform = 'translateY(' + (-items[i].offsetTop) + 'px)';
+  }
+
+  revTick() { if (!this.revPaused && this.revVisible && !document.hidden) this.revStep(1); }
+
+  revRestart() {
+    if (!this.revTimer) return;
+    clearInterval(this.revTimer);
+    this.revTimer = setInterval(() => this.revTick(), 4000);
+  }
+
+  setupReviews() {
+    const t = document.getElementById('hoe-reviews'); if (!t) return;
+    this.revIdx = 0;
+    this.onRevResize = () => this.revStep(0);
+    window.addEventListener('resize', this.onRevResize);
+    if (this.reduce) return;
+    const box = t.closest('[data-rev]');
+    box.addEventListener('mouseenter', () => { this.revPaused = true; });
+    box.addEventListener('mouseleave', () => { this.revPaused = false; });
+    box.addEventListener('focusin', () => { this.revPaused = true; });
+    box.addEventListener('focusout', () => { this.revPaused = false; });
+    if ('IntersectionObserver' in window) {
+      this.rio = new IntersectionObserver(([en]) => { this.revVisible = en.isIntersecting; }, { threshold: 0.3 });
+      this.rio.observe(t.parentElement);
+    } else this.revVisible = true;
+    this.revTimer = setInterval(() => this.revTick(), 4000);
+  }
+
   setupVideos() {
-    const vids = document.querySelectorAll('video[autoplay]');
-    const play = v => { if (!((v.id === 'v-sobre' && this.state.sobreSound) || (v.id === 'v-odonto' && this.state.odontoSound))) { v.muted = true; v.defaultMuted = true; } v.playsInline = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); };
-    vids.forEach(play);
+    const vids = document.querySelectorAll('video[autoplay], video[data-autoplay]');
+    const play = v => { if (!((v.id === 'v-sobre' && this.state.sobreSound) || (v.id === 'v-odonto' && this.state.odontoSound) || (v.id === 'v-depo' && this.state.depoSound))) { v.muted = true; v.defaultMuted = true; } v.playsInline = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+    vids.forEach(v => { if (v.hasAttribute('autoplay')) play(v); });
     if (!('IntersectionObserver' in window)) return;
     this.vio = new IntersectionObserver(entries => entries.forEach(en => { if (en.isIntersecting && en.target.paused) play(en.target); }), { threshold: 0.1 });
     vids.forEach(v => this.vio.observe(v));
@@ -981,6 +1108,7 @@ class Component extends DCLogic {
     if (this.vio) this.vio.disconnect();
     if (this.gio) this.gio.disconnect();
     clearInterval(this.galTimer); clearTimeout(this.galTouch);
+    clearInterval(this.revTimer); if (this.rio) this.rio.disconnect(); window.removeEventListener('resize', this.onRevResize);
     (this.loops || []).forEach(a => a.cancel());
     const s = document.getElementById('hoe-faq-schema'); if (s) s.remove();
   }
@@ -1097,6 +1225,19 @@ class Component extends DCLogic {
       playYT: () => this.setState({ ytPlaying: true }),
       galPrev: () => { this.galStep(-1); this.galRestart(); },
       galNext: () => { this.galStep(1); this.galRestart(); },
+      depoSound: s.depoSound, depoMuted: !s.depoSound,
+      depoSoundLabel: s.depoSound ? 'Desativar áudio do vídeo' : 'Ativar áudio do vídeo',
+      toggleDepoSound: () => {
+        const v = document.getElementById('v-depo'); if (!v) return;
+        const on = !this.state.depoSound;
+        v.muted = !on;
+        if (on) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+        this.setState({ depoSound: on });
+      },
+      revMenu: s.revMenu, revChevron: s.revMenu ? 'rotate(180deg)' : 'none',
+      toggleRevMenu: () => this.setState(st => ({ revMenu: !st.revMenu })),
+      revPrev: () => { this.revStep(-1); this.revRestart(); },
+      revNext: () => { this.revStep(1); this.revRestart(); },
       toggleSobreSound: () => {
         const v = document.getElementById('v-sobre'); if (!v) return;
         const on = !this.state.sobreSound;
