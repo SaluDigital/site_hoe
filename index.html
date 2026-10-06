@@ -514,7 +514,7 @@ button:hover [data-play-ring]{transform:scale(1.08)}
     <div data-fx="fade" style="position:relative;aspect-ratio:16/9;max-height:820px;width:100%;overflow:hidden;border-radius:clamp(80px,12vw,220px) 6px 6px 6px;background:#1D4743;box-shadow:0 60px 120px -60px rgba(0,0,0,.7)">
       <sc-if value="{{ ytCover }}" hint-placeholder-val="{{ true }}">
         <button type="button" onClick="{{ playYT }}" aria-label="Assistir ao vídeo: Hospital Odontológico em Salvador, conheça o HOE" data-event="click_video_estrutura" style="position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;cursor:pointer;background:#1D4743;color:#FFFFFF">
-          <img src="https://i.ytimg.com/vi/puS0RhQbres/sddefault.jpg" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+          <img src="assets/capa-video-institucional-1920.jpg" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%">
           <span aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(15,45,43,.15) 0%,rgba(15,45,43,.6) 100%)"></span>
           <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:18px">
             <span data-play-ring="" style="position:relative;width:clamp(76px,7vw,104px);height:clamp(76px,7vw,104px);border-radius:999px;display:flex;align-items:center;justify-content:center;background:#FFFFFF;color:#163D3A;box-shadow:0 20px 50px -12px rgba(0,0,0,.5);transition:transform .4s cubic-bezier(.2,.7,.1,1)"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-left:4px"><path d="M7 4.5v15a1 1 0 0 0 1.52.85l12-7.5a1 1 0 0 0 0-1.7l-12-7.5A1 1 0 0 0 7 4.5Z"></path></svg></span>
@@ -547,8 +547,8 @@ button:hover [data-play-ring]{transform:scale(1.08)}
     </ul>
     <dl style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:32px;margin:clamp(72px,8vw,120px) 0 0;padding-top:36px;border-top:1px solid rgba(255,255,255,.16)">
       <div data-fx="fade" style="display:flex;flex-direction:column;gap:10px"><dt style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8">Equipe</dt><dd style="margin:0;font:400 16px/1.55 'Instrument Sans',sans-serif;color:#D7E5E2">Especialistas de diferentes áreas no mesmo lugar.</dd></div>
-      <div data-fx="fade" data-delay="100" style="display:flex;flex-direction:column;gap:10px"><dt style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8">Protocolos</dt><dd style="margin:0;font:400 16px/1.55 'Instrument Sans',sans-serif;color:#D7E5E2">Biossegurança e fluxos de atendimento [a detalhar com o HOE].</dd></div>
-      <div data-fx="fade" data-delay="200" style="display:flex;flex-direction:column;gap:10px"><dt style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8">Segurança</dt><dd style="margin:0;font:400 16px/1.55 'Instrument Sans',sans-serif;color:#D7E5E2">Ambiente preparado para procedimentos que exigem mais cuidado.</dd></div>
+      <div data-fx="fade" data-delay="100" style="display:flex;flex-direction:column;gap:10px"><dt style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8">Protocolos</dt><dd style="margin:0;font:400 16px/1.55 'Instrument Sans',sans-serif;color:#D7E5E2">Biossegurança e fluxos de atendimento.</dd></div>
+      <div data-fx="fade" data-delay="200" style="display:flex;flex-direction:column;gap:10px"><dt style="font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8">Segurança</dt><dd style="margin:0;font:400 16px/1.55 'Instrument Sans',sans-serif;color:#D7E5E2">Ambiente preparado para casos que exigem cuidado.</dd></div>
     </dl>
   </div>
 </section>
@@ -715,8 +715,7 @@ button:hover [data-play-ring]{transform:scale(1.08)}
     </h2>
     <div style="display:flex;flex-wrap:wrap;gap:64px clamp(20px,2.4vw,40px)">
       <article data-fx="rise" style="flex:1 1 420px;display:flex;flex-direction:column;gap:32px">
-        <div role="img" aria-label="Fachada da unidade Pituba" style="position:relative;aspect-ratio:4/3;border-radius:clamp(64px,9vw,160px) 6px 6px 6px;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 12px)">
-          <div style="position:absolute;left:24px;bottom:22px;right:24px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67">[Imagem — Pituba]</span><sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#5E716F">assets/images/unidade-pituba.webp</span></sc-if></div>
+        <div style="position:relative;aspect-ratio:4/3;border-radius:clamp(64px,9vw,160px) 6px 6px 6px;overflow:hidden;background:#E3ECEA"><img src="assets/unidade2.jpeg" alt="Unidade Pituba do HOE" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.1,1)" style-hover="transform:scale(1.04)">
         </div>
         <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px 40px">
           <div style="display:flex;flex-direction:column;gap:14px">
@@ -730,8 +729,7 @@ button:hover [data-play-ring]{transform:scale(1.08)}
         </div>
       </article>
       <article data-fx="rise" data-delay="140" style="flex:1 1 420px;display:flex;flex-direction:column;gap:32px">
-        <div role="img" aria-label="Unidade Shopping Paralela" style="position:relative;aspect-ratio:4/3;border-radius:6px clamp(64px,9vw,160px) 6px 6px;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 12px)">
-          <div style="position:absolute;left:24px;bottom:22px;right:24px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67">[Imagem — Shopping Paralela]</span><sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#5E716F">assets/images/unidade-paralela.webp</span></sc-if></div>
+        <div style="position:relative;aspect-ratio:4/3;border-radius:6px clamp(64px,9vw,160px) 6px 6px;overflow:hidden;background:#E3ECEA"><img src="assets/unidade1.jpg" alt="Unidade Shopping Paralela do HOE" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.1,1)" style-hover="transform:scale(1.04)">
         </div>
         <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px 40px">
           <div style="display:flex;flex-direction:column;gap:14px">
@@ -843,7 +841,7 @@ button:hover [data-play-ring]{transform:scale(1.08)}
   <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
     <div style="display:flex;flex-wrap:wrap;gap:48px clamp(40px,5vw,80px);justify-content:space-between">
       <div style="flex:1 1 260px;max-width:340px;display:flex;flex-direction:column;gap:24px">
-        <img src="assets/logo/logo-hoe.webp" alt="HOE — Hospital de Odontologia Especializada" width="604" height="240" loading="lazy" style="height:56px;width:auto;filter:brightness(0) invert(1);opacity:.95">
+        <a href="#inicio" aria-label="HOE — voltar ao início" style="align-self:flex-start;display:inline-flex;padding:14px 20px;border-radius:18px 18px 18px 4px;background:#FFFFFF;box-shadow:0 18px 40px -24px rgba(0,0,0,.6)"><img src="assets/logo/logo-hoe.webp" alt="HOE — Hospital de Odontologia Especializada" width="604" height="240" loading="lazy" style="display:block;height:52px;width:auto;max-width:none"></a>
         <p style="margin:0;font:400 14px/1.6 'Instrument Sans',sans-serif;color:#B9CFCB">Hospital odontológico em Salvador, Bahia. Estrutura hospitalar, equipe especializada e possibilidades de sedação.</p>
       </div>
       <div style="flex:1 1 220px;display:flex;flex-direction:column;gap:14px">
@@ -859,14 +857,10 @@ button:hover [data-play-ring]{transform:scale(1.08)}
         <a href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Conheci%20o%20HOE%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-event="click_whatsapp_footer" style="font:400 14px/1.4 'Instrument Sans',sans-serif;color:#D7E5E2" style-hover="color:#FFFFFF">WhatsApp (71) 99296-0598</a>
         <a href="tel:+557141027244" style="font:400 14px/1.4 'Instrument Sans',sans-serif;color:#D7E5E2" style-hover="color:#FFFFFF">Telefone (71) 4102-7244</a>
       </div>
-      <div style="flex:1 1 220px;display:flex;flex-direction:column;gap:14px">
-        <span style="font:600 11px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8">Atendimento</span>
-        <p style="margin:0;font:400 14px/1.6 'Instrument Sans',sans-serif;color:#D7E5E2">Exclusivamente particular.<br>Não atende SUS.<br>Não atende planos odontológicos.</p>
-      </div>
     </div>
     <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:clamp(56px,6vw,88px);padding-top:28px;border-top:1px solid rgba(255,255,255,.12);font:400 12px/1.5 'Instrument Sans',sans-serif;color:#9DB8B3">
-      <span>© 2026 HOE — Hospital de Odontologia Especializada · Salvador, Bahia</span>
-      <span>Responsável técnico: [Nome] · CRO-BA [número]</span>
+      <span>© 2026, HOE - Hospital de Odontologia Especializada. Todos os direitos reservados. Desenvolvido por SuperDental®</span>
+      <span>Responsável técnico: Dr. Túlio Pereira Ferreira · CRO-BA 12.343</span>
     </div>
   </div>
 </footer>
@@ -919,7 +913,43 @@ class Component extends DCLogic {
     this.onScroll = () => { if (!this.raf) this.raf = requestAnimationFrame(() => { this.raf = 0; this.tick(); }); };
     window.addEventListener('scroll', this.onScroll, { passive: true });
     window.addEventListener('resize', this.onScroll);
-    requestAnimationFrame(() => { this.setupMotion(); this.tick(); this.setupVideos(); });
+    requestAnimationFrame(() => { this.setupMotion(); this.tick(); this.setupVideos(); this.setupGallery(); });
+  }
+
+  galStep(dir) {
+    const g = document.getElementById('hoe-gallery'); if (!g) return;
+    const items = [...g.querySelectorAll('[data-gal-item]')]; if (!items.length) return;
+    const x = g.scrollLeft, max = g.scrollWidth - g.clientWidth - 4, base = items[0].offsetLeft;
+    let left;
+    if (dir > 0) {
+      if (x >= max) left = 0;
+      else { const nx = items.find(it => it.offsetLeft - base > x + 4); left = nx ? nx.offsetLeft - base : 0; }
+    } else {
+      if (x <= 4) left = max + 4;
+      else { const pv = items.filter(it => it.offsetLeft - base < x - 4).pop(); left = pv ? pv.offsetLeft - base : 0; }
+    }
+    g.scrollTo({ left, behavior: 'smooth' });
+  }
+
+  galRestart() {
+    if (!this.galTimer) return;
+    clearInterval(this.galTimer);
+    this.galTimer = setInterval(() => { if (!this.galPaused && this.galVisible && !document.hidden) this.galStep(1); }, 3500);
+  }
+
+  setupGallery() {
+    const g = document.getElementById('hoe-gallery'); if (!g || this.reduce) return;
+    this.galPaused = false; this.galVisible = false;
+    const pause = () => { this.galPaused = true; }, resume = () => { this.galPaused = false; };
+    g.addEventListener('mouseenter', pause); g.addEventListener('mouseleave', resume);
+    g.addEventListener('focusin', pause); g.addEventListener('focusout', resume);
+    g.addEventListener('touchstart', pause, { passive: true });
+    g.addEventListener('touchend', () => { clearTimeout(this.galTouch); this.galTouch = setTimeout(resume, 4000); }, { passive: true });
+    if ('IntersectionObserver' in window) {
+      this.gio = new IntersectionObserver(([en]) => { this.galVisible = en.isIntersecting; }, { threshold: 0.3 });
+      this.gio.observe(g);
+    } else this.galVisible = true;
+    this.galTimer = setInterval(() => { if (!this.galPaused && this.galVisible && !document.hidden) this.galStep(1); }, 3500);
   }
 
   setupVideos() {
@@ -938,6 +968,8 @@ class Component extends DCLogic {
     document.removeEventListener('click', this.onClick);
     if (this.io) this.io.disconnect();
     if (this.vio) this.vio.disconnect();
+    if (this.gio) this.gio.disconnect();
+    clearInterval(this.galTimer); clearTimeout(this.galTouch);
     (this.loops || []).forEach(a => a.cancel());
     const s = document.getElementById('hoe-faq-schema'); if (s) s.remove();
   }
@@ -1052,8 +1084,8 @@ class Component extends DCLogic {
       },
       ytCover: !s.ytPlaying, ytPlaying: s.ytPlaying,
       playYT: () => this.setState({ ytPlaying: true }),
-      galPrev: () => { const g = document.getElementById('hoe-gallery'); if (g) g.scrollBy({ left: -g.clientWidth * 0.8, behavior: 'smooth' }); },
-      galNext: () => { const g = document.getElementById('hoe-gallery'); if (g) g.scrollBy({ left: g.clientWidth * 0.8, behavior: 'smooth' }); },
+      galPrev: () => { this.galStep(-1); this.galRestart(); },
+      galNext: () => { this.galStep(1); this.galRestart(); },
       toggleSobreSound: () => {
         const v = document.getElementById('v-sobre'); if (!v) return;
         const on = !this.state.sobreSound;
