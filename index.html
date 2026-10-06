@@ -38,6 +38,11 @@ summary{list-style:none}
 summary::-webkit-details-marker{display:none}
 input,select,button,textarea{font:inherit}
 :root{--sec-y:clamp(72px,8vw,120px)}
+[data-team-grid]{grid-template-columns:repeat(6,minmax(0,1fr))}
+@media (max-width:1200px){[data-team-grid]{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:860px){[data-team-grid]{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:600px){[data-team-grid]{grid-template-columns:repeat(2,minmax(0,1fr))}}
+li:hover [data-team-photo] img{transform:scale(1.05)}
 [data-gallery]{scrollbar-width:none}
 [data-gallery]::-webkit-scrollbar{display:none}
 [data-play-ring]::after{content:"";position:absolute;inset:-1px;border-radius:inherit;border:2px solid rgba(255,255,255,.7);animation:waPulse 2.6s cubic-bezier(.2,.7,.1,1) infinite}
@@ -596,18 +601,17 @@ button:hover [data-play-ring]{transform:scale(1.08)}
       </div>
       <p data-fx="fade" data-delay="120" style="flex:0 1 320px;margin:0;font:400 16px/1.6 'Instrument Sans',sans-serif;color:#4A5C5A">Profissionais de diferentes especialidades discutem e planejam cada tratamento em conjunto.</p>
     </div>
-    <div data-fx="clipx" role="img" aria-label="Equipe HOE" style="position:relative;height:clamp(320px,40vw,620px);border-radius:6px 6px clamp(80px,12vw,220px) 6px;background-color:#E3ECEA;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 12px)">
-      <span style="position:absolute;top:24px;left:24px;width:12px;height:12px;border-top:1px solid #2E6E67;border-left:1px solid #2E6E67"></span>
-      <div style="position:absolute;left:28px;bottom:24px;right:24px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67">[Imagem — equipe HOE]</span><sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#5E716F">assets/images/equipe-hoe.webp</span></sc-if></div>
-    </div>
-    <ul style="list-style:none;margin:clamp(48px,6vw,80px) 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:40px clamp(16px,2vw,28px)">
-      <sc-for list="{{ team }}" as="p" hint-placeholder-count="4">
-        <li data-fx="clipx" style="display:flex;flex-direction:column;gap:14px">
-          <div role="img" aria-label="Foto do profissional" style="position:relative;aspect-ratio:4/5;border-radius:4px;background-color:#EFF4F3;background-image:repeating-linear-gradient(135deg,rgba(22,61,58,.045) 0 1px,transparent 1px 10px)"><span style="position:absolute;left:16px;bottom:14px;font:600 10px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2E6E67">[Foto]</span></div>
-          <div style="display:flex;flex-direction:column;gap:6px">
-            <h3 style="margin:0;font:500 1.15rem/1.25 'Manrope',sans-serif;letter-spacing:-.01em;color:#1C2B2A">[Nome do profissional]</h3>
-            <span style="font:400 14px/1.4 'Instrument Sans',sans-serif;color:#4A5C5A">[Especialidade]</span>
-            <span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#579D95">CRO-BA [número]</span>
+    <ul data-team-grid="" style="list-style:none;margin:0;padding:0;display:grid;gap:clamp(28px,3vw,44px) clamp(14px,1.6vw,24px)">
+      <sc-for list="{{ team }}" as="p" hint-placeholder-count="12">
+        <li style="display:flex;flex-direction:column;gap:16px">
+          <div data-team-photo="" style="position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:{{ p.radius }};background:#EFF4F3;box-shadow:0 24px 44px -30px rgba(22,61,58,.45)">
+            <img src="{{ p.src }}" alt="{{ p.name }}" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%;transition:transform 1.2s cubic-bezier(.2,.7,.1,1)">
+            <span aria-hidden="true" style="position:absolute;inset:auto 0 0 0;height:35%;background:linear-gradient(to top,rgba(15,45,43,.28),rgba(15,45,43,0))"></span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;padding:0 2px">
+            <span aria-hidden="true" style="width:20px;height:2px;border-radius:2px;background:{{ p.accent }}"></span>
+            <h3 style="margin:0;font:500 clamp(15px,1.15vw,17px)/1.25 'Manrope',sans-serif;letter-spacing:-.015em;color:#1C2B2A">{{ p.name }}</h3>
+            <span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#579D95">{{ p.cro }}</span>
           </div>
         </li>
       </sc-for>
@@ -772,7 +776,7 @@ button:hover [data-play-ring]{transform:scale(1.08)}
     <div style="display:flex;flex-wrap:wrap;gap:72px clamp(48px,7vw,120px);align-items:flex-start">
       <div style="flex:1.1 1 420px;display:flex;flex-direction:column;gap:36px">
         <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8"><span style="width:28px;height:1px;background:currentColor"></span><span>Contato</span></div>
-        <h2 style="margin:0;font:400 clamp(2.3rem,5vw,5.4rem)/1.02 'Manrope',sans-serif;letter-spacing:-.045em;color:#F2F6F5">
+        <h2 style="margin:0;font:400 clamp(2rem,4.2vw,4.5rem)/1.06 'Manrope',sans-serif;letter-spacing:-.04em;color:#F2F6F5">
           <span data-fx="mask" style="display:block;overflow:hidden;padding-bottom:.06em"><span style="display:block">Seu tratamento pode</span></span>
           <span data-fx="mask" data-delay="120" style="display:block;overflow:hidden;padding-bottom:.06em"><span style="display:block;color:#9FD0C8">começar com uma conversa.</span></span>
         </h2>
@@ -818,9 +822,6 @@ button:hover [data-play-ring]{transform:scale(1.08)}
         <sc-if value="{{ formSent }}" hint-placeholder-val="{{ false }}"><p role="status" style="margin:0;padding:12px 14px;border-radius:8px;background:#E3F0EE;color:#163D3A;font:500 14px/1.4 'Instrument Sans',sans-serif">Abrimos o WhatsApp com sua mensagem. Se a janela não abriu, chame no (71) 99296-0598.</p></sc-if>
         <button type="submit" style="height:56px;border:0;border-radius:999px;background:#163D3A;color:#FFFFFF;font:600 15px/1 'Instrument Sans',sans-serif;cursor:pointer;transition:background .3s" style-hover="background:#2E6E67">Enviar e continuar no WhatsApp</button>
       </form>
-    </div>
-    <div data-fx="clip" role="img" aria-label="Imagem ou vídeo final do HOE" style="position:relative;margin-top:clamp(80px,10vw,140px);height:clamp(260px,30vw,460px);border-radius:6px 6px 6px clamp(80px,12vw,220px);background-color:#1D4743;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 12px)">
-      <div style="position:absolute;left:28px;bottom:24px;right:24px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A9D3CC">[Imagem ou vídeo final]</span><sc-if value="{{ showPaths }}" hint-placeholder-val="{{ false }}"><span style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#8FB0AB">assets/videos/final-hoe.mp4</span></sc-if></div>
     </div>
   </div>
 </section>
@@ -872,6 +873,26 @@ const FAQ = [
   ['O que são implantes zigomáticos?', 'São implantes ancorados no osso zigomático (malar), indicados em alguns casos de perda óssea severa no maxilar superior, quando os implantes convencionais não são viáveis. A indicação depende de avaliação especializada.'],
   ['Onde ficam as unidades do HOE?', 'O HOE tem duas unidades em Salvador, Bahia: Pituba (Av. Manoel Dias da Silva, 1783, CEP 41830-001) e Shopping Paralela (Av. Luís Viana, 8544, Piso L1, Alphaville, CEP 41730-101).'],
   ['Como saber qual tratamento é ideal para mim?', 'Somente uma avaliação individual pode indicar o tratamento adequado. Converse com a equipe do HOE para agendar a sua.']
+];
+const TEAM = [
+  ['Dr. Túlio Ferreira', 'CRO-BA 12.343', 'Dr.-Tulio-Ferreira-–-CRO-BA-12.343_Cirurgiao-e-Diretor-clinico-683x1024.jpg'],
+  ['Dr. Jefferson Rodrigues', 'CRO 12.275', 'Dr.Jefferson-Rodrigues-CRO-12.275-Avaliacao-e-planejamento-diagnostico-683x1024.jpeg'],
+  ['Dr. Elon Lessa', 'CRO 11.114', 'Dr.-Elon-Lessa.-Cro-11.114-20Cirurgiao-dentista-Endodontista.jpeg'],
+  ['Dr. Tales Dimitri', 'CRO 29072', 'Dr.-Tales-Dimitri-Cro-29072_clinico-geral-e-protese-683x1024.jpeg'],
+  ['Dr. Leonardo Bezerra', 'CRO 27600', 'Dr.-Leonardo-Bezerra-CRO-27600-683x1024.jpeg'],
+  ['Dr. Caio Assis', 'CRO-BA 24058', 'Dr.-Caio-Assis-Periodontista-CRO_BA-24058-683x1024.jpeg'],
+  ['Dra. Marília Gabriela', 'CRO-BA 17831', 'Croba-17831-Dra-Marilia-Gabriela-Periodontista-682x1024.jpeg'],
+  ['Elisabete Juiz', 'CRO 4788', 'Cro-4788-Elisabete-Juiz-Sedacao-e-odontopediatria-682x1024.jpeg'],
+  ['Karen Pisani', 'CRO 22712', 'Nome-Karen-Pisani-Especialidade-Protese-dentaria-CRO-22712-653x1024.jpeg'],
+  ['Dr. Bruno', 'CRO 17530', 'Nome-Dr-Bruno-Especialidade-Protese-Dentaria-CRO-17530-682x1024.jpeg'],
+  ['Dra. Lorena Vinhas', 'CRO 13747', 'Dra-Lorena-Vinhas-Avaliacao-e-planejamento-diagnostico-CRO-13747-683x1024.jpeg'],
+  ['Dra. Alana Oliveira', 'CRO-BA 15094', 'Dra-Alana-Oliveira-Clinica-geral-e-Periodontista-CROBA-15094-682x1024.jpeg'],
+  ['Dra. Ana Junquilho', 'CRO 31387', 'Dra.-Ana-Junquilho-clinico-geral-CRO-31387-786x1024.jpeg'],
+  ['Dra. Adriana Garcia', 'CRO-BA 31765 / CRO-GO 5919', 'Dra-Adriana-Garcia-Evangelista-Esp.-Endodontia-e-Implantodontia-CRO-GO-5919-CRO-BA-31765-rndjxw6aacqrfvzh2gqeud5f9sttd6uayn09pn54tc.jpeg'],
+  ['Pauliana Pessoa', 'CRO-BA 15898', 'Pauliana-Pessoa-Ortodontia-e-protese-dentaria.-CROBA-15898-768x1024.jpeg'],
+  ['Dr. Matheus Menezes', 'CRO-BA 24062', 'CRO_BA-24062-Dr.-Matheus-Menezes_Avaliacao-e-planejamento-diagnostico-rndjyu0h4e131umbkvczc4m0no712akn3ahqzlqylc.jpeg'],
+  ['Dr. Israel Oliveira', 'CRO-BA 31.221', 'Dr-Israel-Oliveira-CRO_BA-31.221-Clinico-Geral-rndjz68dl8ht8s4klin4qjj0doisucx5gyz2878ucg.jpeg'],
+  ['Dr. Carlos Gomes', 'CRO 19.275', 'Dr.-Carlos-Gomes-Cro-19.275-cirurgiao-e-Implante-rndk0eesig6aegcefjqlhqdoash1w4sjb1mvs7fc80.jpeg']
 ];
 const WA = 'https://wa.me/5571992960598?text=';
 const EASE = 'cubic-bezier(.2,.7,.1,1)';
@@ -1086,7 +1107,12 @@ class Component extends DCLogic {
       headerLine: s.scrolled ? 'rgba(22,61,58,.12)' : 'rgba(22,61,58,0)',
       heroA: variant !== 'hospital', heroB: variant === 'hospital',
       showPaths: !!this.props.showPaths,
-      team: Array.from({ length: s.teamOpen ? 8 : 4 }, (_, i) => ({ id: i })),
+      team: (s.teamOpen ? TEAM : TEAM.slice(0, 12)).map(([name, cro, file], i) => ({
+        id: i, name, cro,
+        src: 'assets/equipe/' + encodeURIComponent(file),
+        radius: i % 2 ? '6px 22px 6px 22px' : '22px 6px 22px 6px',
+        accent: ['#1887C3', '#F7C500', '#C5016F', '#A7BC0A'][i % 4]
+      })),
       teamOpen: s.teamOpen,
       teamLabel: s.teamOpen ? 'Mostrar menos' : 'Ver equipe completa',
       toggleTeam: () => this.setState(st => ({ teamOpen: !st.teamOpen })),
