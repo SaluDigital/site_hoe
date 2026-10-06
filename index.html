@@ -37,6 +37,7 @@ img{max-width:100%;display:block}
 summary{list-style:none}
 summary::-webkit-details-marker{display:none}
 input,select,button,textarea{font:inherit}
+:root{--sec-y:clamp(72px,8vw,120px)}
 ::selection{background:#D3E7E3;color:#163D3A}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 @media (max-width:900px){[data-hero-overlay]{background:linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.88) 55%,rgba(255,255,255,.62) 100%)!important}[data-hero-img]{object-position:76% center!important}}
@@ -141,7 +142,7 @@ input,select,button,textarea{font:inherit}
   </div>
 </section>
 <!-- 01 REPOSICIONAMENTO -->
-<section id="o-hoe" data-screen-label="01 O HOE" style="position:relative;background:#FFFFFF;padding:clamp(120px,16vw,240px) 0 clamp(110px,14vw,200px);overflow:hidden">
+<section id="o-hoe" data-screen-label="01 O HOE" style="position:relative;background:#FFFFFF;padding:var(--sec-y) 0;overflow:hidden">
   <div aria-hidden="true" style="position:absolute;right:-18vw;top:-22vw;width:56vw;height:56vw;border:1px solid rgba(87,157,149,.22);border-radius:50%"></div>
   <div aria-hidden="true" style="position:absolute;right:-12vw;top:-16vw;width:44vw;height:44vw;border:1px solid rgba(87,157,149,.14);border-radius:50%"></div>
   <div style="position:relative;max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px);display:flex;flex-wrap:wrap;align-items:center;gap:clamp(56px,6vw,112px)">
@@ -168,7 +169,7 @@ input,select,button,textarea{font:inherit}
 </section>
 
 <!-- 02 MANIFESTO -->
-<section data-screen-label="02 Manifesto" style="background:#EFF4F3;padding:clamp(120px,15vw,220px) 0 clamp(96px,12vw,170px)">
+<section data-screen-label="02 Manifesto" style="background:#EFF4F3;padding:var(--sec-y) 0">
   <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
     <div style="display:flex;justify-content:center;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67;margin-bottom:clamp(40px,5vw,72px)"><span style="width:28px;height:1px;background:currentColor"></span><span>Manifesto</span></div>
     <h2 data-scroll="words" style="margin:0 auto;max-width:1180px;text-align:center;font:400 clamp(2rem,4.4vw,4.75rem)/1.12 'Manrope',sans-serif;letter-spacing:-.035em;color:#163D3A;text-wrap:balance">
@@ -198,7 +199,7 @@ input,select,button,textarea{font:inherit}
     <div style="position:absolute;left:-20vw;top:30%;width:60vw;height:60vw;border:1px solid rgba(255,255,255,.07);border-radius:50%"></div>
     <div style="position:absolute;right:-24vw;bottom:-10vw;width:70vw;height:70vw;border:1px solid rgba(255,255,255,.06);border-radius:50%"></div>
   </div>
-  <div style="position:relative;max-width:1440px;margin:0 auto;padding:clamp(120px,15vw,220px) clamp(32px,6vw,96px) 0">
+  <div style="position:relative;max-width:1440px;margin:0 auto;padding:var(--sec-y) clamp(32px,6vw,96px) 0">
     <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8;margin-bottom:clamp(36px,5vw,64px)"><span style="width:28px;height:1px;background:currentColor"></span><span>Medo de dentista</span></div>
     <h2 data-fx="rise" style="margin:0;max-width:20ch;font:400 clamp(2.1rem,4.6vw,5rem)/1.06 'Manrope',sans-serif;letter-spacing:-.04em;color:#F2F6F5;text-wrap:balance">Se o medo de dentista faz você adiar seu tratamento, <span style="color:#9FD0C8">comece por conversar.</span></h2>
     <div style="display:flex;flex-wrap:wrap;gap:clamp(48px,6vw,96px);margin-top:clamp(64px,8vw,120px);align-items:flex-start">
@@ -238,7 +239,7 @@ input,select,button,textarea{font:inherit}
       </div>
     </div>
 
-    <div id="sedacao" data-screen-label="04 Sedação" style="margin-top:clamp(120px,15vw,220px);padding-top:clamp(56px,6vw,88px);border-top:1px solid rgba(255,255,255,.16)">
+    <div id="sedacao" data-screen-label="04 Sedação" style="margin-top:var(--sec-y);padding-top:clamp(56px,6vw,88px);border-top:1px solid rgba(255,255,255,.16)">
       <div style="display:flex;flex-wrap:wrap;gap:40px clamp(48px,6vw,96px);justify-content:space-between">
         <div style="flex:1 1 420px;max-width:680px">
           <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9FD0C8;margin-bottom:32px"><span style="width:28px;height:1px;background:currentColor"></span><span>Sedação e tranquilidade</span></div>
@@ -285,13 +286,13 @@ input,select,button,textarea{font:inherit}
           <p style="margin:0;font:400 15px/1.55 'Instrument Sans',sans-serif;color:#B9CFCB">Realizado com a estrutura adequada ao seu caso.</p>
         </li>
       </ol>
-      <p style="margin:clamp(56px,6vw,88px) 0 0;padding-bottom:clamp(110px,14vw,200px);max-width:62ch;font:400 14px/1.6 'Instrument Sans',sans-serif;color:#9DB8B3">A sedação não é indicada da mesma forma para todas as pessoas. A definição depende de avaliação individual, do histórico de saúde e do procedimento planejado.</p>
+      <p style="margin:clamp(56px,6vw,88px) 0 0;padding-bottom:var(--sec-y);max-width:62ch;font:400 14px/1.6 'Instrument Sans',sans-serif;color:#9DB8B3">A sedação não é indicada da mesma forma para todas as pessoas. A definição depende de avaliação individual, do histórico de saúde e do procedimento planejado.</p>
     </div>
   </div>
 </section>
 
 <!-- VIRADA -->
-<section aria-label="O que você recupera" data-screen-label="Virada" style="position:relative;min-height:100svh;display:flex;align-items:center;background:#FFFFFF;overflow:hidden;padding:clamp(120px,14vw,200px) 0">
+<section aria-label="O que você recupera" data-screen-label="Virada" style="position:relative;min-height:100svh;display:flex;align-items:center;background:#FFFFFF;overflow:hidden;padding:var(--sec-y) 0">
   <div aria-hidden="true" style="position:absolute;left:50%;top:50%;width:min(130vw,1800px);aspect-ratio:1;transform:translate(-30%,-50%);border:1px solid rgba(87,157,149,.16);border-radius:50%"></div>
   <div style="position:relative;width:100%;max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
     <p style="margin:0;font:400 clamp(2.6rem,7.4vw,8.6rem)/1 'Manrope',sans-serif;letter-spacing:-.05em;color:#1C2B2A">
@@ -310,7 +311,7 @@ input,select,button,textarea{font:inherit}
 </section>
 
 <!-- 05 TRATAMENTOS -->
-<section id="tratamentos" data-screen-label="05 Tratamentos" style="background:#F7F9F8;padding:clamp(110px,14vw,200px) 0">
+<section id="tratamentos" data-screen-label="05 Tratamentos" style="background:#F7F9F8;padding:var(--sec-y) 0">
   <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
     <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px 64px;margin-bottom:clamp(56px,7vw,104px)">
       <div style="flex:1 1 560px;max-width:900px">
@@ -414,7 +415,7 @@ input,select,button,textarea{font:inherit}
 </section>
 
 <!-- 06 IMPLANTES E REABILITAÇÃO -->
-<section id="reabilitacao" data-screen-label="06 Implantes e reabilitação" style="background:#FFFFFF;padding:clamp(120px,15vw,220px) 0;overflow:hidden">
+<section id="reabilitacao" data-screen-label="06 Implantes e reabilitação" style="background:#FFFFFF;padding:var(--sec-y) 0;overflow:hidden">
   <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
     <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67;margin-bottom:clamp(40px,5vw,72px)"><span style="width:28px;height:1px;background:currentColor"></span><span>Implantes e reabilitação</span></div>
     <h2 style="margin:0;font:400 clamp(2.3rem,5.6vw,6.2rem)/1.02 'Manrope',sans-serif;letter-spacing:-.045em;color:#1C2B2A">
@@ -445,8 +446,8 @@ input,select,button,textarea{font:inherit}
 </section>
 
 <!-- 07 CASOS COMPLEXOS -->
-<section id="casos-complexos" data-screen-label="07 Casos complexos" style="background:#FFFFFF;padding:0 0 clamp(120px,15vw,220px)">
-  <div style="max-width:1440px;margin:0 auto;padding:clamp(80px,9vw,128px) clamp(20px,4vw,64px) 0;border-top:1px solid rgba(22,61,58,.12)">
+<section id="casos-complexos" data-screen-label="07 Casos complexos" style="background:#FFFFFF;padding:0 0 var(--sec-y)">
+  <div style="max-width:1440px;margin:0 auto;padding:var(--sec-y) clamp(20px,4vw,64px) 0;border-top:1px solid rgba(22,61,58,.12)">
     <div style="display:flex;flex-wrap:wrap;gap:48px clamp(48px,7vw,120px)">
       <div style="flex:1 1 380px;max-width:560px;display:flex;flex-direction:column;gap:32px">
         <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67"><span style="width:28px;height:1px;background:currentColor"></span><span>Casos complexos</span></div>
@@ -484,7 +485,7 @@ input,select,button,textarea{font:inherit}
 </section>
 
 <!-- 08 ESTRUTURA -->
-<section id="estrutura" data-screen-label="08 Estrutura" style="background:#0F2D2B;color:#F2F6F5;padding:clamp(110px,14vw,200px) 0">
+<section id="estrutura" data-screen-label="08 Estrutura" style="background:#0F2D2B;color:#F2F6F5;padding:var(--sec-y) 0">
   <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
     <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px 64px;margin-bottom:clamp(56px,7vw,96px)">
       <div style="flex:1 1 560px;max-width:960px">
@@ -538,7 +539,7 @@ input,select,button,textarea{font:inherit}
 </section>
 
 <!-- 09 POR QUE ESTRUTURA -->
-<section data-screen-label="09 Por que estrutura" style="background:#FFFFFF;padding:clamp(120px,15vw,220px) 0">
+<section data-screen-label="09 Por que estrutura" style="background:#FFFFFF;padding:var(--sec-y) 0">
   <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px);display:flex;flex-wrap:wrap;align-items:center;gap:72px clamp(48px,7vw,120px)">
     <div style="flex:1 1 380px;max-width:540px;display:flex;flex-direction:column;gap:32px">
       <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67"><span style="width:28px;height:1px;background:currentColor"></span><span>Por que um hospital odontológico</span></div>
@@ -572,7 +573,7 @@ input,select,button,textarea{font:inherit}
 </section>
 
 <!-- 10 TECNOLOGIA -->
-<section id="tecnologia" data-screen-label="10 Tecnologia" style="background:#F7F9F8;padding:clamp(96px,11vw,160px) 0">
+<section id="tecnologia" data-screen-label="10 Tecnologia" style="background:#F7F9F8;padding:var(--sec-y) 0">
   <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px);display:flex;flex-wrap:wrap;gap:48px clamp(48px,7vw,120px)">
     <div style="flex:1 1 320px;max-width:460px;display:flex;flex-direction:column;gap:28px">
       <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67"><span style="width:28px;height:1px;background:currentColor"></span><span>Tecnologia</span></div>
@@ -588,7 +589,7 @@ input,select,button,textarea{font:inherit}
 </section>
 
 <!-- 11 EQUIPE -->
-<section id="equipe" data-screen-label="11 Equipe" style="background:#FFFFFF;padding:clamp(120px,15vw,220px) 0">
+<section id="equipe" data-screen-label="11 Equipe" style="background:#FFFFFF;padding:var(--sec-y) 0">
   <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
     <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px 64px;margin-bottom:clamp(48px,6vw,88px)">
       <div style="flex:1 1 560px;max-width:900px">
@@ -620,7 +621,7 @@ input,select,button,textarea{font:inherit}
 </section>
 
 <!-- 12 JORNADA -->
-<section id="como-comecar" data-screen-label="12 Jornada" style="background:#EFF4F3;padding:clamp(120px,15vw,220px) 0">
+<section id="como-comecar" data-screen-label="12 Jornada" style="background:#EFF4F3;padding:var(--sec-y) 0">
   <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px);display:flex;flex-wrap:wrap;gap:64px clamp(48px,8vw,140px);align-items:flex-start">
     <div style="flex:1 1 360px;max-width:520px;position:sticky;top:120px;display:flex;flex-direction:column;gap:32px">
       <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67"><span style="width:28px;height:1px;background:currentColor"></span><span>Jornada</span></div>
@@ -665,7 +666,7 @@ input,select,button,textarea{font:inherit}
 </section>
 
 <!-- 13 PROVA SOCIAL -->
-<section id="experiencias" data-screen-label="13 Experiências" style="background:#FFFFFF;padding:clamp(120px,15vw,220px) 0">
+<section id="experiencias" data-screen-label="13 Experiências" style="background:#FFFFFF;padding:var(--sec-y) 0">
   <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
     <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67;margin-bottom:32px"><span style="width:28px;height:1px;background:currentColor"></span><span>Experiências</span></div>
     <h2 data-fx="rise" style="margin:0 0 clamp(56px,7vw,96px);max-width:16ch;font:400 clamp(2rem,4.2vw,4.5rem)/1.06 'Manrope',sans-serif;letter-spacing:-.04em;color:#1C2B2A;text-wrap:balance">Experiências de quem já passou pelo HOE.</h2>
@@ -697,7 +698,7 @@ input,select,button,textarea{font:inherit}
 </section>
 
 <!-- 14 UNIDADES -->
-<section id="unidades" data-screen-label="14 Unidades" style="background:#F7F9F8;padding:clamp(120px,15vw,220px) 0">
+<section id="unidades" data-screen-label="14 Unidades" style="background:#F7F9F8;padding:var(--sec-y) 0">
   <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
     <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67;margin-bottom:32px"><span style="width:28px;height:1px;background:currentColor"></span><span>Unidades em Salvador</span></div>
     <h2 style="margin:0 0 clamp(56px,7vw,104px);font:400 clamp(2rem,4.4vw,4.75rem)/1.06 'Manrope',sans-serif;letter-spacing:-.04em;color:#1C2B2A">
@@ -740,7 +741,7 @@ input,select,button,textarea{font:inherit}
 </section>
 
 <!-- 15 FAQ -->
-<section id="duvidas" data-screen-label="15 Dúvidas" style="background:#FFFFFF;padding:clamp(120px,15vw,220px) 0">
+<section id="duvidas" data-screen-label="15 Dúvidas" style="background:#FFFFFF;padding:var(--sec-y) 0">
   <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px);display:flex;flex-wrap:wrap;gap:56px clamp(48px,8vw,140px);align-items:flex-start">
     <div style="flex:1 1 320px;max-width:460px;position:sticky;top:120px;display:flex;flex-direction:column;gap:32px">
       <div data-fx="fade" style="display:flex;align-items:center;gap:12px;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#2E6E67"><span style="width:28px;height:1px;background:currentColor"></span><span>Dúvidas frequentes</span></div>
@@ -765,7 +766,7 @@ input,select,button,textarea{font:inherit}
 </section>
 
 <!-- 16 CTA FINAL -->
-<section id="contato" data-screen-label="16 Contato" style="position:relative;background:#163D3A;color:#F2F6F5;padding:clamp(120px,15vw,220px) 0 clamp(80px,9vw,128px);overflow:hidden">
+<section id="contato" data-screen-label="16 Contato" style="position:relative;background:#163D3A;color:#F2F6F5;padding:var(--sec-y) 0;overflow:hidden">
   <div data-loop="" aria-hidden="true" style="position:absolute;right:-30vw;top:-30vw;width:90vw;height:90vw;pointer-events:none">
     <div style="position:absolute;inset:0;border:1px solid rgba(255,255,255,.07);border-radius:50%"></div>
     <div style="position:absolute;inset:12%;border:1px solid rgba(255,255,255,.06);border-radius:50% 50% 50% 6%"></div>
