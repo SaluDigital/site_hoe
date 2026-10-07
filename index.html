@@ -101,6 +101,7 @@ button[aria-label="Abrir menu"]>span,button[aria-label="Fechar menu"]>span{trans
     </a>
     
       <nav aria-label="Principal" style="display: flex; align-items: center; gap: 30px;">
+        <a href="#inicio" style="color: rgb(28, 43, 42); font-size: 14px; font-weight: 500;">Início</a>
         <a href="#medo-de-dentista" style="color: rgb(28, 43, 42); font-size: 14px; font-weight: 500;">Medo de dentista</a>
         <a href="#sedacao" style="color: rgb(28, 43, 42); font-size: 14px; font-weight: 500;">Sedação</a>
         <a href="#tratamentos" style="color: rgb(28, 43, 42); font-size: 14px; font-weight: 500;">Tratamentos</a>
@@ -184,6 +185,7 @@ button[aria-label="Abrir menu"]>span,button[aria-label="Fechar menu"]>span{trans
     </a>
     <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
       <nav aria-label="Principal" style="display:flex;align-items:center;gap:30px">
+        <a href="#inicio" style="color:#1C2B2A;font-size:14px;font-weight:500" style-hover="color:#2E6E67">Início</a>
         <a href="#medo-de-dentista" style="color:#1C2B2A;font-size:14px;font-weight:500" style-hover="color:#2E6E67">Medo de dentista</a>
         <a href="#sedacao" style="color:#1C2B2A;font-size:14px;font-weight:500" style-hover="color:#2E6E67">Sedação</a>
         <a href="#tratamentos" style="color:#1C2B2A;font-size:14px;font-weight:500" style-hover="color:#2E6E67">Tratamentos</a>
@@ -209,6 +211,7 @@ button[aria-label="Abrir menu"]>span,button[aria-label="Fechar menu"]>span{trans
   </div>
   <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
     <nav aria-label="Menu" data-mobile-menu="" style="position:fixed;top:76px;left:0;right:0;height:calc(100vh - 76px);background:#FFFFFF;padding:32px clamp(20px,4vw,64px);display:flex;flex-direction:column;gap:4px;overflow:auto">
+      <a href="#inicio" onClick="{{ closeMenu }}" style="padding:14px 0;border-bottom:1px solid rgba(22,61,58,.12);color:#1C2B2A;font:500 19px/1.3 'Manrope',sans-serif;letter-spacing:-.01em">Início</a>
       <a href="#medo-de-dentista" onClick="{{ closeMenu }}" style="padding:14px 0;border-bottom:1px solid rgba(22,61,58,.12);color:#1C2B2A;font:500 19px/1.3 'Manrope',sans-serif;letter-spacing:-.01em">Medo de dentista</a>
       <a href="#sedacao" onClick="{{ closeMenu }}" style="padding:14px 0;border-bottom:1px solid rgba(22,61,58,.12);color:#1C2B2A;font:500 19px/1.3 'Manrope',sans-serif;letter-spacing:-.01em">Sedação</a>
       <a href="#tratamentos" onClick="{{ closeMenu }}" style="padding:14px 0;border-bottom:1px solid rgba(22,61,58,.12);color:#1C2B2A;font:500 19px/1.3 'Manrope',sans-serif;letter-spacing:-.01em">Tratamentos</a>
