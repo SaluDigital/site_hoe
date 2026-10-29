@@ -299,8 +299,7 @@ header.hd.sc{box-shadow:0 1px 0 var(--line)}
 .mos figure{position:relative;overflow:hidden;background:rgba(255,255,255,.06);margin:0}
 .mos img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
 .mos figure:hover img{transform:scale(1.04)}
-.mos .m1{grid-column:1/8;grid-row:1/3}
-.mos .m2{grid-column:8/13;grid-row:1/3}
+.mos .m1{grid-column:1/-1;grid-row:1/3}
 .mos .m3,.mos .m4,.mos .m5{grid-column:span 4;grid-row:3}
 .mos.b{margin-top:clamp(12px,1.6vw,24px);grid-template-rows:repeat(2,calc(var(--R)*1.25))}
 .mos.b figure{grid-row:auto}
@@ -308,7 +307,6 @@ header.hd.sc{box-shadow:0 1px 0 var(--line)}
 .mos.b .n2,.mos.b .n5{grid-column:4/10}
 .mos.b .n3,.mos.b .n6{grid-column:10/13}
 .mos.b .n2 img{object-position:80% 30%}
-.mos .m2 img{object-position:60% 35%}
 .mos .m1 img{object-position:50% 18%}
 .feats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:clamp(56px,7vw,104px);border-top:1px solid var(--line-d)}
 .feat{padding:36px 36px 0 0}
@@ -323,9 +321,6 @@ header.hd.sc{box-shadow:0 1px 0 var(--line)}
 .dir .d2{font-size:clamp(2.2rem,3.4vw,3.5rem);margin:22px 0 8px}
 .cro{font:500 11.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--blue)}
 .dir p.lead{margin-top:28px}
-.dir-q{margin-top:36px;padding-top:28px;border-top:1px solid var(--line);display:flex;gap:24px;align-items:flex-start}
-.dir-q blockquote{font:400 1.35rem/1.45 var(--serif);font-style:italic;color:var(--ink)}
-.dir-q small{display:block;margin-top:10px;font-size:12.5px;color:var(--mute)}
 .team{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(36px,4vw,56px) clamp(16px,2vw,28px);margin-top:clamp(64px,8vw,120px)}
 .mem .ph{--r:3/4}
 .mem .ph::before{display:none}
@@ -485,11 +480,10 @@ footer.ft{margin-top:clamp(80px,10vw,150px);border-top:1px solid var(--line-d);p
   .p11 .vid{grid-column:span 6}
   .p11 .ba-w{grid-column:1/-1}
   .p11 .ba{--r:4/3}
-  .mos{--R:clamp(180px,34vw,300px);grid-template-rows:var(--R) var(--R) var(--R) calc(var(--R)*1.3) calc(var(--R)*1.3)}
+  .mos{--R:clamp(180px,34vw,300px);grid-template-rows:var(--R) var(--R) calc(var(--R)*1.3) calc(var(--R)*1.3)}
   .mos .m1{grid-column:1/-1;grid-row:1/3}
-  .mos .m2{grid-column:1/-1;grid-row:3}
-  .mos .m3,.mos .m4{grid-column:span 6;grid-row:4}
-  .mos .m5{grid-column:1/-1;grid-row:5}
+  .mos .m3,.mos .m4{grid-column:span 6;grid-row:3}
+  .mos .m5{grid-column:1/-1;grid-row:4}
   .mos.b{grid-template-rows:none;grid-auto-rows:var(--R)}
   .mos.b .n1,.mos.b .n3,.mos.b .n4,.mos.b .n6{grid-column:span 6}
   .mos.b .n2,.mos.b .n5{grid-column:1/-1}
@@ -521,8 +515,7 @@ footer.ft{margin-top:clamp(80px,10vw,150px);border-top:1px solid var(--line-d);p
   .hero-stage{background:#0B2538}
   .mos:not(.b){grid-template-rows:none;grid-auto-rows:auto}
   .mos:not(.b) figure{aspect-ratio:4/3}
-  .mos:not(.b) .m2{aspect-ratio:4/5}
-  .mos .m1,.mos .m2,.mos .m3,.mos .m4,.mos .m5{grid-column:1/-1;grid-row:auto}
+  .mos .m1,.mos .m3,.mos .m4,.mos .m5{grid-column:1/-1;grid-row:auto}
   .mos .m1{grid-row:auto;aspect-ratio:3/2}
   .mos .m1 img{object-position:50% 50%}
   .mos.b .n1,.mos.b .n2,.mos.b .n3,.mos.b .n4,.mos.b .n5,.mos.b .n6{grid-column:1/-1}
@@ -1066,7 +1059,6 @@ footer.ft{margin-top:clamp(80px,10vw,150px);border-top:1px solid var(--line-d);p
     </div>
     <div class="mos">
       <figure class="m1" data-r><img src="assets/opt/capa-video-institucional-1600.webp" alt="Corpo clínico do HOE" loading="lazy" width="1600" height="1067"></figure>
-      <figure class="m2" data-r style="--d:.1s"><img src="assets/f3.webp" alt="Diagnóstico por imagem — HOE" loading="lazy" width="382" height="510"></figure>
       <figure class="m3" data-r><img src="assets/f6.webp" alt="Atendimento — HOE" loading="lazy" width="382" height="510"></figure>
       <figure class="m4" data-r style="--d:.1s"><img src="assets/f4.webp" alt="Equipe HOE — HOE" loading="lazy" width="382" height="510"></figure>
       <figure class="m5" data-r><img src="assets/f5.webp" alt="Fachada — HOE" loading="lazy" width="382" height="510"></figure>
@@ -1101,7 +1093,6 @@ footer.ft{margin-top:clamp(80px,10vw,150px);border-top:1px solid var(--line-d);p
         <h3 class="d2">Dr. Túlio Ferreira</h3>
         <span class="num" style="font-size:1.25rem">Cirurgião e diretor clínico</span>
         <p class="lead">À frente da direção clínica, conduz a integração entre as especialidades e o rigor dos protocolos que sustentam a segurança dos tratamentos no HOE.</p>
-        <div class="dir-q"><span class="qmark" style="height:30px;font-size:4rem">“</span><div><blockquote>Dr. Bruno é 10! Perfeito! Recomendo!</blockquote><small>Sandra Rangel Loureiro · Avaliação no Google</small></div></div>
       </div>
     </div>
     <div class="team" id="team"><article class="mem"><figure class="ph photo"><img src="assets/opt/equipe/dr-jefferson-rodrigues-cro-12-275-avaliacao-e-planejamento-d.webp" alt="Jefferson Rodrigues" loading="lazy" width="420" height="560"></figure><h4>Dr. Jefferson Rodrigues</h4><span class="sp">Avaliação e planejamento diagnóstico</span><span class="cro">CRO 12.275</span></article><article class="mem"><figure class="ph photo"><img src="assets/opt/equipe/dr-elon-lessa-cro-11-114-20cirurgiao-dentista-endodontista.webp" alt="Elon Lessa" loading="lazy" width="420" height="560"></figure><h4>Dr. Elon Lessa</h4><span class="sp">Cirurgião-dentista · Endodontista</span><span class="cro">CRO 11.114</span></article><article class="mem"><figure class="ph photo"><img src="assets/opt/equipe/dr-tales-dimitri-cro-29072-clinico-geral-e-protese-683x1024.webp" alt="Tales Dimitri" loading="lazy" width="420" height="560"></figure><h4>Dr. Tales Dimitri</h4><span class="sp">Clínico geral e prótese</span><span class="cro">CRO 29072</span></article><article class="mem"><figure class="ph photo"><img src="assets/opt/equipe/dr-leonardo-bezerra-cro-27600-683x1024.webp" alt="Leonardo Bezerra" loading="lazy" width="420" height="560"></figure><h4>Dr. Leonardo Bezerra</h4><span class="sp">Cirurgião-dentista</span><span class="cro">CRO 27600</span></article><article class="mem"><figure class="ph photo"><img src="assets/opt/equipe/dr-caio-assis-periodontista-cro-ba-24058-683x1024.webp" alt="Caio Assis" loading="lazy" width="420" height="560"></figure><h4>Dr. Caio Assis</h4><span class="sp">Periodontista</span><span class="cro">CRO-BA 24058</span></article><article class="mem"><figure class="ph photo"><img src="assets/opt/equipe/croba-17831-dra-marilia-gabriela-periodontista-682x1024.webp" alt="Marília Gabriela" loading="lazy" width="420" height="560"></figure><h4>Dra. Marília Gabriela</h4><span class="sp">Periodontista</span><span class="cro">CRO-BA 17831</span></article><article class="mem"><figure class="ph photo"><img src="assets/opt/equipe/cro-4788-elisabete-juiz-sedacao-e-odontopediatria-682x1024.webp" alt="Elisabete Juiz" loading="lazy" width="420" height="560"></figure><h4>Elisabete Juiz</h4><span class="sp">Sedação e odontopediatria</span><span class="cro">CRO 4788</span></article><article class="mem"><figure class="ph photo"><img src="assets/opt/equipe/nome-karen-pisani-especialidade-protese-dentaria-cro-22712-6.webp" alt="Karen Pisani" loading="lazy" width="420" height="560"></figure><h4>Karen Pisani</h4><span class="sp">Prótese dentária</span><span class="cro">CRO 22712</span></article><article class="mem"><figure class="ph photo"><img src="assets/opt/equipe/nome-dr-bruno-especialidade-protese-dentaria-cro-17530-682x1.webp" alt="Bruno" loading="lazy" width="420" height="560"></figure><h4>Dr. Bruno</h4><span class="sp">Prótese dentária</span><span class="cro">CRO 17530</span></article><article class="mem"><figure class="ph photo"><img src="assets/opt/equipe/dra-lorena-vinhas-avaliacao-e-planejamento-diagnostico-cro-1.webp" alt="Lorena Vinhas" loading="lazy" width="420" height="560"></figure><h4>Dra. Lorena Vinhas</h4><span class="sp">Avaliação e planejamento diagnóstico</span><span class="cro">CRO 13747</span></article><article class="mem"><figure class="ph photo"><img src="assets/opt/equipe/dra-alana-oliveira-clinica-geral-e-periodontista-croba-15094.webp" alt="Alana Oliveira" loading="lazy" width="420" height="560"></figure><h4>Dra. Alana Oliveira</h4><span class="sp">Clínica geral e periodontista</span><span class="cro">CRO-BA 15094</span></article><article class="mem"><figure class="ph photo"><img src="assets/opt/equipe/dra-ana-junquilho-clinico-geral-cro-31387-786x1024.webp" alt="Ana Junquilho" loading="lazy" width="420" height="560"></figure><h4>Dra. Ana Junquilho</h4><span class="sp">Clínica geral</span><span class="cro">CRO 31387</span></article><article class="mem"><figure class="ph photo"><img src="assets/opt/equipe/dra-adriana-garcia-evangelista-esp-endodontia-e-implantodont.webp" alt="Adriana Garcia" loading="lazy" width="420" height="560"></figure><h4>Dra. Adriana Garcia</h4><span class="sp">Endodontia e implantodontia</span><span class="cro">CRO-BA 31765 / CRO-GO 5919</span></article><article class="mem"><figure class="ph photo"><img src="assets/opt/equipe/pauliana-pessoa-ortodontia-e-protese-dentaria-croba-15898-76.webp" alt="Pauliana Pessoa" loading="lazy" width="420" height="560"></figure><h4>Pauliana Pessoa</h4><span class="sp">Ortodontia e prótese dentária</span><span class="cro">CRO-BA 15898</span></article><article class="mem"><figure class="ph photo"><img src="assets/opt/equipe/cro-ba-24062-dr-matheus-menezes-avaliacao-e-planejamento-dia.webp" alt="Matheus Menezes" loading="lazy" width="420" height="560"></figure><h4>Dr. Matheus Menezes</h4><span class="sp">Avaliação e planejamento diagnóstico</span><span class="cro">CRO-BA 24062</span></article><article class="mem"><figure class="ph photo"><img src="assets/opt/equipe/dr-israel-oliveira-cro-ba-31-221-clinico-geral-rndjz68dl8ht8.webp" alt="Israel Oliveira" loading="lazy" width="420" height="560"></figure><h4>Dr. Israel Oliveira</h4><span class="sp">Clínico geral</span><span class="cro">CRO-BA 31.221</span></article><article class="mem"><figure class="ph photo"><img src="assets/opt/equipe/dr-carlos-gomes-cro-19-275-cirurgiao-e-implante-rndk0eesig6a.webp" alt="Carlos Gomes" loading="lazy" width="420" height="560"></figure><h4>Dr. Carlos Gomes</h4><span class="sp">Cirurgia e implante</span><span class="cro">CRO 19.275</span></article><article class="mem"><figure class="ph photo"><img src="assets/opt/equipe/dr-daniel-lamounier.webp" alt="Daniel Lamounier" loading="lazy" width="420" height="560"></figure><h4>Dr. Daniel Lamounier</h4><span class="sp">Cirurgião-dentista</span><span class="cro">CRO — a informar</span></article></div>
