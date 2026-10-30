@@ -27,7 +27,8 @@
 <meta name="twitter:description" content="Odontologia especializada para cuidar até de quem tem medo de dentista. Pituba e Shopping Paralela.">
 <meta name="twitter:image" content="https://www.hospitalodontologico.com.br/assets/og-hoe.jpg">
 
-<link rel="preload" as="image" href="assets/opt/hero-home-1440.webp" imagesrcset="assets/opt/hero-home-960.webp 960w, assets/opt/hero-home-1440.webp 1440w, assets/hero-home.webp 1920w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero-smart.webp" media="(max-width:720px)" fetchpriority="high">
+<link media="(min-width:721px)" rel="preload" as="image" href="assets/opt/hero-home-1440.webp" imagesrcset="assets/opt/hero-home-960.webp 960w, assets/opt/hero-home-1440.webp 1440w, assets/hero-home.webp 1920w" imagesizes="100vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -482,10 +483,11 @@ footer.ft{margin-top:clamp(80px,10vw,150px);border-top:1px solid var(--line-d);p
   .ft p{margin-left:auto;margin-right:auto}
   .ft-b{justify-content:center}
   .p11 .vid,.p11 .ba-w{grid-column:1/-1}
-  .hero-stage{min-height:clamp(640px,150vw,760px)}
-  .hero-bg{object-position:72% top;height:62%}
-  .hero-stage::before{background:linear-gradient(0deg,rgba(11,37,56,.96) 0%,rgba(11,37,56,.9) 46%,rgba(11,37,56,.25) 74%,rgba(11,37,56,0) 100%)}
-  .hero-stage{background:#0B2538}
+  .hero-stage{display:block;min-height:0;background:#0B2538}
+  .hero-stage picture{display:block}
+  .hero-bg{position:static;display:block;width:100%;height:auto;aspect-ratio:972/1080;object-fit:cover;object-position:center}
+  .hero-stage::before{display:none}
+  .hero-t{padding:32px 0 48px}
   .mos:not(.b){grid-template-rows:none;grid-auto-rows:auto}
   .mos:not(.b) figure{aspect-ratio:4/3}
   .mos .m1,.mos .m3,.mos .m4,.mos .m5{grid-column:1/-1;grid-row:auto}
@@ -565,7 +567,7 @@ footer.ft{margin-top:clamp(80px,10vw,150px);border-top:1px solid var(--line-d);p
 <!-- 01 · HERO -->
 <section class="hero" aria-label="Apresentação">
   <div class="hero-stage">
-  <img class="hero-bg" src="assets/opt/hero-home-1440.webp" srcset="assets/opt/hero-home-960.webp 960w, assets/opt/hero-home-1440.webp 1440w, assets/hero-home.webp 1920w" sizes="100vw" alt="Dentista do HOE cumprimentando uma paciente na recepção da clínica" width="1920" height="1080" fetchpriority="high">
+  <picture><source media="(max-width:720px)" srcset="assets/hero-smart.webp" width="972" height="1080"><img class="hero-bg" src="assets/opt/hero-home-1440.webp" srcset="assets/opt/hero-home-960.webp 960w, assets/opt/hero-home-1440.webp 1440w, assets/hero-home.webp 1920w" sizes="100vw" alt="Dentista do HOE cumprimentando uma paciente na recepção da clínica" width="1920" height="1080" fetchpriority="high"></picture>
   <div class="wrap hero-g">
     <div class="hero-t">
       <h1 class="d1">
