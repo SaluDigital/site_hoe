@@ -69,7 +69,7 @@ section{position:relative}
 .paper{background:var(--paper)}
 .stone{background:var(--stone)}
 .dark{background:var(--blue);color:rgba(255,255,255,.72)}
-.stat b,.contacts a,.score b,.jr .big,.unit h3{font-variant-numeric:lining-nums}
+.stat b,.score b,.jr .big,.unit h3{font-variant-numeric:lining-nums}
 br.m{display:none}
 .eyebrow .dot{font-style:normal}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
@@ -424,15 +424,6 @@ details.q[open] .a{animation:fd .7s var(--ease)}
 
 /* 14 cta */
 .cta{padding-bottom:0}
-.cta-g{display:grid;grid-template-columns:7fr 5fr;gap:clamp(40px,7vw,120px);align-items:start}
-.cta .d1{margin:30px 0 32px;font-size:clamp(2.7rem,5.2vw,5.4rem)}
-.cta .d1 em{color:rgba(255,255,255,.62)}
-.cta-act{display:flex;flex-wrap:wrap;gap:16px;margin-top:44px}
-.contacts{margin-top:56px;display:grid;grid-template-columns:1fr 1fr;gap:0}
-.contacts div{padding:22px 24px 0 0;border-top:1px solid var(--line-d)}
-.contacts div+div{padding-left:24px;border-left:1px solid var(--line-d)}
-.contacts small{display:block;font:500 10.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:10px}
-.contacts a{font:400 1.7rem/1.2 var(--serif);color:#fff}
 footer.ft{margin-top:clamp(80px,10vw,150px);border-top:1px solid var(--line-d);padding:clamp(40px,5vw,64px) 0 36px}
 .ft-g{display:grid;grid-template-columns:4fr 3fr 3fr 2fr;gap:clamp(24px,4vw,64px)}
 .ft .logo img{height:64px;filter:brightness(0) invert(1)}
@@ -451,7 +442,7 @@ footer.ft{margin-top:clamp(80px,10vw,150px);border-top:1px solid var(--line-d);p
   .facts .wrap{grid-template-columns:1fr 1fr}
   .fact:nth-child(3){padding-left:0;border-left:0}
   .fact:nth-child(n+3){border-top:1px solid var(--line)}
-  .cred-g,.fear-top,.dir,.faq-g,.cta-g,.sed,.st-top,.head,.close{grid-template-columns:1fr}
+  .cred-g,.fear-top,.dir,.faq-g,.sed,.st-top,.head,.close{grid-template-columns:1fr}
   .cred-l,.faq-l{position:static}
   .head .lead,.close .r{justify-self:start}
   .p3{grid-template-columns:1fr}
@@ -510,9 +501,8 @@ footer.ft{margin-top:clamp(80px,10vw,150px);border-top:1px solid var(--line-d);p
   .fact:nth-child(n+2){border-top:1px solid var(--line)}
   .stats{grid-template-columns:1fr;gap:28px}
   .stat,.stat+.stat{padding:0 0 28px;border-left:0;border-bottom:1px solid var(--line);text-align:center}
-  .recog,.sed-r,.un,.contacts{grid-template-columns:1fr}
+  .recog,.sed-r,.un{grid-template-columns:1fr}
   .sed-r div,.sed-r div+div{padding:20px 0;border-left:0;border-top:1px solid rgba(17,55,82,.18)}
-  .contacts div+div{padding-left:0;border-left:0}
   .jr{grid-template-columns:1fr}
   .team{grid-template-columns:1fr 1fr}
   .tx a{grid-template-columns:40px 1fr 34px}
@@ -521,7 +511,7 @@ footer.ft{margin-top:clamp(80px,10vw,150px);border-top:1px solid var(--line-d);p
   details.q .a{padding:0 0 26px 34px}
   .fear-rv{flex-direction:column;align-items:flex-start}
   .btn{height:54px;padding:0 26px}
-  .hero-cta .btn,.cta-act .btn{width:100%;justify-content:space-between}
+  .hero-cta .btn{width:100%;justify-content:space-between}
   .ft-g{grid-template-columns:1fr}
   .ba .knob{width:44px;height:44px;margin:-22px 0 0 -22px}
   .logo img{height:44px}.hd.sc .logo img{height:40px}
@@ -558,7 +548,7 @@ footer.ft{margin-top:clamp(80px,10vw,150px);border-top:1px solid var(--line-d);p
       <a href="#corpo-clinico">Corpo clínico</a>
       <a href="#unidades">Unidades</a>
     </nav>
-    <a class="btn btn-o" href="#contato">Agendar avaliação</a>
+    <a class="btn btn-o sellbot-wpp-open" href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20no%20HOE." target="_blank" rel="noopener">Agendar avaliação</a>
     <button class="burger" aria-label="Abrir menu" aria-expanded="false"><i></i><i></i></button>
   </div>
 </header>
@@ -570,7 +560,7 @@ footer.ft{margin-top:clamp(80px,10vw,150px);border-top:1px solid var(--line-d);p
   <a class="l" href="#corpo-clinico">Corpo clínico</a>
   <a class="l" href="#unidades">Unidades</a>
   <a class="l" href="#duvidas">Dúvidas</a>
-  <a class="btn btn-p" href="#contato">Agendar avaliação <i class="ar"></i></a>
+  <a class="btn btn-p sellbot-wpp-open" href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20no%20HOE." target="_blank" rel="noopener">Agendar avaliação <i class="ar"></i></a>
 </nav>
 
 <main>
@@ -1175,22 +1165,6 @@ footer.ft{margin-top:clamp(80px,10vw,150px);border-top:1px solid var(--line-d);p
 <!-- 14 · CTA FINAL -->
 <section class="sec dark cta" id="contato">
   <div class="wrap">
-    <div class="cta-g">
-      <div>
-        <span class="eyebrow" data-r>Contato</span>
-        <h2 class="d1" data-r style="--d:.1s">Seu tratamento pode começar com uma <em>conversa.</em></h2>
-        <p class="lead" data-r style="--d:.2s">Fale com a equipe do HOE e entenda quais possibilidades fazem sentido para o seu caso.</p>
-        <div class="cta-act" data-r style="--d:.3s">
-          <a class="btn btn-w sellbot-wpp-open" href="https://wa.me/5571992960598?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20no%20HOE." target="_blank" rel="noopener">Conversar no WhatsApp <i class="ar"></i></a>
-          <a class="btn btn-ow" href="tel:+557141027244">Ligar agora <i class="ar"></i></a>
-        </div>
-        <div class="contacts" data-r style="--d:.4s">
-          <div><small>WhatsApp</small><a class="sellbot-wpp-open" href="https://wa.me/5571992960598" target="_blank" rel="noopener">(71) 99296-0598</a></div>
-          <div><small>Telefone</small><a href="tel:+557141027244">(71) 4102-7244</a></div>
-        </div>
-      </div>
-    </div>
-
     <footer class="ft">
       <div class="ft-g">
         <div><a href="#top" class="logo"><img src="assets/logo/logo-hoe.webp" srcset="assets/opt/logo-hoe-300.webp 300w, assets/logo/logo-hoe.webp 604w" sizes="140px" width="604" height="240" alt="HOE — Hospital de Odontologia Especializada"></a><p>Hospital odontológico em Salvador, Bahia. Estrutura hospitalar, equipe especializada e possibilidades de sedação.</p></div>
